@@ -1,0 +1,45 @@
+﻿<Window x:Class="SerpientesYEscaleras.Partidas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerpientesYEscaleras"
+        mc:Ignorable="d"
+        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize">
+    <DockPanel LastChildFill="True">
+        <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
+            <Label Content="SERPIENTES Y ESCALERAS" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="40"/>
+            <Grid HorizontalAlignment="Right">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <WrapPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" Margin="0">
+                    <Label x:Name="lb_NombreUsuario" FontFamily="Showcard Gothic" FontSize="16"/>
+                    <Label x:Name="lb_Puntos" Content="Puntos" FontFamily="Showcard Gothic" FontSize="16"/>
+                    <Label x:Name="lb_Victorias" Content="Victorias" FontFamily="Showcard Gothic" FontSize="16"/>
+                </WrapPanel>
+                <Button x:Name="bt_Salir" Content="Salir" Grid.Column="1" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Showcard Gothic" FontSize="16" Margin="100,0,0,0" Click="bt_Salir_Click"/>
+            </Grid>
+        </WrapPanel>
+        <Grid Width="350" DockPanel.Dock="Left">
+            <Button x:Name="bt_CrearPartida" Content="Crear Partida" Height="25" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20" Click="btCrearPartida_Click"/>
+        </Grid>
+        <Grid Width="350" DockPanel.Dock="Right">
+            <Button x:Name="bt_TablaPosiciones" Content="Tabla de Posiciones" Height="25" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20" Click="btTablaPosiciones_Click"/>
+        </Grid>
+        <Grid HorizontalAlignment="Center" Margin="0,0,0,50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="400"/>
+            </Grid.RowDefinitions>
+            <Label Content="Partidas" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="40" MouseUp="LbPartida_MouseUp"/>
+            <DataGrid Name="dg_Experiencias" Grid.Row="1" AutoGenerateColumns="False" Height="400" Width="auto" FontFamily="Showcard Gothic" FontSize="30" IsReadOnly="True" SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nombre" Width="400" FontFamily="Showcard Gothic" FontSize="20" CanUserResize="False" CanUserSort="False" Binding="{Binding nombre}"/>
+                    <DataGridTextColumn Header="Dificultad" Width="*" FontFamily="Showcard Gothic" FontSize="20" CanUserResize="False" CanUserSort="False" Binding="{Binding dificultad}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>

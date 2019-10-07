@@ -1,0 +1,38 @@
+﻿<Window x:Class="SerpientesYEscaleras.Registrarse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerpientesYEscaleras"
+        mc:Ignorable="d"
+        Title="SERPIENTES Y ESCALERAS" Height="400" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <DockPanel LastChildFill="True">
+        <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
+            <Label Content="Registrarse" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="16" Margin="0,30,0,0"/>
+        </WrapPanel>
+        <WrapPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,80">
+            <Button x:Name="bt_Registrarse" Content="Registrarse" HorizontalAlignment="Center" Height="25" FontFamily="Showcard Gothic" FontSize="10" Margin="50,0" Click="bt_Registrarse_Click"/>
+            <Button x:Name="bt_Cancelar" Content="Cancelar" HorizontalAlignment="Center" Height="25" FontFamily="Showcard Gothic" FontSize="10" Margin="50,0" Click="bt_Cancelar_Click"/>
+        </WrapPanel>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Nombre de usuario:" Grid.Row="0" Grid.Column="0" FontFamily="Showcard Gothic" FontSize="11"/>
+            <Label Content="Correo electrónico:" Grid.Row="1" Grid.Column="0" FontFamily="Showcard Gothic" FontSize="11"/>
+            <Label Content="Contraseña:" Grid.Row="2" Grid.Column="0" FontFamily="Showcard Gothic" FontSize="11"/>
+            <Label Content="Confirmar contraseña:" Grid.Row="3" Grid.Column="0" FontFamily="Showcard Gothic" FontSize="11"/>
+            <TextBox x:Name="tb_NombreUsuario" Grid.Row="0" Grid.Column="1" Height="20" MaxLength="15" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="13"/>
+            <TextBox x:Name="tb_CorreoElectronico" Grid.Row="1" Grid.Column="1" Height="20" MaxLength="50" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="13"/>
+            <PasswordBox x:Name="pb_Contrasenia" Grid.Row="2" Grid.Column="1" Height="20" MaxLength="16" VerticalAlignment="Center" FontWeight="Bold" FontSize="13"/>
+            <PasswordBox x:Name="pb_ConfirmarContrasenia" Grid.Row="3" Grid.Column="1" Height="20" MaxLength="16" VerticalAlignment="Center" FontWeight="Bold" FontSize="13"/>
+        </Grid>
+   </DockPanel>
+</Window>

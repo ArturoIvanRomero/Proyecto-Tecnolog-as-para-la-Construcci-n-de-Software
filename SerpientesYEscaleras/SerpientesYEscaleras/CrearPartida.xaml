@@ -1,0 +1,39 @@
+﻿<Window x:Class="SerpientesYEscaleras.CrearPartida"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerpientesYEscaleras"
+        mc:Ignorable="d"
+        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <DockPanel LastChildFill="True">
+        <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
+            <Label Content="Crear Partida" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Showcard Gothic" FontSize="40"/>
+        </WrapPanel>
+        <Grid Width="250" DockPanel.Dock="Left">
+        </Grid>
+        <Grid Width="250" DockPanel.Dock="Right">
+        </Grid>
+        <WrapPanel DockPanel.Dock="Bottom" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,100">
+            <Button x:Name="bt_Crear" Content="Crear" HorizontalAlignment="Center" Height="25" FontFamily="Showcard Gothic" FontSize="20"/>
+        </WrapPanel>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="340"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Nombre:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20"/>
+            <Label Content="Dificultad:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20"/>
+            <TextBox x:Name="tb_NombreUsuario" Grid.Row="0" Grid.Column="1" Height="30" MaxLength="20" VerticalAlignment="Center" FontFamily="Comic Sans MS"  FontSize="20"/>
+            <ComboBox x:Name="cb_Dificultad" Grid.Row="1" Grid.Column="1" Height="30" VerticalAlignment="Center" FontFamily="Showcard Gothic"  FontSize="20" SelectedIndex="0">
+                <ComboBoxItem Content="Normal"/>
+                <ComboBoxItem Content="Fácil"/>
+                <ComboBoxItem Content="Difícil"/>
+            </ComboBox>
+        </Grid>
+    </DockPanel>
+</Window>

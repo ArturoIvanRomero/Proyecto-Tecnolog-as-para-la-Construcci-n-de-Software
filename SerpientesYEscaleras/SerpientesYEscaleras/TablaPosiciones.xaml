@@ -1,0 +1,31 @@
+﻿<Window x:Class="SerpientesYEscaleras.TablaPosiciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerpientesYEscaleras"
+        mc:Ignorable="d"
+        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <DockPanel LastChildFill="True">
+        <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
+            <Label Content="Tabla de Posiciones" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Showcard Gothic" FontSize="40"/>
+        </WrapPanel>
+        <Grid Width="250" DockPanel.Dock="Left">
+        </Grid>
+        <Grid Width="250" DockPanel.Dock="Right">
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+            <DataGrid Name="dg_Jugadores" Grid.Row="0" AutoGenerateColumns="False" Height="300" Width="auto" FontFamily="Showcard Gothic" FontSize="30" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,50">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="dgc_Jugador" Header="Jugador" Width="*" FontFamily="Showcard Gothic" FontSize="20" CanUserResize="False" CanUserSort="False" Binding="{Binding NombreUsuario}"/>
+                    <DataGridTextColumn x:Name="dgc_Posicion" Header="Puntos" Width="200" FontFamily="Showcard Gothic" FontSize="20" CanUserResize="False" CanUserSort="False" Binding="{Binding Puntos}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="bt_Ordenar" Content="Ordenar por Victorias" Grid.Row="1" HorizontalAlignment="Center" Height="25" FontFamily="Showcard Gothic" FontSize="20" Click="bt_Ordenar_Click"/>
+        </Grid>
+    </DockPanel>
+</Window>
