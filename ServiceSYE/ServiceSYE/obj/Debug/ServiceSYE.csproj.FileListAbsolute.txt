@@ -1,0 +1,14 @@
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\ServiceSYE.dll.config
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\ServiceSYE.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\ServiceSYE.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\DataAccess.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\EntityFramework.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\DataAccess.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\DataAccess.dll.config
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\EntityFramework.xml
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.csprojAssemblyReference.cache
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.csproj.CopyComplete
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.pdb
