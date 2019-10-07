@@ -1,0 +1,17 @@
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\Host.exe.config
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\Host.exe
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\Host.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\obj\Debug\Host.csprojAssemblyReference.cache
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\obj\Debug\Host.exe
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\obj\Debug\Host.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\ServiceSYE.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\DataAccess.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\EntityFramework.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\ServiceSYE.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\ServiceSYE.dll.config
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\DataAccess.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\DataAccess.dll.config
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\EntityFramework.xml
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\obj\Debug\Host.csproj.CopyComplete
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\Host\bin\Debug\EntityFramework.SqlServer.xml
