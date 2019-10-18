@@ -50,9 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Casilla.cs">
-      <DependentUpon>DataBase.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="DataBase.Context.cs">
       <AutoGen>True</AutoGen>
@@ -69,19 +66,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBase.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Estadisticas.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Jugador.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Partida.cs">
-      <DependentUpon>DataBase.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tablero.cs">
-      <DependentUpon>DataBase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tiro.cs">
-      <DependentUpon>DataBase.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DataBase.edmx">

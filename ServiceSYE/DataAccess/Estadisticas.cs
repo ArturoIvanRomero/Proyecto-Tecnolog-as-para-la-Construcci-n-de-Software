@@ -12,14 +12,12 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Jugador
+    public partial class Estadisticas
     {
-        public int IdJugador { get; set; }
-        public string nombreUsuario { get; set; }
-        public string contrasenia { get; set; }
-        public string correoElectronico { get; set; }
-        public string codigo { get; set; }
+        public int IdEstadisticas { get; set; }
+        public short puntos { get; set; }
+        public short victorias { get; set; }
     
-        public virtual Estadisticas Estadisticas { get; set; }
+        public virtual Jugador Jugador { get; set; }
     }
 }

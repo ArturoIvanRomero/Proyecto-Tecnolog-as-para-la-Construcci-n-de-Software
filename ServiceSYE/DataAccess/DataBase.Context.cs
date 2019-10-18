@@ -26,9 +26,6 @@ namespace DataAccess
         }
     
         public virtual DbSet<Jugador> JugadorSet { get; set; }
-        public virtual DbSet<Tiro> TiroSet { get; set; }
-        public virtual DbSet<Partida> PartidaSet { get; set; }
-        public virtual DbSet<Casilla> CasillaSet { get; set; }
-        public virtual DbSet<Tablero> TableroSet { get; set; }
+        public virtual DbSet<Estadisticas> EstadisticasSet { get; set; }
     }
 }

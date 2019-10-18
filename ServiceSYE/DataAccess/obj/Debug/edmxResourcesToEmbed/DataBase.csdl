@@ -2,25 +2,10 @@
 <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DataBase" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
   <EntityContainer Name="DataBaseContainer" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="JugadorSet" EntityType="DataBase.Jugador" />
-    <EntitySet Name="TiroSet" EntityType="DataBase.Tiro" />
-    <EntitySet Name="PartidaSet" EntityType="DataBase.Partida" />
-    <EntitySet Name="CasillaSet" EntityType="DataBase.Casilla" />
-    <EntitySet Name="TableroSet" EntityType="DataBase.Tablero" />
-    <AssociationSet Name="PartidaTablero" Association="DataBase.PartidaTablero">
-      <End Role="Partida" EntitySet="PartidaSet" />
-      <End Role="Tablero" EntitySet="TableroSet" />
-    </AssociationSet>
-    <AssociationSet Name="CasillaTablero" Association="DataBase.CasillaTablero">
-      <End Role="Casilla" EntitySet="CasillaSet" />
-      <End Role="Tablero" EntitySet="TableroSet" />
-    </AssociationSet>
-    <AssociationSet Name="TiroJugador" Association="DataBase.TiroJugador">
-      <End Role="Tiro" EntitySet="TiroSet" />
+    <EntitySet Name="EstadisticasSet" EntityType="DataBase.Estadisticas" />
+    <AssociationSet Name="JugadorEstadisticas" Association="DataBase.JugadorEstadisticas">
       <End Role="Jugador" EntitySet="JugadorSet" />
-    </AssociationSet>
-    <AssociationSet Name="JugadorPartida" Association="DataBase.JugadorPartida">
-      <End Role="Jugador" EntitySet="JugadorSet" />
-      <End Role="Partida" EntitySet="PartidaSet" />
+      <End Role="Estadisticas" EntitySet="EstadisticasSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Jugador">
@@ -29,68 +14,22 @@
     </Key>
     <Property Name="IdJugador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombreUsuario" Type="String" Nullable="false" MaxLength="20" />
-    <Property Name="contrasenia" Type="String" Nullable="false" />
-    <Property Name="correoElectronico" Type="String" Nullable="false" MaxLength="40" />
+    <Property Name="contrasenia" Type="String" Nullable="false" MaxLength="Max" />
+    <Property Name="correoElectronico" Type="String" Nullable="false" MaxLength="50" />
+    <Property Name="codigo" Type="String" Nullable="false" MaxLength="5" />
+    <NavigationProperty Name="Estadisticas" Relationship="DataBase.JugadorEstadisticas" FromRole="Jugador" ToRole="Estadisticas" />
+  </EntityType>
+  <EntityType Name="Estadisticas">
+    <Key>
+      <PropertyRef Name="IdEstadisticas" />
+    </Key>
+    <Property Name="IdEstadisticas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="puntos" Type="Int16" Nullable="false" />
     <Property Name="victorias" Type="Int16" Nullable="false" />
-    <Property Name="codigo" Type="String" Nullable="false" />
-    <Property Name="validado" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Tiro" Relationship="DataBase.TiroJugador" FromRole="Jugador" ToRole="Tiro" />
-    <NavigationProperty Name="Partida" Relationship="DataBase.JugadorPartida" FromRole="Jugador" ToRole="Partida" />
+    <NavigationProperty Name="Jugador" Relationship="DataBase.JugadorEstadisticas" FromRole="Estadisticas" ToRole="Jugador" />
   </EntityType>
-  <EntityType Name="Tiro">
-    <Key>
-      <PropertyRef Name="IdTiro" />
-    </Key>
-    <Property Name="IdTiro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="casilla" Type="Int16" Nullable="false" />
-    <Property Name="turno" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Jugador" Relationship="DataBase.TiroJugador" FromRole="Tiro" ToRole="Jugador" />
-  </EntityType>
-  <EntityType Name="Partida">
-    <Key>
-      <PropertyRef Name="IdPartida" />
-    </Key>
-    <Property Name="IdPartida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombre" Type="String" Nullable="false" MaxLength="20" />
-    <Property Name="dificultad" Type="Int16" Nullable="false" />
-    <Property Name="tiempo" Type="Time" Nullable="false" />
-    <Property Name="turno" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Tablero" Relationship="DataBase.PartidaTablero" FromRole="Partida" ToRole="Tablero" />
-    <NavigationProperty Name="Jugadores" Relationship="DataBase.JugadorPartida" FromRole="Partida" ToRole="Jugador" />
-  </EntityType>
-  <EntityType Name="Casilla">
-    <Key>
-      <PropertyRef Name="IdCasilla" />
-    </Key>
-    <Property Name="IdCasilla" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="numero" Type="Int16" Nullable="false" />
-    <Property Name="movimiento" Type="Int16" Nullable="false" />
-    <Property Name="bonus" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Tablero" Relationship="DataBase.CasillaTablero" FromRole="Casilla" ToRole="Tablero" />
-  </EntityType>
-  <EntityType Name="Tablero">
-    <Key>
-      <PropertyRef Name="IdTablero" />
-    </Key>
-    <Property Name="IdTablero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Partidas" Relationship="DataBase.PartidaTablero" FromRole="Tablero" ToRole="Partida" />
-    <NavigationProperty Name="Casillas" Relationship="DataBase.CasillaTablero" FromRole="Tablero" ToRole="Casilla" />
-  </EntityType>
-  <Association Name="PartidaTablero">
-    <End Type="DataBase.Partida" Role="Partida" Multiplicity="*" />
-    <End Type="DataBase.Tablero" Role="Tablero" Multiplicity="1" />
-  </Association>
-  <Association Name="CasillaTablero">
-    <End Type="DataBase.Casilla" Role="Casilla" Multiplicity="*" />
-    <End Type="DataBase.Tablero" Role="Tablero" Multiplicity="1" />
-  </Association>
-  <Association Name="TiroJugador">
-    <End Type="DataBase.Tiro" Role="Tiro" Multiplicity="0..1" />
+  <Association Name="JugadorEstadisticas">
     <End Type="DataBase.Jugador" Role="Jugador" Multiplicity="1" />
-  </Association>
-  <Association Name="JugadorPartida">
-    <End Type="DataBase.Jugador" Role="Jugador" Multiplicity="*" />
-    <End Type="DataBase.Partida" Role="Partida" Multiplicity="0..1" />
+    <End Type="DataBase.Estadisticas" Role="Estadisticas" Multiplicity="1" />
   </Association>
 </Schema>

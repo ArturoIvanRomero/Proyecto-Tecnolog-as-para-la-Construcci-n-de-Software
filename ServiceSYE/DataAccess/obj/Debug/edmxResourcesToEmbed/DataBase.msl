@@ -8,82 +8,26 @@
           <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
           <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
           <ScalarProperty Name="correoElectronico" ColumnName="correoElectronico" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadisticasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(DataBase.Estadisticas)">
+        <MappingFragment StoreEntitySet="EstadisticasSet">
+          <ScalarProperty Name="IdEstadisticas" ColumnName="IdEstadisticas" />
           <ScalarProperty Name="puntos" ColumnName="puntos" />
           <ScalarProperty Name="victorias" ColumnName="victorias" />
-          <ScalarProperty Name="codigo" ColumnName="codigo" />
-          <ScalarProperty Name="validado" ColumnName="validado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TiroSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DataBase.Tiro)">
-        <MappingFragment StoreEntitySet="TiroSet">
-          <ScalarProperty Name="IdTiro" ColumnName="IdTiro" />
-          <ScalarProperty Name="casilla" ColumnName="casilla" />
-          <ScalarProperty Name="turno" ColumnName="turno" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PartidaSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DataBase.Partida)">
-        <MappingFragment StoreEntitySet="PartidaSet">
-          <ScalarProperty Name="IdPartida" ColumnName="IdPartida" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="dificultad" ColumnName="dificultad" />
-          <ScalarProperty Name="tiempo" ColumnName="tiempo" />
-          <ScalarProperty Name="turno" ColumnName="turno" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CasillaSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DataBase.Casilla)">
-        <MappingFragment StoreEntitySet="CasillaSet">
-          <ScalarProperty Name="IdCasilla" ColumnName="IdCasilla" />
-          <ScalarProperty Name="numero" ColumnName="numero" />
-          <ScalarProperty Name="movimiento" ColumnName="movimiento" />
-          <ScalarProperty Name="bonus" ColumnName="bonus" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TableroSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DataBase.Tablero)">
-        <MappingFragment StoreEntitySet="TableroSet">
-          <ScalarProperty Name="IdTablero" ColumnName="IdTablero" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <AssociationSetMapping Name="PartidaTablero" TypeName="DataBase.PartidaTablero" StoreEntitySet="PartidaSet">
-      <EndProperty Name="Tablero">
-        <ScalarProperty Name="IdTablero" ColumnName="Tablero_IdTablero" />
-      </EndProperty>
-      <EndProperty Name="Partida">
-        <ScalarProperty Name="IdPartida" ColumnName="IdPartida" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="CasillaTablero" TypeName="DataBase.CasillaTablero" StoreEntitySet="CasillaSet">
-      <EndProperty Name="Tablero">
-        <ScalarProperty Name="IdTablero" ColumnName="Tablero_IdTablero" />
-      </EndProperty>
-      <EndProperty Name="Casilla">
-        <ScalarProperty Name="IdCasilla" ColumnName="IdCasilla" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="TiroJugador" TypeName="DataBase.TiroJugador" StoreEntitySet="TiroSet">
-      <EndProperty Name="Jugador">
-        <ScalarProperty Name="IdJugador" ColumnName="Jugador_IdJugador" />
-      </EndProperty>
-      <EndProperty Name="Tiro">
-        <ScalarProperty Name="IdTiro" ColumnName="IdTiro" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="JugadorPartida" TypeName="DataBase.JugadorPartida" StoreEntitySet="JugadorSet">
-      <EndProperty Name="Partida">
-        <ScalarProperty Name="IdPartida" ColumnName="Partida_IdPartida" />
+    <AssociationSetMapping Name="JugadorEstadisticas" TypeName="DataBase.JugadorEstadisticas" StoreEntitySet="JugadorSet">
+      <EndProperty Name="Estadisticas">
+        <ScalarProperty Name="IdEstadisticas" ColumnName="Estadisticas_IdEstadisticas" />
       </EndProperty>
       <EndProperty Name="Jugador">
         <ScalarProperty Name="IdJugador" ColumnName="IdJugador" />
       </EndProperty>
-      <Condition ColumnName="Partida_IdPartida" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

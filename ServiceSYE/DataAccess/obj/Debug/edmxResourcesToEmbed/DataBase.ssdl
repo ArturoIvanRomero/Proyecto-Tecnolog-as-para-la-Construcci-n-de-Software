@@ -2,25 +2,10 @@
 <Schema Namespace="DataBase.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="DataBaseStoreContainer">
     <EntitySet Name="JugadorSet" EntityType="DataBase.Store.JugadorSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TiroSet" EntityType="DataBase.Store.TiroSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PartidaSet" EntityType="DataBase.Store.PartidaSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CasillaSet" EntityType="DataBase.Store.CasillaSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TableroSet" EntityType="DataBase.Store.TableroSet" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="PartidaTablero" Association="DataBase.Store.PartidaTablero">
-      <End Role="Partida" EntitySet="PartidaSet" />
-      <End Role="Tablero" EntitySet="TableroSet" />
-    </AssociationSet>
-    <AssociationSet Name="CasillaTablero" Association="DataBase.Store.CasillaTablero">
-      <End Role="Casilla" EntitySet="CasillaSet" />
-      <End Role="Tablero" EntitySet="TableroSet" />
-    </AssociationSet>
-    <AssociationSet Name="TiroJugador" Association="DataBase.Store.TiroJugador">
-      <End Role="Tiro" EntitySet="TiroSet" />
+    <EntitySet Name="EstadisticasSet" EntityType="DataBase.Store.EstadisticasSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="JugadorEstadisticas" Association="DataBase.Store.JugadorEstadisticas">
       <End Role="Jugador" EntitySet="JugadorSet" />
-    </AssociationSet>
-    <AssociationSet Name="JugadorPartida" Association="DataBase.Store.JugadorPartida">
-      <End Role="Jugador" EntitySet="JugadorSet" />
-      <End Role="Partida" EntitySet="PartidaSet" />
+      <End Role="Estadisticas" EntitySet="EstadisticasSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="JugadorSet">
@@ -30,94 +15,27 @@
     <Property Name="IdJugador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombreUsuario" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="contrasenia" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="correoElectronico" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="correoElectronico" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="codigo" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Estadisticas_IdEstadisticas" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadisticasSet">
+    <Key>
+      <PropertyRef Name="IdEstadisticas" />
+    </Key>
+    <Property Name="IdEstadisticas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="puntos" Type="smallint" Nullable="false" />
     <Property Name="victorias" Type="smallint" Nullable="false" />
-    <Property Name="codigo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="validado" Type="bit" Nullable="false" />
-    <Property Name="Partida_IdPartida" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="TiroSet">
-    <Key>
-      <PropertyRef Name="IdTiro" />
-    </Key>
-    <Property Name="IdTiro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="casilla" Type="smallint" Nullable="false" />
-    <Property Name="turno" Type="smallint" Nullable="false" />
-    <Property Name="Jugador_IdJugador" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="PartidaSet">
-    <Key>
-      <PropertyRef Name="IdPartida" />
-    </Key>
-    <Property Name="IdPartida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
-    <Property Name="dificultad" Type="smallint" Nullable="false" />
-    <Property Name="tiempo" Type="time" Nullable="false" />
-    <Property Name="turno" Type="smallint" Nullable="false" />
-    <Property Name="Tablero_IdTablero" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="CasillaSet">
-    <Key>
-      <PropertyRef Name="IdCasilla" />
-    </Key>
-    <Property Name="IdCasilla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="numero" Type="smallint" Nullable="false" />
-    <Property Name="movimiento" Type="smallint" Nullable="false" />
-    <Property Name="bonus" Type="bit" Nullable="false" />
-    <Property Name="Tablero_IdTablero" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TableroSet">
-    <Key>
-      <PropertyRef Name="IdTablero" />
-    </Key>
-    <Property Name="IdTablero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-  </EntityType>
-  <Association Name="PartidaTablero">
-    <End Role="Partida" Type="DataBase.Store.PartidaSet" Multiplicity="*" />
-    <End Role="Tablero" Type="DataBase.Store.TableroSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Tablero">
-        <PropertyRef Name="IdTablero" />
-      </Principal>
-      <Dependent Role="Partida">
-        <PropertyRef Name="Tablero_IdTablero" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="CasillaTablero">
-    <End Role="Casilla" Type="DataBase.Store.CasillaSet" Multiplicity="*" />
-    <End Role="Tablero" Type="DataBase.Store.TableroSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Tablero">
-        <PropertyRef Name="IdTablero" />
-      </Principal>
-      <Dependent Role="Casilla">
-        <PropertyRef Name="Tablero_IdTablero" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="TiroJugador">
-    <End Role="Tiro" Type="DataBase.Store.TiroSet" Multiplicity="*" />
-    <End Role="Jugador" Type="DataBase.Store.JugadorSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Jugador">
-        <PropertyRef Name="IdJugador" />
-      </Principal>
-      <Dependent Role="Tiro">
-        <PropertyRef Name="Jugador_IdJugador" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="JugadorPartida">
+  <Association Name="JugadorEstadisticas">
     <End Role="Jugador" Type="DataBase.Store.JugadorSet" Multiplicity="*" />
-    <End Role="Partida" Type="DataBase.Store.PartidaSet" Multiplicity="0..1" />
+    <End Role="Estadisticas" Type="DataBase.Store.EstadisticasSet" Multiplicity="1" />
     <ReferentialConstraint>
-      <Principal Role="Partida">
-        <PropertyRef Name="IdPartida" />
+      <Principal Role="Estadisticas">
+        <PropertyRef Name="IdEstadisticas" />
       </Principal>
       <Dependent Role="Jugador">
-        <PropertyRef Name="Partida_IdPartida" />
+        <PropertyRef Name="Estadisticas_IdEstadisticas" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
