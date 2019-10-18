@@ -4,36 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SerpientesYEscaleras"
+        xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="300" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <DockPanel LastChildFill="True">
-        <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
-            <Label Content="Validar cuenta" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Showcard Gothic" FontSize="16"/>
-        </WrapPanel>
-        <WrapPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
-            <Button x:Name="bt_Aceptar" Content="Aceptar" HorizontalAlignment="Center" Height="25" Margin="50,0" FontFamily="Showcard Gothic" FontSize="10"/>
-            <Button x:Name="bt_Cancelar" Content="Cancelar" HorizontalAlignment="Center" Height="25" Margin="50,0" FontFamily="Showcard Gothic" FontSize="10"/>
-        </WrapPanel>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="30"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="200"/>
-                </Grid.ColumnDefinitions>
-                <Label Content="Correo electrónico:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="11"/>
-                <Label Content="Código de verificación:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="11"/>
-                <TextBox x:Name="tb_CorreoElctronico" Grid.Row="0" Grid.Column="1" Height="20" MaxLength="50" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="13"/>
-                <TextBox x:Name="tb_CodigoVerificacion" Grid.Row="1" Grid.Column="1" Height="20" MaxLength="6" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="13"/>
-            </Grid>
-            <Label x:Name="lb_EnviarCodigo" Content="Enviar de nuevo el código de verificación" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Showcard Gothic" FontSize="9"/>
-        </Grid>
-    </DockPanel>
+        Title="SERPIENTES Y ESCALERAS" Height="450" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Label Content="{x:Static p:Resources.lb_ValidarCuenta}" Grid.Row="1" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label Content="{x:Static p:Resources.lb_CodigoVerificacion}" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="15" Foreground="White"/>
+        <TextBox x:Name="tb_CodigoVerificacion" Grid.Row="3" MaxLength="5" Height="30" Margin="110,0" FontFamily="Gill Sans MT" FontSize="22"/>
+        <Button x:Name="bt_Aceptar" Content="{x:Static p:Resources.bt_Aceptar}" Grid.Row="4" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Aceptar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <Button x:Name="bt_Cancelar" Content="{x:Static p:Resources.bt_Cancelar}" Grid.Row="5" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Cancelar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <Label Content="{x:Static p:Resources.lb_EnviarCodigo}" Grid.Row="6" VerticalAlignment="Bottom" Margin="10,0" FontFamily="Verdana" FontSize="9" Foreground="White"/>
+        <TextBox x:Name="tb_NombreUsuario" Grid.Row="7" Height="20" MaxLength="20" Margin="10,0" FontFamily="Gill Sans MT" FontSize="14"/>
+        <Button x:Name="bt_Enviar" Content="{x:Static p:Resources.bt_Enviar}" Grid.Row="8" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="12" FontWeight="Bold" Click="Bt_Enviar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+    </Grid>
 </Window>

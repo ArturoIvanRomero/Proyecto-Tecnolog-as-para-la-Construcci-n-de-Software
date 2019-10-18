@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SerpientesYEscaleras"
+        xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize">
+        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092">
     <DockPanel LastChildFill="True">
-        <Label x:Name="lb_Esperando" Content="Esperando jugadores: " DockPanel.Dock="Top" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="40" Margin="0,50,0,0"/>
-        <Button x:Name="bt_Cancelar" Content="Cancelar" DockPanel.Dock="Bottom" Height="25" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20" Margin="0,0,0,100"/>
+        <Label x:Name="lb_Esperando" Content="{x:Static p:Resources.lb_Esperando}" DockPanel.Dock="Top" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="50" Foreground="White" FontWeight="Bold" Margin="0,50,0,0"/>
+        <Button x:Name="bt_Cancelar" Content="{x:Static p:Resources.bt_Cancelar}" DockPanel.Dock="Bottom" Height="40" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Margin="0,0,0,100" Background="White" Foreground="#FF376092" BorderBrush="White"/>
     </DockPanel>
 </Window>

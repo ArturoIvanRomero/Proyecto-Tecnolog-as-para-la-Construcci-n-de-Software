@@ -13,12 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace SerpientesYEscaleras {
-  /// <summary>
-  /// Lógica de interacción para Resultados.xaml
-  /// </summary>
   public partial class Resultados : Window {
-    public Resultados() {
+    Partida partida;
+
+    public Resultados(Partida partida) {
+      this.partida = partida;
       InitializeComponent();
+    }
+
+    private void Bt_Aceptar_Click(object sender, RoutedEventArgs e) {
+      partida.MenuPrincipal();
+      this.Close();
     }
   }
 }

@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SerpientesYEscaleras"
+        xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
     <DockPanel LastChildFill="True">
         <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
-            <Label Content="Tabla de Posiciones" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Showcard Gothic" FontSize="40"/>
+            <Label Content="{x:Static p:Resources.bt_TablaPosiciones}" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Verdana" FontSize="40" Foreground="White" FontWeight="Bold"/>
         </WrapPanel>
         <Grid Width="250" DockPanel.Dock="Left">
         </Grid>
@@ -19,13 +20,13 @@
                 <RowDefinition Height="300"/>
                 <RowDefinition Height="45"/>
             </Grid.RowDefinitions>
-            <DataGrid Name="dg_Jugadores" Grid.Row="0" AutoGenerateColumns="False" Height="300" Width="auto" FontFamily="Showcard Gothic" FontSize="30" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,50">
+            <DataGrid Name="dg_Jugadores" Grid.Row="0" AutoGenerateColumns="False" Height="300" Width="auto" FontFamily="Verdana" FontSize="30" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,50">
                 <DataGrid.Columns>
-                    <DataGridTextColumn x:Name="dgc_Jugador" Header="Jugador" Width="*" FontFamily="Showcard Gothic" FontSize="20" CanUserResize="False" CanUserSort="False" Binding="{Binding NombreUsuario}"/>
-                    <DataGridTextColumn x:Name="dgc_Posicion" Header="Puntos" Width="200" FontFamily="Showcard Gothic" FontSize="20" CanUserResize="False" CanUserSort="False" Binding="{Binding Puntos}"/>
+                    <DataGridTextColumn x:Name="dgc_Jugador" Header="{x:Static p:Resources.dgc_Jugador}" Width="*" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding NombreUsuario}"/>
+                    <DataGridTextColumn x:Name="dgc_Posicion" Header="{x:Static p:Resources.lb_Puntos}" Width="200" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding Estadisticas.Puntos}"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="bt_Ordenar" Content="Ordenar por Victorias" Grid.Row="1" HorizontalAlignment="Center" Height="25" FontFamily="Showcard Gothic" FontSize="20" Click="bt_Ordenar_Click"/>
+            <Button x:Name="bt_Ordenar" Content="{x:Static p:Resources.bt_OrdenarVictorias}" Grid.Row="1" HorizontalAlignment="Center" Height="40" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_Ordenar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         </Grid>
     </DockPanel>
 </Window>

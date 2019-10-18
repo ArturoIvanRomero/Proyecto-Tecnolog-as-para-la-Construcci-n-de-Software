@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SerpientesYEscaleras"
+        xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize">
+        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="770"/>
@@ -37,7 +38,7 @@
                 <RowDefinition Height="400"/>
             </Grid.RowDefinitions>
             <WrapPanel Grid.Row="0" Orientation="Horizontal">
-                <Button x:Name="bt_Abandonar" Content="Abandonar" Height="20" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="16"/>
+                <Button x:Name="bt_Abandonar" Content="Abandonar" Height="20" VerticalAlignment="Center" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Abandonar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
             </WrapPanel>
             <Grid Grid.Row="1" Margin="30,0">
                 <Grid.RowDefinitions>
@@ -55,12 +56,12 @@
                         <ColumnDefinition Width="225"/>
                         <ColumnDefinition Width="225"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Vuelve al inicio" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="14"/>
-                    <Label Content="Divide tus casillas a la mitad" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="14"/>
-                    <Label Content="Regresa 3 casillas" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="14"/>
-                    <Label Content="Ve a la casilla 90" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="14"/>
-                    <Label Content="Duplica tus casillas" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="14"/>
-                    <Label Content="Avanza 6 casillas" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="14"/>
+                    <Label Content="1.- Vuelve al inicio" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
+                    <Label Content="2.- Divide tus casillas a la mitad" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
+                    <Label Content="3.- Regresa 3 casillas" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
+                    <Label Content="4.- Ve a la casilla 90" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
+                    <Label Content="5.- Duplica tus casillas" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
+                    <Label Content="6.- Avanza 6 casillas" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
                 </Grid>
             </Grid>
             <Grid Grid.Row="2" Margin="50,50">
@@ -68,12 +69,12 @@
                     <RowDefinition Height="200"/>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
-                <GroupBox Grid.Row="0" Height="200" Header="Mensajes" FontFamily="Showcard Gothic" FontSize="20">
-                    <TextBox x:Name="tb_Mensajes" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Comic Sans MS"  FontSize="12" Height="165" MaxHeight="175"/>
+                <GroupBox Grid.Row="0" Height="200" Header="Mensajes" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold">
+                    <TextBox x:Name="tb_Mensajes" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Gill Sans MT" FontSize="12" Height="165" MaxHeight="175"/>
                 </GroupBox>
                 <WrapPanel Grid.Row="1" Orientation="Horizontal">
-                    <TextBox x:Name="tb_Mensaje" VerticalAlignment="Center" TextWrapping="NoWrap" AcceptsReturn="False" AcceptsTab="False" FontFamily="Comic Sans MS" FontSize="12" Height="20" Width="310" MaxLength="150" Margin="5,30"/>
-                    <Button x:Name="bt_Enviar" Content="Enviar" Height="20" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="16" Margin="10,0" Click="bt_Enviar_Click"/>
+                    <TextBox x:Name="tb_Mensaje" VerticalAlignment="Center" TextWrapping="NoWrap" AcceptsReturn="False" AcceptsTab="False" FontFamily="Gill Sans MT" FontSize="12" Height="20" Width="310" MaxLength="150" Margin="5,30"/>
+                    <Button x:Name="bt_Enviar" Content="Enviar" Height="20" VerticalAlignment="Center" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Margin="10,0" Click="Bt_Enviar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
                 </WrapPanel>
             </Grid>
         </Grid>

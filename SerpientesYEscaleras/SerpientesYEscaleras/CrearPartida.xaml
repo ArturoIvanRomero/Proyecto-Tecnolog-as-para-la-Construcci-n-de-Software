@@ -4,18 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SerpientesYEscaleras"
+        xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
     <DockPanel LastChildFill="True">
         <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
-            <Label Content="Crear Partida" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Showcard Gothic" FontSize="40"/>
+            <Label Content="{x:Static p:Resources.bt_CrearPartida}" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Verdana" FontSize="40" Foreground="White" FontWeight="Bold"/>
         </WrapPanel>
-        <Grid Width="250" DockPanel.Dock="Left">
+        <Grid Width="230" DockPanel.Dock="Left">
         </Grid>
-        <Grid Width="250" DockPanel.Dock="Right">
+        <Grid Width="230" DockPanel.Dock="Right">
         </Grid>
         <WrapPanel DockPanel.Dock="Bottom" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,100">
-            <Button x:Name="bt_Crear" Content="Crear" HorizontalAlignment="Center" Height="25" FontFamily="Showcard Gothic" FontSize="20"/>
+            <Button x:Name="bt_Crear" Content="{x:Static p:Resources.bt_Crear}" HorizontalAlignment="Center" Height="40" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_Crear_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         </WrapPanel>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
             <Grid.RowDefinitions>
@@ -23,16 +24,16 @@
                 <RowDefinition Height="45"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="140"/>
-                <ColumnDefinition Width="340"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
-            <Label Content="Nombre:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20"/>
-            <Label Content="Dificultad:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20"/>
-            <TextBox x:Name="tb_NombreUsuario" Grid.Row="0" Grid.Column="1" Height="30" MaxLength="20" VerticalAlignment="Center" FontFamily="Comic Sans MS"  FontSize="20"/>
-            <ComboBox x:Name="cb_Dificultad" Grid.Row="1" Grid.Column="1" Height="30" VerticalAlignment="Center" FontFamily="Showcard Gothic"  FontSize="20" SelectedIndex="0">
-                <ComboBoxItem Content="Normal"/>
-                <ComboBoxItem Content="Fácil"/>
-                <ComboBoxItem Content="Difícil"/>
+            <Label Content="{x:Static p:Resources.lb_Nombre}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontFamily="Verdana" FontSize="30" Foreground="White"/>
+            <Label Content="{x:Static p:Resources.lb_Dificultad}" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontFamily="Verdana" FontSize="30" Foreground="White"/>
+            <TextBox x:Name="tb_NombrePartida" Grid.Row="0" Grid.Column="1" Height="35" MaxLength="20" VerticalAlignment="Center" FontFamily="Gill Sans MT" FontSize="28"/>
+            <ComboBox x:Name="cb_Dificultad" Grid.Row="1" Grid.Column="1" Height="35" VerticalAlignment="Center" FontFamily="Gill Sans MT" FontSize="28" SelectedIndex="0" Background="White" BorderBrush="White">
+                <ComboBoxItem Content="{x:Static p:Resources.cbi_Normal}"/>
+                <ComboBoxItem Content="{x:Static p:Resources.cbi_Facil}"/>
+                <ComboBoxItem Content="{x:Static p:Resources.cbi_Dificil}"/>
             </ComboBox>
         </Grid>
     </DockPanel>
