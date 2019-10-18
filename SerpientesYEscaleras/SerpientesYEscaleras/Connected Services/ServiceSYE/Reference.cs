@@ -32,16 +32,10 @@ namespace SerpientesYEscaleras.ServiceSYE {
         private string CorreoElectronicoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SerpientesYEscaleras.ServiceSYE.Estadisticas EstadisticasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombreUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short PuntosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ValidadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short VictoriasField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -93,6 +87,19 @@ namespace SerpientesYEscaleras.ServiceSYE {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public SerpientesYEscaleras.ServiceSYE.Estadisticas Estadisticas {
+            get {
+                return this.EstadisticasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadisticasField, value) != true)) {
+                    this.EstadisticasField = value;
+                    this.RaisePropertyChanged("Estadisticas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string NombreUsuario {
             get {
                 return this.NombreUsuarioField;
@@ -105,6 +112,41 @@ namespace SerpientesYEscaleras.ServiceSYE {
             }
         }
         
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Estadisticas", Namespace="http://schemas.datacontract.org/2004/07/ServiceSYE")]
+    [System.SerializableAttribute()]
+    public partial class Estadisticas : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short PuntosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short VictoriasField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public short Puntos {
             get {
@@ -114,19 +156,6 @@ namespace SerpientesYEscaleras.ServiceSYE {
                 if ((this.PuntosField.Equals(value) != true)) {
                     this.PuntosField = value;
                     this.RaisePropertyChanged("Puntos");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Validado {
-            get {
-                return this.ValidadoField;
-            }
-            set {
-                if ((this.ValidadoField.Equals(value) != true)) {
-                    this.ValidadoField = value;
-                    this.RaisePropertyChanged("Validado");
                 }
             }
         }
@@ -154,33 +183,530 @@ namespace SerpientesYEscaleras.ServiceSYE {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Jugador", Namespace="http://schemas.datacontract.org/2004/07/DataAccess")]
+    [System.SerializableAttribute()]
+    public partial class Jugador1 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SerpientesYEscaleras.ServiceSYE.Estadisticas1 EstadisticasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdJugadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string codigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string contraseniaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string correoElectronicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nombreUsuarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SerpientesYEscaleras.ServiceSYE.Estadisticas1 Estadisticas {
+            get {
+                return this.EstadisticasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadisticasField, value) != true)) {
+                    this.EstadisticasField = value;
+                    this.RaisePropertyChanged("Estadisticas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdJugador {
+            get {
+                return this.IdJugadorField;
+            }
+            set {
+                if ((this.IdJugadorField.Equals(value) != true)) {
+                    this.IdJugadorField = value;
+                    this.RaisePropertyChanged("IdJugador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.codigoField, value) != true)) {
+                    this.codigoField = value;
+                    this.RaisePropertyChanged("codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string contrasenia {
+            get {
+                return this.contraseniaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.contraseniaField, value) != true)) {
+                    this.contraseniaField = value;
+                    this.RaisePropertyChanged("contrasenia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string correoElectronico {
+            get {
+                return this.correoElectronicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.correoElectronicoField, value) != true)) {
+                    this.correoElectronicoField = value;
+                    this.RaisePropertyChanged("correoElectronico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nombreUsuario {
+            get {
+                return this.nombreUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nombreUsuarioField, value) != true)) {
+                    this.nombreUsuarioField = value;
+                    this.RaisePropertyChanged("nombreUsuario");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Estadisticas", Namespace="http://schemas.datacontract.org/2004/07/DataAccess")]
+    [System.SerializableAttribute()]
+    public partial class Estadisticas1 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdEstadisticasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SerpientesYEscaleras.ServiceSYE.Jugador1 JugadorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short puntosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short victoriasField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdEstadisticas {
+            get {
+                return this.IdEstadisticasField;
+            }
+            set {
+                if ((this.IdEstadisticasField.Equals(value) != true)) {
+                    this.IdEstadisticasField = value;
+                    this.RaisePropertyChanged("IdEstadisticas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SerpientesYEscaleras.ServiceSYE.Jugador1 Jugador {
+            get {
+                return this.JugadorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JugadorField, value) != true)) {
+                    this.JugadorField = value;
+                    this.RaisePropertyChanged("Jugador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short puntos {
+            get {
+                return this.puntosField;
+            }
+            set {
+                if ((this.puntosField.Equals(value) != true)) {
+                    this.puntosField = value;
+                    this.RaisePropertyChanged("puntos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short victorias {
+            get {
+                return this.victoriasField;
+            }
+            set {
+                if ((this.victoriasField.Equals(value) != true)) {
+                    this.victoriasField = value;
+                    this.RaisePropertyChanged("victorias");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Partida", Namespace="http://schemas.datacontract.org/2004/07/ServiceSYE")]
+    [System.SerializableAttribute()]
+    public partial class Partida : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DificultadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SerpientesYEscaleras.ServiceSYE.Jugador[] JugadoresField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SerpientesYEscaleras.ServiceSYE.Tablero TableroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short TurnoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Dificultad {
+            get {
+                return this.DificultadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DificultadField, value) != true)) {
+                    this.DificultadField = value;
+                    this.RaisePropertyChanged("Dificultad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SerpientesYEscaleras.ServiceSYE.Jugador[] Jugadores {
+            get {
+                return this.JugadoresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JugadoresField, value) != true)) {
+                    this.JugadoresField = value;
+                    this.RaisePropertyChanged("Jugadores");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SerpientesYEscaleras.ServiceSYE.Tablero Tablero {
+            get {
+                return this.TableroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TableroField, value) != true)) {
+                    this.TableroField = value;
+                    this.RaisePropertyChanged("Tablero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Turno {
+            get {
+                return this.TurnoField;
+            }
+            set {
+                if ((this.TurnoField.Equals(value) != true)) {
+                    this.TurnoField = value;
+                    this.RaisePropertyChanged("Turno");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Tablero", Namespace="http://schemas.datacontract.org/2004/07/ServiceSYE")]
+    [System.SerializableAttribute()]
+    public partial class Tablero : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private SerpientesYEscaleras.ServiceSYE.Casilla[] CasillasField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public SerpientesYEscaleras.ServiceSYE.Casilla[] Casillas {
+            get {
+                return this.CasillasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CasillasField, value) != true)) {
+                    this.CasillasField = value;
+                    this.RaisePropertyChanged("Casillas");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Casilla", Namespace="http://schemas.datacontract.org/2004/07/ServiceSYE")]
+    [System.SerializableAttribute()]
+    public partial class Casilla : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool BonusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short MovimientoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short NumeroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Bonus {
+            get {
+                return this.BonusField;
+            }
+            set {
+                if ((this.BonusField.Equals(value) != true)) {
+                    this.BonusField = value;
+                    this.RaisePropertyChanged("Bonus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Movimiento {
+            get {
+                return this.MovimientoField;
+            }
+            set {
+                if ((this.MovimientoField.Equals(value) != true)) {
+                    this.MovimientoField = value;
+                    this.RaisePropertyChanged("Movimiento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Numero {
+            get {
+                return this.NumeroField;
+            }
+            set {
+                if ((this.NumeroField.Equals(value) != true)) {
+                    this.NumeroField = value;
+                    this.RaisePropertyChanged("Numero");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceSYE.IJugador")]
     public interface IJugador {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/AddJugador", ReplyAction="http://tempuri.org/IJugador/AddJugadorResponse")]
-        void AddJugador(SerpientesYEscaleras.ServiceSYE.Jugador jugador);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/RegistrarJugador", ReplyAction="http://tempuri.org/IJugador/RegistrarJugadorResponse")]
+        void RegistrarJugador(SerpientesYEscaleras.ServiceSYE.Jugador jugador);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/AddJugador", ReplyAction="http://tempuri.org/IJugador/AddJugadorResponse")]
-        System.Threading.Tasks.Task AddJugadorAsync(SerpientesYEscaleras.ServiceSYE.Jugador jugador);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/RegistrarJugador", ReplyAction="http://tempuri.org/IJugador/RegistrarJugadorResponse")]
+        System.Threading.Tasks.Task RegistrarJugadorAsync(SerpientesYEscaleras.ServiceSYE.Jugador jugador);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/GetJugador", ReplyAction="http://tempuri.org/IJugador/GetJugadorResponse")]
-        SerpientesYEscaleras.ServiceSYE.Jugador GetJugador(string nombreUsuario, string contrasenia);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/IniciarSesion", ReplyAction="http://tempuri.org/IJugador/IniciarSesionResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador IniciarSesion(string nombreUsuario, string contrasenia);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/GetJugador", ReplyAction="http://tempuri.org/IJugador/GetJugadorResponse")]
-        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> GetJugadorAsync(string nombreUsuario, string contrasenia);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/IniciarSesion", ReplyAction="http://tempuri.org/IJugador/IniciarSesionResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> IniciarSesionAsync(string nombreUsuario, string contrasenia);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/GetJugadoresPuntos", ReplyAction="http://tempuri.org/IJugador/GetJugadoresPuntosResponse")]
-        SerpientesYEscaleras.ServiceSYE.Jugador[] GetJugadoresPuntos();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadoresPuntos", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadoresPuntosResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador[] ObtenerJugadoresPuntos();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/GetJugadoresPuntos", ReplyAction="http://tempuri.org/IJugador/GetJugadoresPuntosResponse")]
-        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> GetJugadoresPuntosAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadoresPuntos", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadoresPuntosResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> ObtenerJugadoresPuntosAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/GetJugadoresVictorias", ReplyAction="http://tempuri.org/IJugador/GetJugadoresVictoriasResponse")]
-        SerpientesYEscaleras.ServiceSYE.Jugador[] GetJugadoresVictorias();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadoresVictorias", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadoresVictoriasResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador[] ObtenerJugadoresVictorias();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/GetJugadoresVictorias", ReplyAction="http://tempuri.org/IJugador/GetJugadoresVictoriasResponse")]
-        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> GetJugadoresVictoriasAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadoresVictorias", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadoresVictoriasResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> ObtenerJugadoresVictoriasAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/EnviarCodigoACorreo", ReplyAction="http://tempuri.org/IJugador/EnviarCodigoACorreoResponse")]
+        void EnviarCodigoACorreo(SerpientesYEscaleras.ServiceSYE.Jugador jugador, string asunto, string mensajeIngresar, string mensajeFinal);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/EnviarCodigoACorreo", ReplyAction="http://tempuri.org/IJugador/EnviarCodigoACorreoResponse")]
+        System.Threading.Tasks.Task EnviarCodigoACorreoAsync(SerpientesYEscaleras.ServiceSYE.Jugador jugador, string asunto, string mensajeIngresar, string mensajeFinal);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadorPorCodigo", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadorPorCodigoResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador ObtenerJugadorPorCodigo(string codigoVerificacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadorPorCodigo", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadorPorCodigoResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ObtenerJugadorPorCodigoAsync(string codigoVerificacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadorPorNombre", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadorPorNombreResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador ObtenerJugadorPorNombre(string nombreUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadorPorNombre", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadorPorNombreResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ObtenerJugadorPorNombreAsync(string nombreUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadorPorCorreo", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadorPorCorreoResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador ObtenerJugadorPorCorreo(string correoElectronico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ObtenerJugadorPorCorreo", ReplyAction="http://tempuri.org/IJugador/ObtenerJugadorPorCorreoResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ObtenerJugadorPorCorreoAsync(string correoElectronico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ValidarJugador", ReplyAction="http://tempuri.org/IJugador/ValidarJugadorResponse")]
+        void ValidarJugador(string correoElectronico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ValidarJugador", ReplyAction="http://tempuri.org/IJugador/ValidarJugadorResponse")]
+        System.Threading.Tasks.Task ValidarJugadorAsync(string correoElectronico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ValidarCodigo", ReplyAction="http://tempuri.org/IJugador/ValidarCodigoResponse")]
+        bool ValidarCodigo(string codigoVerificacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ValidarCodigo", ReplyAction="http://tempuri.org/IJugador/ValidarCodigoResponse")]
+        System.Threading.Tasks.Task<bool> ValidarCodigoAsync(string codigoVerificacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ModificarCodigo", ReplyAction="http://tempuri.org/IJugador/ModificarCodigoResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador ModificarCodigo(string codigoVerificacion, string nuevoCodigoVerificacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/ModificarCodigo", ReplyAction="http://tempuri.org/IJugador/ModificarCodigoResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ModificarCodigoAsync(string codigoVerificacion, string nuevoCodigoVerificacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/CrearJugador", ReplyAction="http://tempuri.org/IJugador/CrearJugadorResponse")]
+        SerpientesYEscaleras.ServiceSYE.Jugador CrearJugador(SerpientesYEscaleras.ServiceSYE.Jugador1[] jugador);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJugador/CrearJugador", ReplyAction="http://tempuri.org/IJugador/CrearJugadorResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> CrearJugadorAsync(SerpientesYEscaleras.ServiceSYE.Jugador1[] jugador);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -210,36 +736,175 @@ namespace SerpientesYEscaleras.ServiceSYE {
                 base(binding, remoteAddress) {
         }
         
-        public void AddJugador(SerpientesYEscaleras.ServiceSYE.Jugador jugador) {
-            base.Channel.AddJugador(jugador);
+        public void RegistrarJugador(SerpientesYEscaleras.ServiceSYE.Jugador jugador) {
+            base.Channel.RegistrarJugador(jugador);
         }
         
-        public System.Threading.Tasks.Task AddJugadorAsync(SerpientesYEscaleras.ServiceSYE.Jugador jugador) {
-            return base.Channel.AddJugadorAsync(jugador);
+        public System.Threading.Tasks.Task RegistrarJugadorAsync(SerpientesYEscaleras.ServiceSYE.Jugador jugador) {
+            return base.Channel.RegistrarJugadorAsync(jugador);
         }
         
-        public SerpientesYEscaleras.ServiceSYE.Jugador GetJugador(string nombreUsuario, string contrasenia) {
-            return base.Channel.GetJugador(nombreUsuario, contrasenia);
+        public SerpientesYEscaleras.ServiceSYE.Jugador IniciarSesion(string nombreUsuario, string contrasenia) {
+            return base.Channel.IniciarSesion(nombreUsuario, contrasenia);
         }
         
-        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> GetJugadorAsync(string nombreUsuario, string contrasenia) {
-            return base.Channel.GetJugadorAsync(nombreUsuario, contrasenia);
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> IniciarSesionAsync(string nombreUsuario, string contrasenia) {
+            return base.Channel.IniciarSesionAsync(nombreUsuario, contrasenia);
         }
         
-        public SerpientesYEscaleras.ServiceSYE.Jugador[] GetJugadoresPuntos() {
-            return base.Channel.GetJugadoresPuntos();
+        public SerpientesYEscaleras.ServiceSYE.Jugador[] ObtenerJugadoresPuntos() {
+            return base.Channel.ObtenerJugadoresPuntos();
         }
         
-        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> GetJugadoresPuntosAsync() {
-            return base.Channel.GetJugadoresPuntosAsync();
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> ObtenerJugadoresPuntosAsync() {
+            return base.Channel.ObtenerJugadoresPuntosAsync();
         }
         
-        public SerpientesYEscaleras.ServiceSYE.Jugador[] GetJugadoresVictorias() {
-            return base.Channel.GetJugadoresVictorias();
+        public SerpientesYEscaleras.ServiceSYE.Jugador[] ObtenerJugadoresVictorias() {
+            return base.Channel.ObtenerJugadoresVictorias();
         }
         
-        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> GetJugadoresVictoriasAsync() {
-            return base.Channel.GetJugadoresVictoriasAsync();
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador[]> ObtenerJugadoresVictoriasAsync() {
+            return base.Channel.ObtenerJugadoresVictoriasAsync();
+        }
+        
+        public void EnviarCodigoACorreo(SerpientesYEscaleras.ServiceSYE.Jugador jugador, string asunto, string mensajeIngresar, string mensajeFinal) {
+            base.Channel.EnviarCodigoACorreo(jugador, asunto, mensajeIngresar, mensajeFinal);
+        }
+        
+        public System.Threading.Tasks.Task EnviarCodigoACorreoAsync(SerpientesYEscaleras.ServiceSYE.Jugador jugador, string asunto, string mensajeIngresar, string mensajeFinal) {
+            return base.Channel.EnviarCodigoACorreoAsync(jugador, asunto, mensajeIngresar, mensajeFinal);
+        }
+        
+        public SerpientesYEscaleras.ServiceSYE.Jugador ObtenerJugadorPorCodigo(string codigoVerificacion) {
+            return base.Channel.ObtenerJugadorPorCodigo(codigoVerificacion);
+        }
+        
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ObtenerJugadorPorCodigoAsync(string codigoVerificacion) {
+            return base.Channel.ObtenerJugadorPorCodigoAsync(codigoVerificacion);
+        }
+        
+        public SerpientesYEscaleras.ServiceSYE.Jugador ObtenerJugadorPorNombre(string nombreUsuario) {
+            return base.Channel.ObtenerJugadorPorNombre(nombreUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ObtenerJugadorPorNombreAsync(string nombreUsuario) {
+            return base.Channel.ObtenerJugadorPorNombreAsync(nombreUsuario);
+        }
+        
+        public SerpientesYEscaleras.ServiceSYE.Jugador ObtenerJugadorPorCorreo(string correoElectronico) {
+            return base.Channel.ObtenerJugadorPorCorreo(correoElectronico);
+        }
+        
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ObtenerJugadorPorCorreoAsync(string correoElectronico) {
+            return base.Channel.ObtenerJugadorPorCorreoAsync(correoElectronico);
+        }
+        
+        public void ValidarJugador(string correoElectronico) {
+            base.Channel.ValidarJugador(correoElectronico);
+        }
+        
+        public System.Threading.Tasks.Task ValidarJugadorAsync(string correoElectronico) {
+            return base.Channel.ValidarJugadorAsync(correoElectronico);
+        }
+        
+        public bool ValidarCodigo(string codigoVerificacion) {
+            return base.Channel.ValidarCodigo(codigoVerificacion);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ValidarCodigoAsync(string codigoVerificacion) {
+            return base.Channel.ValidarCodigoAsync(codigoVerificacion);
+        }
+        
+        public SerpientesYEscaleras.ServiceSYE.Jugador ModificarCodigo(string codigoVerificacion, string nuevoCodigoVerificacion) {
+            return base.Channel.ModificarCodigo(codigoVerificacion, nuevoCodigoVerificacion);
+        }
+        
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> ModificarCodigoAsync(string codigoVerificacion, string nuevoCodigoVerificacion) {
+            return base.Channel.ModificarCodigoAsync(codigoVerificacion, nuevoCodigoVerificacion);
+        }
+        
+        public SerpientesYEscaleras.ServiceSYE.Jugador CrearJugador(SerpientesYEscaleras.ServiceSYE.Jugador1[] jugador) {
+            return base.Channel.CrearJugador(jugador);
+        }
+        
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Jugador> CrearJugadorAsync(SerpientesYEscaleras.ServiceSYE.Jugador1[] jugador) {
+            return base.Channel.CrearJugadorAsync(jugador);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceSYE.IPartida")]
+    public interface IPartida {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPartida/CrearPartida", ReplyAction="http://tempuri.org/IPartida/CrearPartidaResponse")]
+        void CrearPartida(SerpientesYEscaleras.ServiceSYE.Partida partida);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPartida/CrearPartida", ReplyAction="http://tempuri.org/IPartida/CrearPartidaResponse")]
+        System.Threading.Tasks.Task CrearPartidaAsync(SerpientesYEscaleras.ServiceSYE.Partida partida);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPartida/EliminarPartida", ReplyAction="http://tempuri.org/IPartida/EliminarPartidaResponse")]
+        void EliminarPartida(SerpientesYEscaleras.ServiceSYE.Partida partida);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPartida/EliminarPartida", ReplyAction="http://tempuri.org/IPartida/EliminarPartidaResponse")]
+        System.Threading.Tasks.Task EliminarPartidaAsync(SerpientesYEscaleras.ServiceSYE.Partida partida);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPartida/ActualizarPartidas", ReplyAction="http://tempuri.org/IPartida/ActualizarPartidasResponse")]
+        SerpientesYEscaleras.ServiceSYE.Partida[] ActualizarPartidas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPartida/ActualizarPartidas", ReplyAction="http://tempuri.org/IPartida/ActualizarPartidasResponse")]
+        System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Partida[]> ActualizarPartidasAsync();
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IPartidaChannel : SerpientesYEscaleras.ServiceSYE.IPartida, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class PartidaClient : System.ServiceModel.ClientBase<SerpientesYEscaleras.ServiceSYE.IPartida>, SerpientesYEscaleras.ServiceSYE.IPartida {
+        
+        public PartidaClient() {
+        }
+        
+        public PartidaClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public PartidaClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public PartidaClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public PartidaClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public void CrearPartida(SerpientesYEscaleras.ServiceSYE.Partida partida) {
+            base.Channel.CrearPartida(partida);
+        }
+        
+        public System.Threading.Tasks.Task CrearPartidaAsync(SerpientesYEscaleras.ServiceSYE.Partida partida) {
+            return base.Channel.CrearPartidaAsync(partida);
+        }
+        
+        public void EliminarPartida(SerpientesYEscaleras.ServiceSYE.Partida partida) {
+            base.Channel.EliminarPartida(partida);
+        }
+        
+        public System.Threading.Tasks.Task EliminarPartidaAsync(SerpientesYEscaleras.ServiceSYE.Partida partida) {
+            return base.Channel.EliminarPartidaAsync(partida);
+        }
+        
+        public SerpientesYEscaleras.ServiceSYE.Partida[] ActualizarPartidas() {
+            return base.Channel.ActualizarPartidas();
+        }
+        
+        public System.Threading.Tasks.Task<SerpientesYEscaleras.ServiceSYE.Partida[]> ActualizarPartidasAsync() {
+            return base.Channel.ActualizarPartidasAsync();
         }
     }
 }

@@ -5,17 +5,58 @@
       <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CorreoElectronico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estadisticas" nillable="true" type="tns:Estadisticas" />
       <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Puntos" type="xs:short" />
-      <xs:element minOccurs="0" name="Validado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Victorias" type="xs:short" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Jugador" nillable="true" type="tns:Jugador" />
+  <xs:complexType name="Estadisticas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Puntos" type="xs:short" />
+      <xs:element minOccurs="0" name="Victorias" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Estadisticas" nillable="true" type="tns:Estadisticas" />
   <xs:complexType name="ArrayOfJugador">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Jugador" nillable="true" type="tns:Jugador" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfJugador" nillable="true" type="tns:ArrayOfJugador" />
+  <xs:complexType name="Partida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dificultad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jugadores" nillable="true" type="tns:ArrayOfJugador" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tablero" nillable="true" type="tns:Tablero" />
+      <xs:element minOccurs="0" name="Turno" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Partida" nillable="true" type="tns:Partida" />
+  <xs:complexType name="Tablero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Casillas" nillable="true" type="tns:ArrayOfCasilla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tablero" nillable="true" type="tns:Tablero" />
+  <xs:complexType name="ArrayOfCasilla">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Casilla" nillable="true" type="tns:Casilla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCasilla" nillable="true" type="tns:ArrayOfCasilla" />
+  <xs:complexType name="Casilla">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bonus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Movimiento" type="xs:short" />
+      <xs:element minOccurs="0" name="Numero" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Casilla" nillable="true" type="tns:Casilla" />
+  <xs:complexType name="ArrayOfPartida">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Partida" nillable="true" type="tns:Partida" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPartida" nillable="true" type="tns:ArrayOfPartida" />
 </xs:schema>

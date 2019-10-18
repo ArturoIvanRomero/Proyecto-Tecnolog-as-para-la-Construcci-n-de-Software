@@ -118,210 +118,210 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="bt_Abandonar" xml:space="preserve">
-    <value>Abandonar</value>
+    <value>Leave</value>
   </data>
   <data name="bt_Aceptar" xml:space="preserve">
-    <value>Aceptar</value>
+    <value>Accept</value>
   </data>
   <data name="bt_Cancelar" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Cancel</value>
   </data>
   <data name="bt_Crear" xml:space="preserve">
-    <value>Crear</value>
+    <value>Create</value>
   </data>
   <data name="bt_CrearPartida" xml:space="preserve">
-    <value>Crear Partida</value>
+    <value>Create Game</value>
   </data>
   <data name="bt_Enviar" xml:space="preserve">
-    <value>Enviar</value>
+    <value>Send</value>
   </data>
   <data name="bt_Ingresar" xml:space="preserve">
-    <value>Ingresar</value>
+    <value>Sign in</value>
   </data>
   <data name="bt_OrdenarPuntos" xml:space="preserve">
-    <value>Ordenar por Puntos</value>
+    <value>Sort by Score</value>
   </data>
   <data name="bt_OrdenarVictorias" xml:space="preserve">
-    <value>Ordenar por Victorias</value>
+    <value>Sort by Victories</value>
   </data>
   <data name="bt_Salir" xml:space="preserve">
-    <value>Salir</value>
+    <value>Sign out</value>
   </data>
   <data name="bt_TablaPosiciones" xml:space="preserve">
-    <value>Tabla de Posiciones</value>
+    <value>Ranking</value>
   </data>
   <data name="bt_Unirse" xml:space="preserve">
-    <value>Unirse</value>
+    <value>Join</value>
   </data>
   <data name="bt_UnirsePartida" xml:space="preserve">
-    <value>Unirse a Partida</value>
+    <value>Join a Game</value>
   </data>
   <data name="cbi_Dificil" xml:space="preserve">
-    <value>Difícil</value>
+    <value>Hard</value>
   </data>
   <data name="cbi_Facil" xml:space="preserve">
-    <value>Fácil</value>
+    <value>Easy</value>
   </data>
   <data name="cbi_Normal" xml:space="preserve">
     <value>Normal</value>
   </data>
   <data name="dgc_Dificultad" xml:space="preserve">
-    <value>Dificultad</value>
+    <value>Dificulty</value>
   </data>
   <data name="dgc_Jugador" xml:space="preserve">
-    <value>Jugador</value>
+    <value>Player</value>
   </data>
   <data name="dgc_Mensajes" xml:space="preserve">
-    <value>Mensajes</value>
+    <value>Messages</value>
   </data>
   <data name="dgc_Nombre" xml:space="preserve">
-    <value>Nombre</value>
+    <value>Name</value>
   </data>
   <data name="lb_CodigoVerificacion" xml:space="preserve">
-    <value>Código de verificación:</value>
+    <value>Verification code:</value>
   </data>
   <data name="lb_ConfirmarContrasenia" xml:space="preserve">
-    <value>Confirmar contraseña:</value>
+    <value>Confirm password:</value>
   </data>
   <data name="lb_Contrasenia" xml:space="preserve">
-    <value>Contraseña:</value>
+    <value>Password:</value>
   </data>
   <data name="lb_CorreoElectronico" xml:space="preserve">
-    <value>Correo electrónico:</value>
+    <value>Email address:</value>
   </data>
   <data name="lb_Dificultad" xml:space="preserve">
-    <value>Dificultad:</value>
+    <value>Dificult:</value>
   </data>
   <data name="lb_EnviarCodigo" xml:space="preserve">
-    <value>Enviar de nuevo el código de verificación al usuario:</value>
+    <value>Send the verification code back to the user:</value>
   </data>
   <data name="lb_Esperando" xml:space="preserve">
-    <value>Esperando jugadores:</value>
+    <value>Waiting for players:</value>
   </data>
   <data name="lb_Fin" xml:space="preserve">
-    <value>FIN DEL JUEGO</value>
+    <value>GAME OVER</value>
   </data>
   <data name="lb_IniciarSesion" xml:space="preserve">
-    <value>Iniciar sesión</value>
+    <value>Sign in</value>
   </data>
   <data name="lb_Nombre" xml:space="preserve">
-    <value>Nombre:</value>
+    <value>Name:</value>
   </data>
   <data name="lb_NombreUsuario" xml:space="preserve">
-    <value>Nombre de usuario:</value>
+    <value>User name:</value>
   </data>
   <data name="lb_Partidas" xml:space="preserve">
-    <value>Partidas</value>
+    <value>Games</value>
   </data>
   <data name="lb_Puntos" xml:space="preserve">
-    <value>Puntos</value>
+    <value>Score</value>
   </data>
   <data name="lb_Registrarse" xml:space="preserve">
-    <value>Registrarse</value>
+    <value>Sign up</value>
   </data>
   <data name="lb_Resultados" xml:space="preserve">
-    <value>Resultados</value>
+    <value>Results</value>
   </data>
   <data name="lb_TablaPosiciones" xml:space="preserve">
-    <value>Tabla de Posiciones</value>
+    <value>Positions table</value>
   </data>
   <data name="lb_ValidarCuenta" xml:space="preserve">
-    <value>Validar cuenta</value>
+    <value>Validate account</value>
   </data>
   <data name="lb_Victorias" xml:space="preserve">
-    <value>Victorias</value>
+    <value>Wins</value>
   </data>
   <data name="mb_Alerta" xml:space="preserve">
-    <value>Alerta</value>
+    <value>Alert</value>
   </data>
   <data name="mb_CaracteresInvalidos" xml:space="preserve">
-    <value>Caracteres inválidos en el nombre de usuario, verifique sus datos.</value>
+    <value>Invalid characters in the user name, verify your information.</value>
   </data>
   <data name="mb_Codigo" xml:space="preserve">
-    <value>Código de verificación</value>
+    <value>Verification Code</value>
   </data>
   <data name="mb_CodigoEnviado" xml:space="preserve">
-    <value>Le hemos enviado de nuevo el código de verificación al correo:  </value>
+    <value>We have sent the verification code back to the email:</value>
   </data>
   <data name="mb_CodigoIncorrecto" xml:space="preserve">
-    <value>Código incorrecto.</value>
+    <value>Incorrect code.</value>
   </data>
   <data name="mb_CodigoVacio" xml:space="preserve">
-    <value>Ingrese un código.</value>
+    <value>Enter a code.</value>
   </data>
   <data name="mb_ContraseniaInvalida" xml:space="preserve">
-    <value>La contraseña debe tener 8 caracteres con una letra y un número, como mínimo.</value>
+    <value>The password must have 8 characters with at least one letter and one number.</value>
   </data>
   <data name="mb_ContraseniaNoCoincide" xml:space="preserve">
-    <value>No coincide la confirmación de la contraseña, verifique su contraseña.</value>
+    <value>Password confirmation does not match, verify your password.</value>
   </data>
   <data name="mb_CorreoEnviado" xml:space="preserve">
-    <value>Le hemos enviado un correo con el código de verificación, ingréselo para validar su cuenta.</value>
+    <value>We have sent you an email with the verification code, enter it to validate your account.</value>
   </data>
   <data name="mb_CorreoInvalido" xml:space="preserve">
-    <value>Correo electrónico inválido, verifique sus datos.</value>
+    <value>Invalid email address, verify your information.</value>
   </data>
   <data name="mb_CorreoOcupado" xml:space="preserve">
-    <value>Este correo ya fue registrado, ingrese otro correo.</value>
+    <value>This email has already been registered, enter another email.</value>
   </data>
   <data name="mb_CuentaNoValidada" xml:space="preserve">
-    <value>Esta cuenta aún no ha sido validada, valide su cuenta con el código de verificación.</value>
+    <value>This account has not yet been validated, validate your account with the verification code.</value>
   </data>
   <data name="mb_CuentaValidada" xml:space="preserve">
-    <value>Se validó la cuenta: </value>
+    <value>The account was validated: </value>
   </data>
   <data name="mb_CuentaYaVerificada" xml:space="preserve">
-    <value>Esta cuenta ya está verificada.</value>
+    <value>This account is already verified.</value>
   </data>
   <data name="mb_DatosVacios" xml:space="preserve">
-    <value>No ingreso todos los campos, ingrese sus datos.</value>
+    <value>You did not enter all your data, enter your information.</value>
   </data>
   <data name="mb_IngreseCodigo" xml:space="preserve">
-    <value>, ingréselo para validar su cuenta.</value>
+    <value>, enter it to validate your account.</value>
   </data>
   <data name="mb_IngreseJugador" xml:space="preserve">
-    <value>Ingrese el nombre de usuario al que quiere enviar el código.</value>
+    <value>Enter the username to which you want to send the code.</value>
   </data>
   <data name="mb_JugadorInexistente" xml:space="preserve">
-    <value>No existe este jugador, verifique su nombre de usuario.</value>
+    <value>This player does not exist, verify your username.</value>
   </data>
   <data name="mb_Listo" xml:space="preserve">
-    <value>Listo</value>
+    <value>Ready</value>
   </data>
   <data name="mb_NombreOcupado" xml:space="preserve">
-    <value>Este nombre de usuario ya está ocupado, ingrese otro nombre de usuario.</value>
+    <value>This username is already registered, enter another username.</value>
   </data>
   <data name="mb_NombreUsuarioOContraseniaIncorrectos" xml:space="preserve">
-    <value>Nombre de usuario o contraseña incorrectos, verifique sus datos.</value>
+    <value>Incorrect user name or password, verify your information.</value>
   </data>
   <data name="mb_NombreUsuarioOContraseniaVacios" xml:space="preserve">
-    <value>Nombre de usuario o contraseña vacios, ingrese sus datos.</value>
+    <value>Empty user name or password, enter your information.</value>
   </data>
   <data name="mb_NombreVacio" xml:space="preserve">
-    <value>Ingrese el nombre de la partida.</value>
+    <value>Enter the name of the game.</value>
   </data>
   <data name="mb_RegistroExitoso" xml:space="preserve">
-    <value>Se registró correctamente.</value>
+    <value>It was registered correctly.</value>
   </data>
   <data name="mb_SoloNumeros" xml:space="preserve">
-    <value>El código sólo puede tener números.</value>
+    <value>The code can only have numbers.</value>
   </data>
   <data name="mi_Espaniol" xml:space="preserve">
-    <value>Español</value>
+    <value>Spanish</value>
   </data>
   <data name="mi_Idioma" xml:space="preserve">
-    <value>Idioma</value>
+    <value>Language</value>
   </data>
   <data name="mi_Ingles" xml:space="preserve">
-    <value>Inglés</value>
+    <value>English</value>
   </data>
   <data name="ms_Asunto" xml:space="preserve">
-    <value>Código de verifiación Serpientes Y Escaleras</value>
+    <value>Verification code Serpientes Y Escaleras</value>
   </data>
   <data name="ms_IngresaCodigo" xml:space="preserve">
-    <value>Ingresa el siguiente código:&lt;br/&gt;</value>
+    <value>Enter the code:&lt;br/&gt;</value>
   </data>
   <data name="ms_Mensaje" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;No compartas este código con nadie ya que es necesario para verificar su cuenta en Serpientes y Escaleras.&lt;br/&gt;&lt;br/&gt;¡Gracias por jugar con nosotros!</value>
+    <value>&lt;br/&gt;&lt;br/&gt;Do not share this code with anyone it is necessary to verify your account in Serpientes y Escaleras.&lt;br/&gt;&lt;br/&gt;Thanks for playing with us!</value>
   </data>
 </root>

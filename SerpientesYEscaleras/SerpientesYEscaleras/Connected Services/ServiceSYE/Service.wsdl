@@ -29,60 +29,202 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_IPartida_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceSYE" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IJugador_AddJugador_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddJugador" />
+  <wsdl:message name="IJugador_RegistrarJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarJugador" />
   </wsdl:message>
-  <wsdl:message name="IJugador_AddJugador_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddJugadorResponse" />
+  <wsdl:message name="IJugador_RegistrarJugador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarJugadorResponse" />
   </wsdl:message>
-  <wsdl:message name="IJugador_GetJugador_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetJugador" />
+  <wsdl:message name="IJugador_IniciarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesion" />
   </wsdl:message>
-  <wsdl:message name="IJugador_GetJugador_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetJugadorResponse" />
+  <wsdl:message name="IJugador_IniciarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
   </wsdl:message>
-  <wsdl:message name="IJugador_GetJugadoresPuntos_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetJugadoresPuntos" />
+  <wsdl:message name="IJugador_ObtenerJugadoresPuntos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadoresPuntos" />
   </wsdl:message>
-  <wsdl:message name="IJugador_GetJugadoresPuntos_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetJugadoresPuntosResponse" />
+  <wsdl:message name="IJugador_ObtenerJugadoresPuntos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadoresPuntosResponse" />
   </wsdl:message>
-  <wsdl:message name="IJugador_GetJugadoresVictorias_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetJugadoresVictorias" />
+  <wsdl:message name="IJugador_ObtenerJugadoresVictorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadoresVictorias" />
   </wsdl:message>
-  <wsdl:message name="IJugador_GetJugadoresVictorias_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetJugadoresVictoriasResponse" />
+  <wsdl:message name="IJugador_ObtenerJugadoresVictorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadoresVictoriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_EnviarCodigoACorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCodigoACorreo" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_EnviarCodigoACorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCodigoACorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ObtenerJugadorPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadorPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ObtenerJugadorPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadorPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ObtenerJugadorPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadorPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ObtenerJugadorPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadorPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ObtenerJugadorPorCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadorPorCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ObtenerJugadorPorCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerJugadorPorCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ValidarJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarJugador" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ValidarJugador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarJugadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ValidarCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ValidarCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ModificarCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ModificarCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_CrearJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearJugador" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_CrearJugador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearJugadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_CrearPartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPartida" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_CrearPartida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_EliminarPartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPartida" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_EliminarPartida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_ActualizarPartidas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPartidas" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_ActualizarPartidas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPartidasResponse" />
   </wsdl:message>
   <wsdl:portType name="IJugador">
-    <wsdl:operation name="AddJugador">
-      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/AddJugador" message="tns:IJugador_AddJugador_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/AddJugadorResponse" message="tns:IJugador_AddJugador_OutputMessage" />
+    <wsdl:operation name="RegistrarJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/RegistrarJugador" message="tns:IJugador_RegistrarJugador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/RegistrarJugadorResponse" message="tns:IJugador_RegistrarJugador_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetJugador">
-      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/GetJugador" message="tns:IJugador_GetJugador_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/GetJugadorResponse" message="tns:IJugador_GetJugador_OutputMessage" />
+    <wsdl:operation name="IniciarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/IniciarSesion" message="tns:IJugador_IniciarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/IniciarSesionResponse" message="tns:IJugador_IniciarSesion_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetJugadoresPuntos">
-      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/GetJugadoresPuntos" message="tns:IJugador_GetJugadoresPuntos_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/GetJugadoresPuntosResponse" message="tns:IJugador_GetJugadoresPuntos_OutputMessage" />
+    <wsdl:operation name="ObtenerJugadoresPuntos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadoresPuntos" message="tns:IJugador_ObtenerJugadoresPuntos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadoresPuntosResponse" message="tns:IJugador_ObtenerJugadoresPuntos_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetJugadoresVictorias">
-      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/GetJugadoresVictorias" message="tns:IJugador_GetJugadoresVictorias_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/GetJugadoresVictoriasResponse" message="tns:IJugador_GetJugadoresVictorias_OutputMessage" />
+    <wsdl:operation name="ObtenerJugadoresVictorias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadoresVictorias" message="tns:IJugador_ObtenerJugadoresVictorias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadoresVictoriasResponse" message="tns:IJugador_ObtenerJugadoresVictorias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCodigoACorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/EnviarCodigoACorreo" message="tns:IJugador_EnviarCodigoACorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/EnviarCodigoACorreoResponse" message="tns:IJugador_EnviarCodigoACorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerJugadorPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorCodigo" message="tns:IJugador_ObtenerJugadorPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorCodigoResponse" message="tns:IJugador_ObtenerJugadorPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerJugadorPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorNombre" message="tns:IJugador_ObtenerJugadorPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorNombreResponse" message="tns:IJugador_ObtenerJugadorPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerJugadorPorCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorCorreo" message="tns:IJugador_ObtenerJugadorPorCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorCorreoResponse" message="tns:IJugador_ObtenerJugadorPorCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ValidarJugador" message="tns:IJugador_ValidarJugador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ValidarJugadorResponse" message="tns:IJugador_ValidarJugador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ValidarCodigo" message="tns:IJugador_ValidarCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ValidarCodigoResponse" message="tns:IJugador_ValidarCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ModificarCodigo" message="tns:IJugador_ModificarCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ModificarCodigoResponse" message="tns:IJugador_ModificarCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/CrearJugador" message="tns:IJugador_CrearJugador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/CrearJugadorResponse" message="tns:IJugador_CrearJugador_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPartida">
+    <wsdl:operation name="CrearPartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/CrearPartida" message="tns:IPartida_CrearPartida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/CrearPartidaResponse" message="tns:IPartida_CrearPartida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/EliminarPartida" message="tns:IPartida_EliminarPartida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/EliminarPartidaResponse" message="tns:IPartida_EliminarPartida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPartidas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/ActualizarPartidas" message="tns:IPartida_ActualizarPartidas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/ActualizarPartidasResponse" message="tns:IPartida_ActualizarPartidas_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IJugador" type="tns:IJugador">
     <wsp:PolicyReference URI="#NetTcpBinding_IJugador_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="AddJugador">
-      <soap12:operation soapAction="http://tempuri.org/IJugador/AddJugador" style="document" />
+    <wsdl:operation name="RegistrarJugador">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/RegistrarJugador" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -90,8 +232,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetJugador">
-      <soap12:operation soapAction="http://tempuri.org/IJugador/GetJugador" style="document" />
+    <wsdl:operation name="IniciarSesion">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/IniciarSesion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -99,8 +241,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetJugadoresPuntos">
-      <soap12:operation soapAction="http://tempuri.org/IJugador/GetJugadoresPuntos" style="document" />
+    <wsdl:operation name="ObtenerJugadoresPuntos">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ObtenerJugadoresPuntos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -108,8 +250,111 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetJugadoresVictorias">
-      <soap12:operation soapAction="http://tempuri.org/IJugador/GetJugadoresVictorias" style="document" />
+    <wsdl:operation name="ObtenerJugadoresVictorias">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ObtenerJugadoresVictorias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCodigoACorreo">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/EnviarCodigoACorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerJugadorPorCodigo">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ObtenerJugadorPorCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerJugadorPorNombre">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ObtenerJugadorPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerJugadorPorCorreo">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ObtenerJugadorPorCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarJugador">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ValidarJugador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarCodigo">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ValidarCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCodigo">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ModificarCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearJugador">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/CrearJugador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IPartida" type="tns:IPartida">
+    <wsp:PolicyReference URI="#NetTcpBinding_IPartida_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="CrearPartida">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/CrearPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPartida">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/EliminarPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPartidas">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/ActualizarPartidas" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -120,6 +365,15 @@
   </wsdl:binding>
   <wsdl:service name="Service">
     <wsdl:port name="NetTcpBinding_IJugador" binding="tns:NetTcpBinding_IJugador">
+      <soap12:address location="net.tcp://localhost:8091/CalculatorService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8091/CalculatorService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>LAPTOP-LSK6UDI7\Arturo</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IPartida" binding="tns:NetTcpBinding_IPartida">
       <soap12:address location="net.tcp://localhost:8091/CalculatorService" />
       <wsa10:EndpointReference>
         <wsa10:Address>net.tcp://localhost:8091/CalculatorService</wsa10:Address>
