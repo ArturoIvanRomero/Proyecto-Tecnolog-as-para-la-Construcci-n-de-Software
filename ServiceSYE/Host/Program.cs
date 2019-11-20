@@ -10,7 +10,8 @@ namespace Host {
     static void Main(string[] args) {
       using (ServiceHost host = new ServiceHost(typeof(ServiceSYE.Service))) {
         host.Open();
-        Console.WriteLine("Service is running");
+        Console.WriteLine("El servicio está corriendo...");
+        Console.Write("Presione Enter para salir.");
         Console.ReadLine();
       }
     }
