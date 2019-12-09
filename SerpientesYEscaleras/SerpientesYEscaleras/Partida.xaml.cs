@@ -728,7 +728,7 @@ namespace SerpientesYEscaleras {
     /// Nombre del jugador que no se activará el botón de abandonar.
     /// </param>
     public void ActivarAbandonar(String nombreUsuario) {
-      if (!Jugador.NombreUsuario.Equals(nombreUsuario) || PartidaEnJuego.JugadoresPartida.Count == 1) {
+      if (!Jugador.NombreUsuario.Equals(nombreUsuario)) {
         bt_Abandonar.IsEnabled = true;
       }
     }

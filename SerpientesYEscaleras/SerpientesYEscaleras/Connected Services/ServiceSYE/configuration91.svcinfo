@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/GGV2KeIAz1oMPIYbFzrmjDLITc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="PzzPPPpbIZ3L5QXa9Oh7IVXaN24=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_IJugador">
       <properties>
@@ -357,10 +357,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NetTcpBinding_IJugador" contract="ServiceSYE.IJugador" bindingType="netTcpBinding" address="net.tcp://192.168.43.171/CalculatorService" bindingConfiguration="NetTcpBinding_IJugador">
+    <endpoint name="NetTcpBinding_IJugador" contract="ServiceSYE.IJugador" bindingType="netTcpBinding" address="net.tcp://localhost:8091/CalculatorService" bindingConfiguration="NetTcpBinding_IJugador">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://192.168.43.171/CalculatorService</serializedValue>
+          <serializedValue>net.tcp://localhost:8091/CalculatorService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -442,10 +442,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_IPartida" contract="ServiceSYE.IPartida" bindingType="netTcpBinding" address="net.tcp://192.168.43.171/CalculatorService" bindingConfiguration="NetTcpBinding_IPartida">
+    <endpoint name="NetTcpBinding_IPartida" contract="ServiceSYE.IPartida" bindingType="netTcpBinding" address="net.tcp://localhost:8091/CalculatorService" bindingConfiguration="NetTcpBinding_IPartida">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://192.168.43.171/CalculatorService</serializedValue>
+          <serializedValue>net.tcp://localhost:8091/CalculatorService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -527,10 +527,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_IChat" contract="ServiceSYE.IChat" bindingType="netTcpBinding" address="net.tcp://192.168.43.171/CalculatorService" bindingConfiguration="NetTcpBinding_IChat">
+    <endpoint name="NetTcpBinding_IChat" contract="ServiceSYE.IChat" bindingType="netTcpBinding" address="net.tcp://localhost:8091/CalculatorService" bindingConfiguration="NetTcpBinding_IChat">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://192.168.43.171/CalculatorService</serializedValue>
+          <serializedValue>net.tcp://localhost:8091/CalculatorService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

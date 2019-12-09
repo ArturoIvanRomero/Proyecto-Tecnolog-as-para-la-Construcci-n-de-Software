@@ -26,11 +26,11 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceSYE" />
-      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
-      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceSYE" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IJugador_RegistrarJugador_InputMessage">
@@ -693,21 +693,21 @@
   </wsdl:binding>
   <wsdl:service name="Service">
     <wsdl:port name="NetTcpBinding_IJugador" binding="tns:NetTcpBinding_IJugador">
-      <soap12:address location="net.tcp://192.168.43.171/CalculatorService" />
+      <soap12:address location="net.tcp://localhost:8091/CalculatorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.43.171/CalculatorService</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:8091/CalculatorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_IPartida" binding="tns:NetTcpBinding_IPartida">
-      <soap12:address location="net.tcp://192.168.43.171/CalculatorService" />
+      <soap12:address location="net.tcp://localhost:8091/CalculatorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.43.171/CalculatorService</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:8091/CalculatorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_IChat" binding="tns:NetTcpBinding_IChat">
-      <soap12:address location="net.tcp://192.168.43.171/CalculatorService" />
+      <soap12:address location="net.tcp://localhost:8091/CalculatorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.43.171/CalculatorService</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:8091/CalculatorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>
