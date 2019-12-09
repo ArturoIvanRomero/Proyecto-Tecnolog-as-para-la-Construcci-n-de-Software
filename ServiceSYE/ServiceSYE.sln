@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{A5C361EF-DEA5-4998-A2F1-6EEA2E99C075}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceSYETests", "ServiceSYETests\ServiceSYETests.csproj", "{6F38E7CC-1A15-4019-BDB6-6A6EA86BE7C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceSYETestsException", "ServiceSYETests1\ServiceSYETestsException.csproj", "{5B8A9BFA-32F6-44C5-907A-452E52BB3E5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{A5C361EF-DEA5-4998-A2F1-6EEA2E99C075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5C361EF-DEA5-4998-A2F1-6EEA2E99C075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5C361EF-DEA5-4998-A2F1-6EEA2E99C075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F38E7CC-1A15-4019-BDB6-6A6EA86BE7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F38E7CC-1A15-4019-BDB6-6A6EA86BE7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F38E7CC-1A15-4019-BDB6-6A6EA86BE7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F38E7CC-1A15-4019-BDB6-6A6EA86BE7C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8A9BFA-32F6-44C5-907A-452E52BB3E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8A9BFA-32F6-44C5-907A-452E52BB3E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8A9BFA-32F6-44C5-907A-452E52BB3E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8A9BFA-32F6-44C5-907A-452E52BB3E5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

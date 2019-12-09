@@ -12,18 +12,21 @@
             <Label Content="{x:Static p:Resources.bt_TablaPosiciones}" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Verdana" FontSize="40" Foreground="White" FontWeight="Bold"/>
         </WrapPanel>
         <Grid Width="250" DockPanel.Dock="Left">
+            <Image x:Name="i_Posicion" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label x:Name="lb_Posicion" HorizontalAlignment="Center" FontFamily="Verdana" Foreground="Black" FontWeight="Bold"/>
         </Grid>
         <Grid Width="250" DockPanel.Dock="Right">
+            <Image Source="Imagenes/MenuPrincipal/Posiciones.png" VerticalAlignment="Top" Margin="10,100"/>
         </Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="300"/>
                 <RowDefinition Height="45"/>
             </Grid.RowDefinitions>
-            <DataGrid Name="dg_Jugadores" Grid.Row="0" AutoGenerateColumns="False" Height="300" Width="auto" FontFamily="Verdana" FontSize="30" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,50">
+            <DataGrid Name="dg_Jugadores" Grid.Row="0" AutoGenerateColumns="False" Height="250" Width="auto" FontFamily="Verdana" FontSize="30" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,50" SelectedCellsChanged="Dg_Jugadores_SelectedCellsChanged" Background="White" Foreground="#FF376092" BorderBrush="White">
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="dgc_Jugador" Header="{x:Static p:Resources.dgc_Jugador}" Width="*" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding NombreUsuario}"/>
-                    <DataGridTextColumn x:Name="dgc_Posicion" Header="{x:Static p:Resources.lb_Puntos}" Width="200" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding Estadisticas.Puntos}"/>
+                    <DataGridTextColumn x:Name="dgc_Posicion" Header="{x:Static p:Resources.mi_Puntos}" Width="200" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding Estadisticas.Puntos}"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="bt_Ordenar" Content="{x:Static p:Resources.bt_OrdenarVictorias}" Grid.Row="1" HorizontalAlignment="Center" Height="40" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_Ordenar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>

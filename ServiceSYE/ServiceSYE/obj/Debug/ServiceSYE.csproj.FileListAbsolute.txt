@@ -12,3 +12,5 @@ C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Softwa
 C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.csproj.CopyComplete
 C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.dll
 C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.csproj.GenerateResource.cache
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\ServiceSYE\ServiceSYE\obj\Debug\ServiceSYE.Properties.Resources.resources

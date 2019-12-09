@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SerpientesYEscaleras"
         xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="500" Width="700" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
+        Title="SERPIENTES Y ESCALERAS" Height="550" Width="700" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092" Closing="Window_Closing">
     <DockPanel LastChildFill="True">
         <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
             <Label Content="{x:Static p:Resources.lb_Fin}" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="40" Foreground="White" FontWeight="Bold" Margin="0,30,0,0"/>
@@ -15,16 +15,16 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="45"/>
                 <RowDefinition Height="210"/>
-                <RowDefinition Height="45"/>
+                <RowDefinition Height="90"/>
             </Grid.RowDefinitions>
-            <Label Content="{x:Static p:Resources.lb_Resultados}" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" Foreground="White" Margin="0,0,0,0"/>
-            <DataGrid Name="dg_Jugadores" Grid.Row="1" AutoGenerateColumns="False" Height="300" Width="auto" FontFamily="Verdana" FontSize="30" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,50">
+            <Label Content="{x:Static p:Resources.lb_Resultados}" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" Foreground="White"/>
+            <DataGrid Name="dg_Jugadores" Grid.Row="1" AutoGenerateColumns="False" Height="200" Width="auto" FontFamily="Verdana" FontSize="30" IsReadOnly="True" SelectionMode="Single" Background="White" Foreground="#FF376092" BorderBrush="White">
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="dgc_Jugador" Header="{x:Static p:Resources.dgc_Jugador}" Width="*" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding NombreUsuario}"/>
-                    <DataGridTextColumn x:Name="dgc_Posicion" Header="{x:Static p:Resources.lb_Puntos}" Width="150" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding Estadisticas.Puntos}"/>
+                    <DataGridTextColumn x:Name="dgc_Posicion" Header="{x:Static p:Resources.dcg_Puntos}" Width="150" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding Estadisticas.Puntos}"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="bt_Aceptar" Content="{x:Static p:Resources.bt_Aceptar}" Grid.Row="2" Height="40" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_Aceptar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+            <Button x:Name="bt_Aceptar" Content="{x:Static p:Resources.bt_Aceptar}" Grid.Row="2" Height="40" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Margin="0,50,0,0" Click="Bt_Aceptar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         </Grid>
      </DockPanel>
 </Window>

@@ -1,14 +1,31 @@
 ﻿<Window x:Class="SerpientesYEscaleras.Espera"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SerpientesYEscaleras"
         xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092">
+        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092" Closing="Window_Closing">
     <DockPanel LastChildFill="True">
-        <Label x:Name="lb_Esperando" Content="{x:Static p:Resources.lb_Esperando}" DockPanel.Dock="Top" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="50" Foreground="White" FontWeight="Bold" Margin="0,50,0,0"/>
-        <Button x:Name="bt_Cancelar" Content="{x:Static p:Resources.bt_Cancelar}" DockPanel.Dock="Bottom" Height="40" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Margin="0,0,0,100" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <DockPanel LastChildFill="True" DockPanel.Dock="Left">
+            <Label x:Name="lb_Esperando" Content="{x:Static p:Resources.lb_Esperando}" DockPanel.Dock="Top" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="50" Foreground="White" FontWeight="Bold" Margin="100,0,100,0"/>
+            <Button x:Name="bt_Cancelar" Content="{x:Static p:Resources.bt_Cancelar}" DockPanel.Dock="Bottom" Height="40" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Margin="0,0,0,100" Click="Bt_Cancelar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+            <Grid>
+                <Image Height="400" Margin="0,50" Source="Imagenes/Espera/SerpienteTiempo.png"/>
+                <Image Height="200" Source="Imagenes/Espera/Circulo.png"/>
+                <Image Height="700" Width="700" gif:ImageBehavior.RepeatBehavior="10000x" gif:ImageBehavior.AnimatedSource="Imagenes/Espera/Espera.gif"/>
+            </Grid>
+        </DockPanel>
+        <WrapPanel DockPanel.Dock="Right" Orientation="Vertical" Width="auto">
+            <GroupBox Height="500" Header="{x:Static p:Resources.gb_Mensajes}" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold" Width="500" Margin="0,100,0,0">
+                <TextBox x:Name="tb_Mensajes" Height="450" TextWrapping="Wrap" IsReadOnly="True" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Gill Sans MT" FontSize="12" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+            </GroupBox>
+            <WrapPanel Orientation="Horizontal">
+                <TextBox x:Name="tb_Mensaje" VerticalAlignment="Center" TextWrapping="NoWrap" AcceptsReturn="False" AcceptsTab="False" FontFamily="Gill Sans MT" FontSize="20" Height="30" Width="380" MaxLength="150" Margin="5,30" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+                <Button x:Name="Enviar" Content="{x:Static p:Resources.bt_Enviar}" VerticalAlignment="Center" FontFamily="Verdana" FontSize="20" FontWeight="Bold" Margin="10,0" Click="Bt_Enviar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+            </WrapPanel>
+        </WrapPanel>
     </DockPanel>
 </Window>

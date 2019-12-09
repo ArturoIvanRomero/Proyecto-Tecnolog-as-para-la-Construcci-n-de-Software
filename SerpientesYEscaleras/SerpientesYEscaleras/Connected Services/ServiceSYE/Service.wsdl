@@ -4,27 +4,6 @@
     <wsp:ExactlyOne>
       <wsp:All>
         <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
-        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:TransportToken>
-              <wsp:Policy>
-                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
-                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
-                </msf:WindowsTransportSecurity>
-              </wsp:Policy>
-            </sp:TransportToken>
-            <sp:AlgorithmSuite>
-              <wsp:Policy>
-                <sp:Basic256 />
-              </wsp:Policy>
-            </sp:AlgorithmSuite>
-            <sp:Layout>
-              <wsp:Policy>
-                <sp:Strict />
-              </wsp:Policy>
-            </sp:Layout>
-          </wsp:Policy>
-        </sp:TransportBinding>
         <wsaw:UsingAddressing />
       </wsp:All>
     </wsp:ExactlyOne>
@@ -33,37 +12,25 @@
     <wsp:ExactlyOne>
       <wsp:All>
         <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
-        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:TransportToken>
-              <wsp:Policy>
-                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
-                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
-                </msf:WindowsTransportSecurity>
-              </wsp:Policy>
-            </sp:TransportToken>
-            <sp:AlgorithmSuite>
-              <wsp:Policy>
-                <sp:Basic256 />
-              </wsp:Policy>
-            </sp:AlgorithmSuite>
-            <sp:Layout>
-              <wsp:Policy>
-                <sp:Strict />
-              </wsp:Policy>
-            </sp:Layout>
-          </wsp:Policy>
-        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_IChat_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
         <wsaw:UsingAddressing />
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceSYE" />
-      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
+      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceSYE" />
+      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
+      <xsd:import schemaLocation="http://192.168.43.171/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IJugador_RegistrarJugador_InputMessage">
@@ -77,6 +44,24 @@
   </wsdl:message>
   <wsdl:message name="IJugador_IniciarSesion_OutputMessage">
     <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_UnirseAlJuego_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnirseAlJuego" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_UnirseAlJuego_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnirseAlJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_SalirDelJuego_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalirDelJuego" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_SalirDelJuego_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalirDelJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ValidarConectado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarConectado" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ValidarConectado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarConectadoResponse" />
   </wsdl:message>
   <wsdl:message name="IJugador_ObtenerJugadoresPuntos_InputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerJugadoresPuntos" />
@@ -114,11 +99,11 @@
   <wsdl:message name="IJugador_ObtenerJugadorPorCorreo_OutputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerJugadorPorCorreoResponse" />
   </wsdl:message>
-  <wsdl:message name="IJugador_ValidarJugador_InputMessage">
-    <wsdl:part name="parameters" element="tns:ValidarJugador" />
+  <wsdl:message name="IJugador_ValidarCuentaJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCuentaJugador" />
   </wsdl:message>
-  <wsdl:message name="IJugador_ValidarJugador_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ValidarJugadorResponse" />
+  <wsdl:message name="IJugador_ValidarCuentaJugador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCuentaJugadorResponse" />
   </wsdl:message>
   <wsdl:message name="IJugador_ValidarCodigo_InputMessage">
     <wsdl:part name="parameters" element="tns:ValidarCodigo" />
@@ -132,6 +117,12 @@
   <wsdl:message name="IJugador_ModificarCodigo_OutputMessage">
     <wsdl:part name="parameters" element="tns:ModificarCodigoResponse" />
   </wsdl:message>
+  <wsdl:message name="IJugador_ModificarEstadisticas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstadisticas" />
+  </wsdl:message>
+  <wsdl:message name="IJugador_ModificarEstadisticas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstadisticasResponse" />
+  </wsdl:message>
   <wsdl:message name="IJugador_CrearJugador_InputMessage">
     <wsdl:part name="parameters" element="tns:CrearJugador" />
   </wsdl:message>
@@ -144,17 +135,98 @@
   <wsdl:message name="IPartida_CrearPartida_OutputMessage">
     <wsdl:part name="parameters" element="tns:CrearPartidaResponse" />
   </wsdl:message>
-  <wsdl:message name="IPartida_EliminarPartida_InputMessage">
-    <wsdl:part name="parameters" element="tns:EliminarPartida" />
+  <wsdl:message name="IPartida_ObtenerPartidas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPartidas" />
   </wsdl:message>
-  <wsdl:message name="IPartida_EliminarPartida_OutputMessage">
-    <wsdl:part name="parameters" element="tns:EliminarPartidaResponse" />
+  <wsdl:message name="IPartida_ObtenerPartidas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPartidasResponse" />
   </wsdl:message>
-  <wsdl:message name="IPartida_ActualizarPartidas_InputMessage">
+  <wsdl:message name="IPartida_ValidarNombrePartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarNombrePartida" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_ValidarNombrePartida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarNombrePartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_VerPartidas_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerPartidas" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_VerPartidas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerPartidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_SalirVerPartidas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalirVerPartidas" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_SalirVerPartidas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalirVerPartidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_UnirsePartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnirsePartida" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_UnirsePartida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnirsePartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_SalirPartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalirPartida" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_SalirPartida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalirPartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_SalirPartidaEnJuego_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalirPartidaEnJuego" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_SalirPartidaEnJuego_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalirPartidaEnJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_ObtenerPartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPartida" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_ObtenerPartida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPartidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_CambiarTurno_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarTurno" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_CambiarTurno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_MovimientoEspecial_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovimientoEspecial" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_MovimientoEspecial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovimientoEspecialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_CambiarPosicionBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarPosicionBonus" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_CambiarPosicionBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarPosicionBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartida_ActualizarPartidas_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:ActualizarPartidas" />
   </wsdl:message>
-  <wsdl:message name="IPartida_ActualizarPartidas_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ActualizarPartidasResponse" />
+  <wsdl:message name="IPartida_Tirar_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:Tirar" />
+  </wsdl:message>
+  <wsdl:message name="IChat_UnirseChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnirseChat" />
+  </wsdl:message>
+  <wsdl:message name="IChat_EnviarMensaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarMensaje" />
+  </wsdl:message>
+  <wsdl:message name="IChat_EnviarMensajePartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarMensajePartida" />
+  </wsdl:message>
+  <wsdl:message name="IChat_SalirChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalirChat" />
+  </wsdl:message>
+  <wsdl:message name="IChat_SalirChatPartida_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalirChatPartida" />
+  </wsdl:message>
+  <wsdl:message name="IChat_RecibeMensaje_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecibeMensaje" />
+  </wsdl:message>
+  <wsdl:message name="IChat_RecibeMensajePartida_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecibeMensajePartida" />
   </wsdl:message>
   <wsdl:portType name="IJugador">
     <wsdl:operation name="RegistrarJugador">
@@ -164,6 +236,18 @@
     <wsdl:operation name="IniciarSesion">
       <wsdl:input wsaw:Action="http://tempuri.org/IJugador/IniciarSesion" message="tns:IJugador_IniciarSesion_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IJugador/IniciarSesionResponse" message="tns:IJugador_IniciarSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnirseAlJuego">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/UnirseAlJuego" message="tns:IJugador_UnirseAlJuego_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/UnirseAlJuegoResponse" message="tns:IJugador_UnirseAlJuego_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalirDelJuego">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/SalirDelJuego" message="tns:IJugador_SalirDelJuego_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/SalirDelJuegoResponse" message="tns:IJugador_SalirDelJuego_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarConectado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ValidarConectado" message="tns:IJugador_ValidarConectado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ValidarConectadoResponse" message="tns:IJugador_ValidarConectado_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ObtenerJugadoresPuntos">
       <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadoresPuntos" message="tns:IJugador_ObtenerJugadoresPuntos_InputMessage" />
@@ -189,9 +273,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorCorreo" message="tns:IJugador_ObtenerJugadorPorCorreo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ObtenerJugadorPorCorreoResponse" message="tns:IJugador_ObtenerJugadorPorCorreo_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ValidarJugador">
-      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ValidarJugador" message="tns:IJugador_ValidarJugador_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ValidarJugadorResponse" message="tns:IJugador_ValidarJugador_OutputMessage" />
+    <wsdl:operation name="ValidarCuentaJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ValidarCuentaJugador" message="tns:IJugador_ValidarCuentaJugador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ValidarCuentaJugadorResponse" message="tns:IJugador_ValidarCuentaJugador_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ValidarCodigo">
       <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ValidarCodigo" message="tns:IJugador_ValidarCodigo_InputMessage" />
@@ -200,6 +284,10 @@
     <wsdl:operation name="ModificarCodigo">
       <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ModificarCodigo" message="tns:IJugador_ModificarCodigo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ModificarCodigoResponse" message="tns:IJugador_ModificarCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadisticas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJugador/ModificarEstadisticas" message="tns:IJugador_ModificarEstadisticas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJugador/ModificarEstadisticasResponse" message="tns:IJugador_ModificarEstadisticas_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CrearJugador">
       <wsdl:input wsaw:Action="http://tempuri.org/IJugador/CrearJugador" message="tns:IJugador_CrearJugador_InputMessage" />
@@ -211,13 +299,78 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPartida/CrearPartida" message="tns:IPartida_CrearPartida_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPartida/CrearPartidaResponse" message="tns:IPartida_CrearPartida_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="EliminarPartida">
-      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/EliminarPartida" message="tns:IPartida_EliminarPartida_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/EliminarPartidaResponse" message="tns:IPartida_EliminarPartida_OutputMessage" />
+    <wsdl:operation name="ObtenerPartidas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/ObtenerPartidas" message="tns:IPartida_ObtenerPartidas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/ObtenerPartidasResponse" message="tns:IPartida_ObtenerPartidas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarNombrePartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/ValidarNombrePartida" message="tns:IPartida_ValidarNombrePartida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/ValidarNombrePartidaResponse" message="tns:IPartida_ValidarNombrePartida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerPartidas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/VerPartidas" message="tns:IPartida_VerPartidas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/VerPartidasResponse" message="tns:IPartida_VerPartidas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalirVerPartidas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/SalirVerPartidas" message="tns:IPartida_SalirVerPartidas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/SalirVerPartidasResponse" message="tns:IPartida_SalirVerPartidas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnirsePartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/UnirsePartida" message="tns:IPartida_UnirsePartida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/UnirsePartidaResponse" message="tns:IPartida_UnirsePartida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalirPartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/SalirPartida" message="tns:IPartida_SalirPartida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/SalirPartidaResponse" message="tns:IPartida_SalirPartida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalirPartidaEnJuego">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/SalirPartidaEnJuego" message="tns:IPartida_SalirPartidaEnJuego_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/SalirPartidaEnJuegoResponse" message="tns:IPartida_SalirPartidaEnJuego_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/ObtenerPartida" message="tns:IPartida_ObtenerPartida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/ObtenerPartidaResponse" message="tns:IPartida_ObtenerPartida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarTurno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/CambiarTurno" message="tns:IPartida_CambiarTurno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/CambiarTurnoResponse" message="tns:IPartida_CambiarTurno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoEspecial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/MovimientoEspecial" message="tns:IPartida_MovimientoEspecial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/MovimientoEspecialResponse" message="tns:IPartida_MovimientoEspecial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarPosicionBonus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/CambiarPosicionBonus" message="tns:IPartida_CambiarPosicionBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/CambiarPosicionBonusResponse" message="tns:IPartida_CambiarPosicionBonus_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ActualizarPartidas">
-      <wsdl:input wsaw:Action="http://tempuri.org/IPartida/ActualizarPartidas" message="tns:IPartida_ActualizarPartidas_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/ActualizarPartidasResponse" message="tns:IPartida_ActualizarPartidas_OutputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/ActualizarPartidas" message="tns:IPartida_ActualizarPartidas_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tirar">
+      <wsdl:output wsaw:Action="http://tempuri.org/IPartida/Tirar" message="tns:IPartida_Tirar_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IChat">
+    <wsdl:operation name="UnirseChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChat/UnirseChat" message="tns:IChat_UnirseChat_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChat/EnviarMensaje" message="tns:IChat_EnviarMensaje_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensajePartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChat/EnviarMensajePartida" message="tns:IChat_EnviarMensajePartida_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalirChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChat/SalirChat" message="tns:IChat_SalirChat_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalirChatPartida">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChat/SalirChatPartida" message="tns:IChat_SalirChatPartida_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibeMensaje">
+      <wsdl:output wsaw:Action="http://tempuri.org/IChat/RecibeMensaje" message="tns:IChat_RecibeMensaje_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibeMensajePartida">
+      <wsdl:output wsaw:Action="http://tempuri.org/IChat/RecibeMensajePartida" message="tns:IChat_RecibeMensajePartida_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IJugador" type="tns:IJugador">
@@ -234,6 +387,33 @@
     </wsdl:operation>
     <wsdl:operation name="IniciarSesion">
       <soap12:operation soapAction="http://tempuri.org/IJugador/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnirseAlJuego">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/UnirseAlJuego" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalirDelJuego">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/SalirDelJuego" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarConectado">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ValidarConectado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -295,8 +475,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ValidarJugador">
-      <soap12:operation soapAction="http://tempuri.org/IJugador/ValidarJugador" style="document" />
+    <wsdl:operation name="ValidarCuentaJugador">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ValidarCuentaJugador" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -315,6 +495,15 @@
     </wsdl:operation>
     <wsdl:operation name="ModificarCodigo">
       <soap12:operation soapAction="http://tempuri.org/IJugador/ModificarCodigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadisticas">
+      <soap12:operation soapAction="http://tempuri.org/IJugador/ModificarEstadisticas" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -344,8 +533,98 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="EliminarPartida">
-      <soap12:operation soapAction="http://tempuri.org/IPartida/EliminarPartida" style="document" />
+    <wsdl:operation name="ObtenerPartidas">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/ObtenerPartidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarNombrePartida">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/ValidarNombrePartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerPartidas">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/VerPartidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalirVerPartidas">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/SalirVerPartidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnirsePartida">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/UnirsePartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalirPartida">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/SalirPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalirPartidaEnJuego">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/SalirPartidaEnJuego" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartida">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/ObtenerPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarTurno">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/CambiarTurno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoEspecial">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/MovimientoEspecial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarPosicionBonus">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/CambiarPosicionBonus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -355,9 +634,58 @@
     </wsdl:operation>
     <wsdl:operation name="ActualizarPartidas">
       <soap12:operation soapAction="http://tempuri.org/IPartida/ActualizarPartidas" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tirar">
+      <soap12:operation soapAction="http://tempuri.org/IPartida/Tirar" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IChat" type="tns:IChat">
+    <wsp:PolicyReference URI="#NetTcpBinding_IChat_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="UnirseChat">
+      <soap12:operation soapAction="http://tempuri.org/IChat/UnirseChat" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensaje">
+      <soap12:operation soapAction="http://tempuri.org/IChat/EnviarMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensajePartida">
+      <soap12:operation soapAction="http://tempuri.org/IChat/EnviarMensajePartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SalirChat">
+      <soap12:operation soapAction="http://tempuri.org/IChat/SalirChat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SalirChatPartida">
+      <soap12:operation soapAction="http://tempuri.org/IChat/SalirChatPartida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeMensaje">
+      <soap12:operation soapAction="http://tempuri.org/IChat/RecibeMensaje" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeMensajePartida">
+      <soap12:operation soapAction="http://tempuri.org/IChat/RecibeMensajePartida" style="document" />
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
@@ -365,21 +693,21 @@
   </wsdl:binding>
   <wsdl:service name="Service">
     <wsdl:port name="NetTcpBinding_IJugador" binding="tns:NetTcpBinding_IJugador">
-      <soap12:address location="net.tcp://localhost:8091/CalculatorService" />
+      <soap12:address location="net.tcp://192.168.43.171/CalculatorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost:8091/CalculatorService</wsa10:Address>
-        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>LAPTOP-LSK6UDI7\Arturo</Upn>
-        </Identity>
+        <wsa10:Address>net.tcp://192.168.43.171/CalculatorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_IPartida" binding="tns:NetTcpBinding_IPartida">
-      <soap12:address location="net.tcp://localhost:8091/CalculatorService" />
+      <soap12:address location="net.tcp://192.168.43.171/CalculatorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost:8091/CalculatorService</wsa10:Address>
-        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>LAPTOP-LSK6UDI7\Arturo</Upn>
-        </Identity>
+        <wsa10:Address>net.tcp://192.168.43.171/CalculatorService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IChat" binding="tns:NetTcpBinding_IChat">
+      <soap12:address location="net.tcp://192.168.43.171/CalculatorService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.43.171/CalculatorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

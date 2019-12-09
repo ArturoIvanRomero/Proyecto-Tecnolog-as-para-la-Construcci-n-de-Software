@@ -12,8 +12,13 @@
             <Label Content="{x:Static p:Resources.bt_CrearPartida}" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Verdana" FontSize="40" Foreground="White" FontWeight="Bold"/>
         </WrapPanel>
         <Grid Width="230" DockPanel.Dock="Left">
+            <Image Source="Imagenes/MenuPrincipal/Crear.png" VerticalAlignment="Top" Margin="10,100"/>
         </Grid>
         <Grid Width="230" DockPanel.Dock="Right">
+            <Button x:Name="bt_Ayuda" Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20,30" Click="Bt_Ayuda_Click" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="Imagenes/Partida/Ayuda.png"/>
+            </Button>
+            <Image x:Name="i_Tablero" Height="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100" Source="Imagenes/Partida/TableroNormal.png"/>
         </Grid>
         <WrapPanel DockPanel.Dock="Bottom" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,100">
             <Button x:Name="bt_Crear" Content="{x:Static p:Resources.bt_Crear}" HorizontalAlignment="Center" Height="40" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_Crear_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
@@ -29,8 +34,8 @@
             </Grid.ColumnDefinitions>
             <Label Content="{x:Static p:Resources.lb_Nombre}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontFamily="Verdana" FontSize="30" Foreground="White"/>
             <Label Content="{x:Static p:Resources.lb_Dificultad}" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontFamily="Verdana" FontSize="30" Foreground="White"/>
-            <TextBox x:Name="tb_NombrePartida" Grid.Row="0" Grid.Column="1" Height="35" MaxLength="20" VerticalAlignment="Center" FontFamily="Gill Sans MT" FontSize="28"/>
-            <ComboBox x:Name="cb_Dificultad" Grid.Row="1" Grid.Column="1" Height="35" VerticalAlignment="Center" FontFamily="Gill Sans MT" FontSize="28" SelectedIndex="0" Background="White" BorderBrush="White">
+            <TextBox x:Name="tb_NombrePartida" Grid.Row="0" Grid.Column="1" Height="35" MaxLength="20" VerticalAlignment="Center" FontFamily="Gill Sans MT" FontSize="28" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+            <ComboBox x:Name="cb_Dificultad" Grid.Row="1" Grid.Column="1" Height="35" VerticalAlignment="Center" FontFamily="Gill Sans MT" FontSize="28" SelectedIndex="0" SelectionChanged="Cb_Dificultad_SelectionChanged" Background="White" Foreground="#FF376092" BorderBrush="White">
                 <ComboBoxItem Content="{x:Static p:Resources.cbi_Normal}"/>
                 <ComboBoxItem Content="{x:Static p:Resources.cbi_Facil}"/>
                 <ComboBoxItem Content="{x:Static p:Resources.cbi_Dificil}"/>

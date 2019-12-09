@@ -142,20 +142,20 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Salir.
-        /// </summary>
-        public static string bt_Salir {
-            get {
-                return ResourceManager.GetString("bt_Salir", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Tabla de Posiciones.
         /// </summary>
         public static string bt_TablaPosiciones {
             get {
                 return ResourceManager.GetString("bt_TablaPosiciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Términos y condiciones y Política de privacidad.
+        /// </summary>
+        public static string bt_TerminosYPolitica {
+            get {
+                return ResourceManager.GetString("bt_TerminosYPolitica", resourceCulture);
             }
         }
         
@@ -174,6 +174,15 @@ namespace SerpientesYEscaleras.Properties {
         public static string bt_UnirsePartida {
             get {
                 return ResourceManager.GetString("bt_UnirsePartida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acepto los Términos y condiciones.
+        /// </summary>
+        public static string cb_TerminosCondiciones {
+            get {
+                return ResourceManager.GetString("cb_TerminosCondiciones", resourceCulture);
             }
         }
         
@@ -205,6 +214,15 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Puntos.
+        /// </summary>
+        public static string dcg_Puntos {
+            get {
+                return ResourceManager.GetString("dcg_Puntos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dificultad.
         /// </summary>
         public static string dgc_Dificultad {
@@ -223,20 +241,20 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mensajes.
-        /// </summary>
-        public static string dgc_Mensajes {
-            get {
-                return ResourceManager.GetString("dgc_Mensajes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Nombre.
         /// </summary>
         public static string dgc_Nombre {
             get {
                 return ResourceManager.GetString("dgc_Nombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mensajes.
+        /// </summary>
+        public static string gb_Mensajes {
+            get {
+                return ResourceManager.GetString("gb_Mensajes", resourceCulture);
             }
         }
         
@@ -295,7 +313,7 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Esperando jugadores:.
+        ///   Looks up a localized string similar to Esperando jugadores: .
         /// </summary>
         public static string lb_Esperando {
             get {
@@ -349,15 +367,6 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Puntos.
-        /// </summary>
-        public static string lb_Puntos {
-            get {
-                return ResourceManager.GetString("lb_Puntos", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Registrarse.
         /// </summary>
         public static string lb_Registrarse {
@@ -394,15 +403,6 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Victorias.
-        /// </summary>
-        public static string lb_Victorias {
-            get {
-                return ResourceManager.GetString("lb_Victorias", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Alerta.
         /// </summary>
         public static string mb_Alerta {
@@ -412,11 +412,87 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Caracteres inválidos en el nombre de usuario, verifique sus datos..
+        ///   Looks up a localized string similar to ¿Cómo jugar?.
+        /// </summary>
+        public static string mb_Ayuda {
+            get {
+                return ResourceManager.GetString("mb_Ayuda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La dificultad de la partida está determinada por el número de serpientes y escaleras presentes en el tablero:
+        ///Fácil: 6 escaleras y 3 serpientes.
+        ///Normal: 4 escaleras y 4 serpientes.
+        ///Difícil: 3 escaleras y 6 serpientes.
+        ///
+        ///La partida comienza cuando haya 4 jugadores.
+        ///Al empezar la partida apostaras 200 puntos..
+        /// </summary>
+        public static string mb_AyudaDificultad {
+            get {
+                return ResourceManager.GetString("mb_AyudaDificultad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.- Cada jugador tiene 10 segundos para realizar su tiro.
+        ///2.- Tu ficha y tu turno se encuentran en la esquina superior derecha.
+        ///3..- Cuando sea tu turno, presiona el dado para tirar y se mostrará cuanto obtuviste a la derecha del dado.
+        ///4.- Si un jugador no tira pierde su turno.
+        ///5.- En el chat puedes mandar mensaje a los demás jugadores, además de recibir retroalimentación del juego.
+        ///6.- Sólo puedes abandonar la partida cuando sea el turno de los demás jugadores. Si decides abandonar la partida perderás [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string mb_AyudaPartida {
+            get {
+                return ResourceManager.GetString("mb_AyudaPartida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para unirte a una partida debes seleccionar una partida de la tabla y dar clic al botón Unirse, y te llevará a la pantalla de espera.
+        ///La partida comienza cuando haya 4 jugadores.
+        ///Al empezar la partida apostaras 200 puntos..
+        /// </summary>
+        public static string mb_AyudaUnirse {
+            get {
+                return ResourceManager.GetString("mb_AyudaUnirse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caracteres inválidos en el nombre de usuario, verifique sus datos. Sólo puede tener letras y números..
         /// </summary>
         public static string mb_CaracteresInvalidos {
             get {
                 return ResourceManager.GetString("mb_CaracteresInvalidos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caracteres inválidos en la contraseña, verifique sus datos. Sólo puede tener letras y números..
+        /// </summary>
+        public static string mb_CaracteresInvalidosContrasenia {
+            get {
+                return ResourceManager.GetString("mb_CaracteresInvalidosContrasenia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caracteres inválidos en el mensaje, sólo puede tener letras y números..
+        /// </summary>
+        public static string mb_CaracteresInvalidosMensaje {
+            get {
+                return ResourceManager.GetString("mb_CaracteresInvalidosMensaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caracteres inválidos en el nombre de la partida, sólo puede tener letras y números..
+        /// </summary>
+        public static string mb_CaracteresInvalidosPartida {
+            get {
+                return ResourceManager.GetString("mb_CaracteresInvalidosPartida", resourceCulture);
             }
         }
         
@@ -457,7 +533,52 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La contraseña debe tener 8 caracteres con una letra y un número, como mínimo..
+        ///   Looks up a localized string similar to No hay conexión con la base de datos, inténtelo más tarde..
+        /// </summary>
+        public static string mb_ConexionBD {
+            get {
+                return ResourceManager.GetString("mb_ConexionBD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No hay conexión con la base de datos, por favor no cierre el juego ya que sus datos podrían no guardarse, estamos trabajando en esto, inténtelo más tarde..
+        /// </summary>
+        public static string mb_ConexionBD2 {
+            get {
+                return ResourceManager.GetString("mb_ConexionBD2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No hay conexión con el servidor, inténtelo más tarde..
+        /// </summary>
+        public static string mb_ConexionServidor {
+            get {
+                return ResourceManager.GetString("mb_ConexionServidor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No hay conexión con el servidor, por favor no cierre el juego ya que sus datos podrían no guardarse, estamos trabajando en esto, inténtelo más tarde..
+        /// </summary>
+        public static string mb_ConexionServidor2 {
+            get {
+                return ResourceManager.GetString("mb_ConexionServidor2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No hay conexión con el servidor, volverá al menú principal..
+        /// </summary>
+        public static string mb_ConexionServidor3 {
+            get {
+                return ResourceManager.GetString("mb_ConexionServidor3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La contraseña debe tener 8 caracteres con una letra y un número, como mínimo. Sólo puede tener letras y números..
         /// </summary>
         public static string mb_ContraseniaInvalida {
             get {
@@ -538,6 +659,15 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No pudimos enviar el código de verificación, inténtelo más tarde..
+        /// </summary>
+        public static string mb_EnvioFallido {
+            get {
+                return ResourceManager.GetString("mb_EnvioFallido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to , ingréselo para validar su cuenta..
         /// </summary>
         public static string mb_IngreseCodigo {
@@ -583,6 +713,15 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ya creó una partida con este nombre, ingrese otro nombre..
+        /// </summary>
+        public static string mb_NombrePartidaOcupado {
+            get {
+                return ResourceManager.GetString("mb_NombrePartidaOcupado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nombre de usuario o contraseña incorrectos, verifique sus datos..
         /// </summary>
         public static string mb_NombreUsuarioOContraseniaIncorrectos {
@@ -610,6 +749,15 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No tienes suficientes puntos para unirte o crear una partida, necesitas 200 para apostar..
+        /// </summary>
+        public static string mb_PuntosInsuficientes {
+            get {
+                return ResourceManager.GetString("mb_PuntosInsuficientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Se registró correctamente..
         /// </summary>
         public static string mb_RegistroExitoso {
@@ -619,11 +767,31 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Temporalmente no podemos registrar jugadores, inténtelo más tarde..
+        /// </summary>
+        public static string mb_RegistroFallido {
+            get {
+                return ResourceManager.GetString("mb_RegistroFallido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to El código sólo puede tener números..
         /// </summary>
         public static string mb_SoloNumeros {
             get {
                 return ResourceManager.GetString("mb_SoloNumeros", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TÉRMINOS DE SERVICIO
+        ///Por favor, lea estas Condiciones de servicio cuidadosamente antes de acceder o utilizar nuestro juego. Al acceder o utilizar cualquier parte del juego, usted acepta que quedará vinculado por estas Condiciones de Servicio. Si usted no está de acuerdo con todos los términos y condiciones de este acuerdo, entonces usted no puede utilizar nuestro  juego. 
+        ///Usted no puede usar nuestro juego para ningún propósito ilegal o no autorizado ni puede, en el uso del juego, violar cualquier ley en s [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string mb_TerminosCondiciones {
+            get {
+                return ResourceManager.GetString("mb_TerminosCondiciones", resourceCulture);
             }
         }
         
@@ -655,11 +823,90 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Puntos.
+        /// </summary>
+        public static string mi_Puntos {
+            get {
+                return ResourceManager.GetString("mi_Puntos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salir.
+        /// </summary>
+        public static string mi_Salir {
+            get {
+                return ResourceManager.GetString("mi_Salir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Victorias.
+        /// </summary>
+        public static string mi_Victorias {
+            get {
+                return ResourceManager.GetString("mi_Victorias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debes aceptar los Términos y condiciones..
+        /// </summary>
+        public static string ms_AceptarTerminos {
+            get {
+                return ResourceManager.GetString("ms_AceptarTerminos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amarillo.
+        /// </summary>
+        public static string ms_Amarillo {
+            get {
+                return ResourceManager.GetString("ms_Amarillo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Código de verifiación Serpientes Y Escaleras.
         /// </summary>
         public static string ms_Asunto {
             get {
                 return ResourceManager.GetString("ms_Asunto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  está en una casilla bonus, vuelve a tirar.
+        ///Bonus:
+        ///1.- Vuelve al inicio
+        ///2.- Divide tus casillas a la mitad
+        ///3.- Retrocede 3 casillas
+        ///4.- Gana 50 puntos
+        ///5.- Avanza 10 casillas
+        ///6.- Ve a la casilla 90.
+        /// </summary>
+        public static string ms_Bonus {
+            get {
+                return ResourceManager.GetString("ms_Bonus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EL JUEGO HA COMENZADO.
+        /// </summary>
+        public static string ms_Comienzo {
+            get {
+                return ResourceManager.GetString("ms_Comienzo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  ganó..
+        /// </summary>
+        public static string ms_Gano {
+            get {
+                return ResourceManager.GetString("ms_Gano", resourceCulture);
             }
         }
         
@@ -673,11 +920,101 @@ namespace SerpientesYEscaleras.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Este jugador ya está conectado..
+        /// </summary>
+        public static string ms_JugadorConectado {
+            get {
+                return ResourceManager.GetString("ms_JugadorConectado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;br/&gt;&lt;br/&gt;No compartas este código con nadie ya que es necesario para verificar su cuenta en Serpientes y Escaleras.&lt;br/&gt;&lt;br/&gt;¡Gracias por jugar con nosotros!.
         /// </summary>
         public static string ms_Mensaje {
             get {
                 return ResourceManager.GetString("ms_Mensaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Morado.
+        /// </summary>
+        public static string ms_Morado {
+            get {
+                return ResourceManager.GetString("ms_Morado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naranja.
+        /// </summary>
+        public static string ms_Naranja {
+            get {
+                return ResourceManager.GetString("ms_Naranja", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  obtuvó .
+        /// </summary>
+        public static string ms_Numero {
+            get {
+                return ResourceManager.GetString("ms_Numero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rosa.
+        /// </summary>
+        public static string ms_Rosa {
+            get {
+                return ResourceManager.GetString("ms_Rosa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  salió de la partida..
+        /// </summary>
+        public static string ms_Salir {
+            get {
+                return ResourceManager.GetString("ms_Salir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turno.
+        /// </summary>
+        public static string ms_Turn {
+            get {
+                return ResourceManager.GetString("ms_Turn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Es el turno de: .
+        /// </summary>
+        public static string ms_Turno {
+            get {
+                return ResourceManager.GetString("ms_Turno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  perdió su turno..
+        /// </summary>
+        public static string ms_TurnoPerdido {
+            get {
+                return ResourceManager.GetString("ms_TurnoPerdido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  se unió a la partida..
+        /// </summary>
+        public static string ms_Unirse {
+            get {
+                return ResourceManager.GetString("ms_Unirse", resourceCulture);
             }
         }
     }

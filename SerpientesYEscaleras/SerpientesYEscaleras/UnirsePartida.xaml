@@ -6,14 +6,19 @@
         xmlns:local="clr-namespace:SerpientesYEscaleras"
         xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
+        Title="SERPIENTES Y ESCALERAS" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092" Closing="Window_Closing">
     <DockPanel LastChildFill="True">
         <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
             <Label Content="{x:Static p:Resources.bt_UnirsePartida}" HorizontalAlignment="Center" Margin="0,30,0,0" FontFamily="Verdana" FontSize="40" Foreground="White" FontWeight="Bold"/>
         </WrapPanel>
         <Grid Width="250" DockPanel.Dock="Left">
+            <Image Source="Imagenes/MenuPrincipal/Unirse.png" VerticalAlignment="Top" Margin="10,100"/>
         </Grid>
         <Grid Width="250" DockPanel.Dock="Right">
+            <Button x:Name="bt_Ayuda" Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20,30" Click="Bt_Ayuda_Click" Background="Transparent" BorderBrush="Transparent">
+                <Image Source="Imagenes/Partida/Ayuda.png"/>
+            </Button>
+            <Image Source="Imagenes/MenuPrincipal/Unirse.png" VerticalAlignment="Top" Margin="10,100"/>
         </Grid>
         <Button x:Name="bt_Unirse" Content="{x:Static p:Resources.bt_Unirse}" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Height="40" Margin="0,0,0,50" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_Unirse_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0">
@@ -22,10 +27,10 @@
                 <RowDefinition Height="300"/>
             </Grid.RowDefinitions>
             <Label Content="{x:Static p:Resources.lb_Partidas}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="30" Foreground="White"/>
-            <DataGrid Name="dg_Partidas" Grid.Row="1" Height="300" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Center" AutoGenerateColumns="False" FontFamily="Verdana" FontSize="30" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid Name="dg_Partidas" Grid.Row="1" Height="300" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Center" AutoGenerateColumns="False" FontFamily="Verdana" FontSize="30" IsReadOnly="True" SelectionMode="Single" Background="White" Foreground="#FF376092" BorderBrush="White">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="{x:Static p:Resources.dgc_Nombre}" Width="*" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding nombre}"/>
-                    <DataGridTextColumn Header="{x:Static p:Resources.dgc_Dificultad}" Width="200" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding dificultad}"/>
+                    <DataGridTextColumn Header="{x:Static p:Resources.dgc_Nombre}" Width="*" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding Nombre}"/>
+                    <DataGridTextColumn Header="{x:Static p:Resources.dgc_Dificultad}" Width="200" FontFamily="Gill Sans MT" FontSize="30" CanUserResize="False" CanUserSort="False" Binding="{Binding Dificultad}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

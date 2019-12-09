@@ -144,11 +144,11 @@
   <data name="bt_OrdenarVictorias" xml:space="preserve">
     <value>Ordenar por Victorias</value>
   </data>
-  <data name="bt_Salir" xml:space="preserve">
-    <value>Salir</value>
-  </data>
   <data name="bt_TablaPosiciones" xml:space="preserve">
     <value>Tabla de Posiciones</value>
+  </data>
+  <data name="bt_TerminosYPolitica" xml:space="preserve">
+    <value>Términos y condiciones y Política de privacidad</value>
   </data>
   <data name="bt_Unirse" xml:space="preserve">
     <value>Unirse</value>
@@ -165,17 +165,23 @@
   <data name="cbi_Normal" xml:space="preserve">
     <value>Normal</value>
   </data>
+  <data name="cb_TerminosCondiciones" xml:space="preserve">
+    <value>Acepto los Términos y condiciones</value>
+  </data>
+  <data name="dcg_Puntos" xml:space="preserve">
+    <value>Puntos</value>
+  </data>
   <data name="dgc_Dificultad" xml:space="preserve">
     <value>Dificultad</value>
   </data>
   <data name="dgc_Jugador" xml:space="preserve">
     <value>Jugador</value>
   </data>
-  <data name="dgc_Mensajes" xml:space="preserve">
-    <value>Mensajes</value>
-  </data>
   <data name="dgc_Nombre" xml:space="preserve">
     <value>Nombre</value>
+  </data>
+  <data name="gb_Mensajes" xml:space="preserve">
+    <value>Mensajes</value>
   </data>
   <data name="lb_CodigoVerificacion" xml:space="preserve">
     <value>Código de verificación:</value>
@@ -196,7 +202,7 @@
     <value>Enviar de nuevo el código de verificación al usuario:</value>
   </data>
   <data name="lb_Esperando" xml:space="preserve">
-    <value>Esperando jugadores:</value>
+    <value>Esperando jugadores: </value>
   </data>
   <data name="lb_Fin" xml:space="preserve">
     <value>FIN DEL JUEGO</value>
@@ -213,9 +219,6 @@
   <data name="lb_Partidas" xml:space="preserve">
     <value>Partidas</value>
   </data>
-  <data name="lb_Puntos" xml:space="preserve">
-    <value>Puntos</value>
-  </data>
   <data name="lb_Registrarse" xml:space="preserve">
     <value>Registrarse</value>
   </data>
@@ -228,14 +231,49 @@
   <data name="lb_ValidarCuenta" xml:space="preserve">
     <value>Validar cuenta</value>
   </data>
-  <data name="lb_Victorias" xml:space="preserve">
-    <value>Victorias</value>
-  </data>
   <data name="mb_Alerta" xml:space="preserve">
     <value>Alerta</value>
   </data>
+  <data name="mb_Ayuda" xml:space="preserve">
+    <value>¿Cómo jugar?</value>
+  </data>
+  <data name="mb_AyudaDificultad" xml:space="preserve">
+    <value>La dificultad de la partida está determinada por el número de serpientes y escaleras presentes en el tablero:
+Fácil: 6 escaleras y 3 serpientes.
+Normal: 4 escaleras y 4 serpientes.
+Difícil: 3 escaleras y 6 serpientes.
+
+La partida comienza cuando haya 4 jugadores.
+Al empezar la partida apostaras 200 puntos.</value>
+  </data>
+  <data name="mb_AyudaPartida" xml:space="preserve">
+    <value>1.- Cada jugador tiene 10 segundos para realizar su tiro.
+2.- Tu ficha y tu turno se encuentran en la esquina superior derecha.
+3..- Cuando sea tu turno, presiona el dado para tirar y se mostrará cuanto obtuviste a la derecha del dado.
+4.- Si un jugador no tira pierde su turno.
+5.- En el chat puedes mandar mensaje a los demás jugadores, además de recibir retroalimentación del juego.
+6.- Sólo puedes abandonar la partida cuando sea el turno de los demás jugadores. Si decides abandonar la partida perderás automáticamente y no recibirás ningún punto de premio.
+7.- Las escaleras te hacen subir a la casilla en donde terminan y las serpientes te hacen bajar a la casilla donde terminan.
+8.- Hay 4 casillas bonus en el tablero, cuando caigas en alguna volveras a tirar y te apareceran en el chat los diferentes bonus, cada vuelta los bonus cambiarán de casilla.
+9.- Para ganar hay que llegar EXACTAMENTE al 100, si tu tiro pasa del 100 tu ficha regresará.
+10.- La partida termina cuando algún jugador llega a la casilla 100, y las posiciones se asignarán de la mayor a la menor casilla de los jugadores. En caso de empate en alguna casiila, el juego asignará las posiciones en la partida.</value>
+  </data>
+  <data name="mb_AyudaUnirse" xml:space="preserve">
+    <value>Para unirte a una partida debes seleccionar una partida de la tabla y dar clic al botón Unirse, y te llevará a la pantalla de espera.
+La partida comienza cuando haya 4 jugadores.
+Al empezar la partida apostaras 200 puntos.</value>
+  </data>
   <data name="mb_CaracteresInvalidos" xml:space="preserve">
-    <value>Caracteres inválidos en el nombre de usuario, verifique sus datos.</value>
+    <value>Caracteres inválidos en el nombre de usuario, verifique sus datos. Sólo puede tener letras y números.</value>
+  </data>
+  <data name="mb_CaracteresInvalidosContrasenia" xml:space="preserve">
+    <value>Caracteres inválidos en la contraseña, verifique sus datos. Sólo puede tener letras y números.</value>
+  </data>
+  <data name="mb_CaracteresInvalidosMensaje" xml:space="preserve">
+    <value>Caracteres inválidos en el mensaje, sólo puede tener letras y números.</value>
+  </data>
+  <data name="mb_CaracteresInvalidosPartida" xml:space="preserve">
+    <value>Caracteres inválidos en el nombre de la partida, sólo puede tener letras y números.</value>
   </data>
   <data name="mb_Codigo" xml:space="preserve">
     <value>Código de verificación</value>
@@ -249,8 +287,23 @@
   <data name="mb_CodigoVacio" xml:space="preserve">
     <value>Ingrese un código.</value>
   </data>
+  <data name="mb_ConexionBD" xml:space="preserve">
+    <value>No hay conexión con la base de datos, inténtelo más tarde.</value>
+  </data>
+  <data name="mb_ConexionBD2" xml:space="preserve">
+    <value>No hay conexión con la base de datos, por favor no cierre el juego ya que sus datos podrían no guardarse, estamos trabajando en esto, inténtelo más tarde.</value>
+  </data>
+  <data name="mb_ConexionServidor" xml:space="preserve">
+    <value>No hay conexión con el servidor, inténtelo más tarde.</value>
+  </data>
+  <data name="mb_ConexionServidor2" xml:space="preserve">
+    <value>No hay conexión con el servidor, por favor no cierre el juego ya que sus datos podrían no guardarse, estamos trabajando en esto, inténtelo más tarde.</value>
+  </data>
+  <data name="mb_ConexionServidor3" xml:space="preserve">
+    <value>No hay conexión con el servidor, volverá al menú principal.</value>
+  </data>
   <data name="mb_ContraseniaInvalida" xml:space="preserve">
-    <value>La contraseña debe tener 8 caracteres con una letra y un número, como mínimo.</value>
+    <value>La contraseña debe tener 8 caracteres con una letra y un número, como mínimo. Sólo puede tener letras y números.</value>
   </data>
   <data name="mb_ContraseniaNoCoincide" xml:space="preserve">
     <value>No coincide la confirmación de la contraseña, verifique su contraseña.</value>
@@ -276,6 +329,9 @@
   <data name="mb_DatosVacios" xml:space="preserve">
     <value>No ingreso todos los campos, ingrese sus datos.</value>
   </data>
+  <data name="mb_EnvioFallido" xml:space="preserve">
+    <value>No pudimos enviar el código de verificación, inténtelo más tarde.</value>
+  </data>
   <data name="mb_IngreseCodigo" xml:space="preserve">
     <value>, ingréselo para validar su cuenta.</value>
   </data>
@@ -291,6 +347,9 @@
   <data name="mb_NombreOcupado" xml:space="preserve">
     <value>Este nombre de usuario ya está ocupado, ingrese otro nombre de usuario.</value>
   </data>
+  <data name="mb_NombrePartidaOcupado" xml:space="preserve">
+    <value>Ya creó una partida con este nombre, ingrese otro nombre.</value>
+  </data>
   <data name="mb_NombreUsuarioOContraseniaIncorrectos" xml:space="preserve">
     <value>Nombre de usuario o contraseña incorrectos, verifique sus datos.</value>
   </data>
@@ -300,11 +359,34 @@
   <data name="mb_NombreVacio" xml:space="preserve">
     <value>Ingrese el nombre de la partida.</value>
   </data>
+  <data name="mb_PuntosInsuficientes" xml:space="preserve">
+    <value>No tienes suficientes puntos para unirte o crear una partida, necesitas 200 para apostar.</value>
+  </data>
   <data name="mb_RegistroExitoso" xml:space="preserve">
     <value>Se registró correctamente.</value>
   </data>
+  <data name="mb_RegistroFallido" xml:space="preserve">
+    <value>Temporalmente no podemos registrar jugadores, inténtelo más tarde.</value>
+  </data>
   <data name="mb_SoloNumeros" xml:space="preserve">
     <value>El código sólo puede tener números.</value>
+  </data>
+  <data name="mb_TerminosCondiciones" xml:space="preserve">
+    <value>TÉRMINOS DE SERVICIO
+Por favor, lea estas Condiciones de servicio cuidadosamente antes de acceder o utilizar nuestro juego. Al acceder o utilizar cualquier parte del juego, usted acepta que quedará vinculado por estas Condiciones de Servicio. Si usted no está de acuerdo con todos los términos y condiciones de este acuerdo, entonces usted no puede utilizar nuestro  juego. 
+Usted no puede usar nuestro juego para ningún propósito ilegal o no autorizado ni puede, en el uso del juego, violar cualquier ley en su jurisdicción (incluyendo pero no limitado a las leyes de derechos de autor).
+Usted no debe transmitir ningún gusano, virus o cualquier código de naturaleza destructiva.
+Un incumplimiento o violación de cualquiera de los Términos darán lugar a un cese inmediato de su cuenta.
+Nos reservamos el derecho de rechazar prestar el servicio a cualquier persona por cualquier motivo y en cualquier momento.
+Nos reservamos el derecho en cualquier momento de modificar o interrumpir el juego (o cualquier parte o contenido de éste) sin previo aviso en cualquier momento.
+
+POLÍTICA DE PRIVACIDAD
+Serpientes y Escaleras, es el responsable del tratamiento de los datos personales que nos proporcione. Sus datos personales, serán utilizados para las siguientes finalidades: 
+a) Registrar su inscripción al juego;  b) generar listas de jugadores; c) establecer comunicación para dar seguimiento o aclaración de dudas sobre sus datos, notificación de baneo; y e) generar estadísticas. De manera adicional, utilizaremos su información personal para las siguientes finalidades que no son necesarias, pero que nos permiten y facilitan brindarle una mejor atención: a) invitaciones a futuros eventos.
+Cuando usted se registra recopilamos la información personal que usted nos da, como su nombre y dirección de correo electrónico.
+Cuando juegas, también recibimos automáticamente la dirección del equipo de protocolo de Internet (IP) con el fin de proporcionarnos información que nos ayuda a conectarte con más jugadores.
+Marketing por correo electrónico (si procede): Con su permiso, podemos enviarle correos electrónicos acerca de nuestro juego, nuevos productos y otras actualizaciones.
+Cuando usted nos proporciona información personal para completar su registro implica que usted acepta nuestra política de privacidad.</value>
   </data>
   <data name="mi_Espaniol" xml:space="preserve">
     <value>Español</value>
@@ -315,13 +397,74 @@
   <data name="mi_Ingles" xml:space="preserve">
     <value>Inglés</value>
   </data>
+  <data name="mi_Puntos" xml:space="preserve">
+    <value>Puntos</value>
+  </data>
+  <data name="mi_Salir" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="mi_Victorias" xml:space="preserve">
+    <value>Victorias</value>
+  </data>
+  <data name="ms_AceptarTerminos" xml:space="preserve">
+    <value>Debes aceptar los Términos y condiciones.</value>
+  </data>
+  <data name="ms_Amarillo" xml:space="preserve">
+    <value>Amarillo</value>
+  </data>
   <data name="ms_Asunto" xml:space="preserve">
     <value>Código de verifiación Serpientes Y Escaleras</value>
+  </data>
+  <data name="ms_Bonus" xml:space="preserve">
+    <value> está en una casilla bonus, vuelve a tirar.
+Bonus:
+1.- Vuelve al inicio
+2.- Divide tus casillas a la mitad
+3.- Retrocede 3 casillas
+4.- Gana 50 puntos
+5.- Avanza 10 casillas
+6.- Ve a la casilla 90</value>
+  </data>
+  <data name="ms_Comienzo" xml:space="preserve">
+    <value>EL JUEGO HA COMENZADO</value>
+  </data>
+  <data name="ms_Gano" xml:space="preserve">
+    <value> ganó.</value>
   </data>
   <data name="ms_IngresaCodigo" xml:space="preserve">
     <value>Ingresa el siguiente código:&lt;br/&gt;</value>
   </data>
+  <data name="ms_JugadorConectado" xml:space="preserve">
+    <value>Este jugador ya está conectado.</value>
+  </data>
   <data name="ms_Mensaje" xml:space="preserve">
     <value>&lt;br/&gt;&lt;br/&gt;No compartas este código con nadie ya que es necesario para verificar su cuenta en Serpientes y Escaleras.&lt;br/&gt;&lt;br/&gt;¡Gracias por jugar con nosotros!</value>
+  </data>
+  <data name="ms_Morado" xml:space="preserve">
+    <value>Morado</value>
+  </data>
+  <data name="ms_Naranja" xml:space="preserve">
+    <value>Naranja</value>
+  </data>
+  <data name="ms_Numero" xml:space="preserve">
+    <value> obtuvó </value>
+  </data>
+  <data name="ms_Rosa" xml:space="preserve">
+    <value>Rosa</value>
+  </data>
+  <data name="ms_Salir" xml:space="preserve">
+    <value> salió de la partida.</value>
+  </data>
+  <data name="ms_Turn" xml:space="preserve">
+    <value>Turno</value>
+  </data>
+  <data name="ms_Turno" xml:space="preserve">
+    <value>Es el turno de: </value>
+  </data>
+  <data name="ms_TurnoPerdido" xml:space="preserve">
+    <value> perdió su turno.</value>
+  </data>
+  <data name="ms_Unirse" xml:space="preserve">
+    <value> se unió a la partida.</value>
   </data>
 </root>

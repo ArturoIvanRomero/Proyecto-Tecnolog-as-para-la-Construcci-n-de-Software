@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceSYE" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceSYE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.43.171/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="Jugador">
     <xs:sequence>
       <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
@@ -7,6 +8,7 @@
       <xs:element minOccurs="0" name="CorreoElectronico" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Estadisticas" nillable="true" type="tns:Estadisticas" />
       <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Turno" nillable="true" type="tns:Turno" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Jugador" nillable="true" type="tns:Jugador" />
@@ -17,6 +19,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Estadisticas" nillable="true" type="tns:Estadisticas" />
+  <xs:complexType name="Turno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Casilla" nillable="true" type="tns:Casilla" />
+      <xs:element minOccurs="0" name="NumeroTurno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Turno" nillable="true" type="tns:Turno" />
+  <xs:complexType name="Casilla">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bonus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Movimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="PosicionX" type="xs:int" />
+      <xs:element minOccurs="0" name="PosicionY" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Casilla" nillable="true" type="tns:Casilla" />
   <xs:complexType name="ArrayOfJugador">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Jugador" nillable="true" type="tns:Jugador" />
@@ -26,10 +45,11 @@
   <xs:complexType name="Partida">
     <xs:sequence>
       <xs:element minOccurs="0" name="Dificultad" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Jugadores" nillable="true" type="tns:ArrayOfJugador" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="JugadoresChat" nillable="true" type="q1:ArrayOfKeyValueOfanyTypestring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="JugadoresPartida" nillable="true" type="q2:ArrayOfKeyValueOfanyTypeJugadoroM4bvCgA" />
       <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Tablero" nillable="true" type="tns:Tablero" />
-      <xs:element minOccurs="0" name="Turno" type="xs:short" />
+      <xs:element minOccurs="0" name="Turno" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Partida" nillable="true" type="tns:Partida" />
@@ -45,14 +65,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfCasilla" nillable="true" type="tns:ArrayOfCasilla" />
-  <xs:complexType name="Casilla">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Bonus" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Movimiento" type="xs:short" />
-      <xs:element minOccurs="0" name="Numero" type="xs:short" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Casilla" nillable="true" type="tns:Casilla" />
   <xs:complexType name="ArrayOfPartida">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Partida" nillable="true" type="tns:Partida" />

@@ -144,11 +144,11 @@
   <data name="bt_OrdenarVictorias" xml:space="preserve">
     <value>Sort by Victories</value>
   </data>
-  <data name="bt_Salir" xml:space="preserve">
-    <value>Sign out</value>
-  </data>
   <data name="bt_TablaPosiciones" xml:space="preserve">
     <value>Ranking</value>
+  </data>
+  <data name="bt_TerminosYPolitica" xml:space="preserve">
+    <value>Terms and conditions and Privacy policy</value>
   </data>
   <data name="bt_Unirse" xml:space="preserve">
     <value>Join</value>
@@ -165,17 +165,23 @@
   <data name="cbi_Normal" xml:space="preserve">
     <value>Normal</value>
   </data>
+  <data name="cb_TerminosCondiciones" xml:space="preserve">
+    <value>I accept the terms and conditions</value>
+  </data>
+  <data name="dcg_Puntos" xml:space="preserve">
+    <value>Points</value>
+  </data>
   <data name="dgc_Dificultad" xml:space="preserve">
     <value>Dificulty</value>
   </data>
   <data name="dgc_Jugador" xml:space="preserve">
     <value>Player</value>
   </data>
-  <data name="dgc_Mensajes" xml:space="preserve">
-    <value>Messages</value>
-  </data>
   <data name="dgc_Nombre" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="gb_Mensajes" xml:space="preserve">
+    <value>Messages</value>
   </data>
   <data name="lb_CodigoVerificacion" xml:space="preserve">
     <value>Verification code:</value>
@@ -190,13 +196,13 @@
     <value>Email address:</value>
   </data>
   <data name="lb_Dificultad" xml:space="preserve">
-    <value>Dificult:</value>
+    <value>Dificulty:</value>
   </data>
   <data name="lb_EnviarCodigo" xml:space="preserve">
     <value>Send the verification code back to the user:</value>
   </data>
   <data name="lb_Esperando" xml:space="preserve">
-    <value>Waiting for players:</value>
+    <value>Waiting for players: </value>
   </data>
   <data name="lb_Fin" xml:space="preserve">
     <value>GAME OVER</value>
@@ -213,9 +219,6 @@
   <data name="lb_Partidas" xml:space="preserve">
     <value>Games</value>
   </data>
-  <data name="lb_Puntos" xml:space="preserve">
-    <value>Score</value>
-  </data>
   <data name="lb_Registrarse" xml:space="preserve">
     <value>Sign up</value>
   </data>
@@ -228,14 +231,49 @@
   <data name="lb_ValidarCuenta" xml:space="preserve">
     <value>Validate account</value>
   </data>
-  <data name="lb_Victorias" xml:space="preserve">
-    <value>Wins</value>
-  </data>
   <data name="mb_Alerta" xml:space="preserve">
     <value>Alert</value>
   </data>
+  <data name="mb_Ayuda" xml:space="preserve">
+    <value>How to play?</value>
+  </data>
+  <data name="mb_AyudaDificultad" xml:space="preserve">
+    <value>The difference between the difficulties is the amount of stairs and snakes:
+Easy: 6 ladders and 3 snakes.
+Normal: 4 ladders and 4 snakes.
+Hard: 3 ladders and 6 snakes.
+
+The game starts when there are 4 players.
+At the start of the game you will bet 200 points.</value>
+  </data>
+  <data name="mb_AyudaPartida" xml:space="preserve">
+    <value>1.- Each player has 10 seconds to make his shot.
+2.- Your token and your turn are in the upper right corner.
+3.- When it's your turn, press the dice to roll and it will show how much you got to the right of the dice.
+4.- If a player does not roll he loses his turn.
+5.- In the chat you can send message to the other players, in addition to receiving feedback from the game.
+6.- You can only leave the game when it is the turn of the other players. If you decide to leave the game you will lose automatically and you will not receive any prize points.
+7.- The ladders make you go up to the position where they end and the snakes make you go down to the position where they end.
+8.- There are 4 bonus positions on the board, when you are in some place you will throw again and the different bonuses will appear in the chat, each round the bonus will change the position.
+9.- To win you have to EXACTLY reach 100, if your shot goes over 100 your token will return.
+10.- The game ends when a player reaches box 100, and the ranking will be assigned from the highest to the lowest position of the players. In case of a tie in any position, the game will assign the positions in the ranking of the game.</value>
+  </data>
+  <data name="mb_AyudaUnirse" xml:space="preserve">
+    <value>To join a game you must select a game from the table and click on the Join button, and it will take you to the waiting screen.
+The game starts when there are 4 players.
+At the start of the game you will bet 200 points.</value>
+  </data>
   <data name="mb_CaracteresInvalidos" xml:space="preserve">
-    <value>Invalid characters in the user name, verify your information.</value>
+    <value>Invalid characters in the user name, verify your information. That can only have letters and numbers.</value>
+  </data>
+  <data name="mb_CaracteresInvalidosContrasenia" xml:space="preserve">
+    <value>Invalid characters in the password, verify your information. That can only have letters and numbers.</value>
+  </data>
+  <data name="mb_CaracteresInvalidosMensaje" xml:space="preserve">
+    <value>Invalid characters in the message, that can only have letters and numbers.</value>
+  </data>
+  <data name="mb_CaracteresInvalidosPartida" xml:space="preserve">
+    <value>Invalid characters in the game name, that can only have letters and numbers.</value>
   </data>
   <data name="mb_Codigo" xml:space="preserve">
     <value>Verification Code</value>
@@ -249,8 +287,23 @@
   <data name="mb_CodigoVacio" xml:space="preserve">
     <value>Enter a code.</value>
   </data>
+  <data name="mb_ConexionBD" xml:space="preserve">
+    <value>There is no connection to the database, try again later.</value>
+  </data>
+  <data name="mb_ConexionBD2" xml:space="preserve">
+    <value>There is no connection to the database, please do not close the game since your data may not be saved, we are working on this, please try again later.</value>
+  </data>
+  <data name="mb_ConexionServidor" xml:space="preserve">
+    <value>There is no connection to the server, try again later.</value>
+  </data>
+  <data name="mb_ConexionServidor2" xml:space="preserve">
+    <value>There is no connection to the server, please do not close the game since your data may not be saved, we are working on this, please try again later.</value>
+  </data>
+  <data name="mb_ConexionServidor3" xml:space="preserve">
+    <value>There is no connection to the server, you will return to the main menu.</value>
+  </data>
   <data name="mb_ContraseniaInvalida" xml:space="preserve">
-    <value>The password must have 8 characters with at least one letter and one number.</value>
+    <value>The password must have 8 characters with at least one letter and one number. That can only have letters and numbers.</value>
   </data>
   <data name="mb_ContraseniaNoCoincide" xml:space="preserve">
     <value>Password confirmation does not match, verify your password.</value>
@@ -276,6 +329,9 @@
   <data name="mb_DatosVacios" xml:space="preserve">
     <value>You did not enter all your data, enter your information.</value>
   </data>
+  <data name="mb_EnvioFallido" xml:space="preserve">
+    <value>We couldn't send the verification code, please try again later.</value>
+  </data>
   <data name="mb_IngreseCodigo" xml:space="preserve">
     <value>, enter it to validate your account.</value>
   </data>
@@ -291,6 +347,9 @@
   <data name="mb_NombreOcupado" xml:space="preserve">
     <value>This username is already registered, enter another username.</value>
   </data>
+  <data name="mb_NombrePartidaOcupado" xml:space="preserve">
+    <value>You have already created a game with this name, enter another name.</value>
+  </data>
   <data name="mb_NombreUsuarioOContraseniaIncorrectos" xml:space="preserve">
     <value>Incorrect user name or password, verify your information.</value>
   </data>
@@ -300,11 +359,34 @@
   <data name="mb_NombreVacio" xml:space="preserve">
     <value>Enter the name of the game.</value>
   </data>
+  <data name="mb_PuntosInsuficientes" xml:space="preserve">
+    <value>You don't have enough points to join or create a game, you need 200 to bet.</value>
+  </data>
   <data name="mb_RegistroExitoso" xml:space="preserve">
     <value>It was registered correctly.</value>
   </data>
+  <data name="mb_RegistroFallido" xml:space="preserve">
+    <value>Temporarily we can't register players, please try again later.</value>
+  </data>
   <data name="mb_SoloNumeros" xml:space="preserve">
     <value>The code can only have numbers.</value>
+  </data>
+  <data name="mb_TerminosCondiciones" xml:space="preserve">
+    <value>TERMS OF SERVICE
+Please read these Terms of Service carefully before accessing or using our game. By accessing or using any part of the game, you agree to be bound by these Terms of Service. If you do not agree with all the terms and conditions of this agreement, then you cannot use our game.
+You may not use our game for any illegal or unauthorized purpose nor may, in the use of the game, violate any law in your jurisdiction (including but not limited to copyright laws).
+You must not transmit any worms, viruses or any code of a destructive nature.
+A breach or violation of any of the Terms will result in an immediate termination of your account.
+We reserve the right to refuse to provide the service to any person for any reason and at any time.
+We reserve the right at any time to modify or interrupt the game (or any part or content thereof) without prior notice at any time.
+
+PRIVACY POLICY
+Snakes and Ladders, is responsible for the processing of personal data you provide. Your personal data will be used for the following purposes:
+a) Register your game registration; b) generate player lists; c) establish communication to follow up or clarify doubts about your data, notification of banning; and e) generate statistics. Additionally, we will use your personal information for the following purposes that are not necessary, but that allow and facilitate us to provide you with better service: a) invitations to future events.
+When you register we collect the personal information you give us, such as your name and email address.
+When you play, we also automatically receive the address of the Internet Protocol (IP) team in order to provide us with information that helps us connect with more players.
+Email marketing (if applicable): With your permission, we can send you emails about our game, new products and other updates.
+When you provide us with personal information to complete your registration it implies that you accept our privacy policy.</value>
   </data>
   <data name="mi_Espaniol" xml:space="preserve">
     <value>Spanish</value>
@@ -315,13 +397,74 @@
   <data name="mi_Ingles" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="mi_Puntos" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="mi_Salir" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="mi_Victorias" xml:space="preserve">
+    <value>Wins</value>
+  </data>
+  <data name="ms_AceptarTerminos" xml:space="preserve">
+    <value>You must agree to Terms and conditions.</value>
+  </data>
+  <data name="ms_Amarillo" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
   <data name="ms_Asunto" xml:space="preserve">
     <value>Verification code Serpientes Y Escaleras</value>
+  </data>
+  <data name="ms_Bonus" xml:space="preserve">
+    <value> is in a bonus position, throw again.
+Bonus:
+1.- Back to start
+2.- Divide your position in half
+3.- Back 3 positions
+4.- Earn 50 points
+5.- Move 10 positions
+6.- Go to 90 position</value>
+  </data>
+  <data name="ms_Comienzo" xml:space="preserve">
+    <value>THE GAME HAS STARTED</value>
+  </data>
+  <data name="ms_Gano" xml:space="preserve">
+    <value> won.</value>
   </data>
   <data name="ms_IngresaCodigo" xml:space="preserve">
     <value>Enter the code:&lt;br/&gt;</value>
   </data>
+  <data name="ms_JugadorConectado" xml:space="preserve">
+    <value>This player is already conected.</value>
+  </data>
   <data name="ms_Mensaje" xml:space="preserve">
     <value>&lt;br/&gt;&lt;br/&gt;Do not share this code with anyone it is necessary to verify your account in Serpientes y Escaleras.&lt;br/&gt;&lt;br/&gt;Thanks for playing with us!</value>
+  </data>
+  <data name="ms_Morado" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="ms_Naranja" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="ms_Numero" xml:space="preserve">
+    <value> got </value>
+  </data>
+  <data name="ms_Rosa" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="ms_Salir" xml:space="preserve">
+    <value> left the game.</value>
+  </data>
+  <data name="ms_Turn" xml:space="preserve">
+    <value>Turn</value>
+  </data>
+  <data name="ms_Turno" xml:space="preserve">
+    <value>It's the turn of: </value>
+  </data>
+  <data name="ms_TurnoPerdido" xml:space="preserve">
+    <value> lost his turn.</value>
+  </data>
+  <data name="ms_Unirse" xml:space="preserve">
+    <value> joined the game.</value>
   </data>
 </root>

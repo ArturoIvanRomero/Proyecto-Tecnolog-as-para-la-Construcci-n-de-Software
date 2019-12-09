@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:SerpientesYEscaleras"
         xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="450" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
+        Title="SERPIENTES Y ESCALERAS" Height="450" Width="320" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="50"/>
@@ -19,13 +19,14 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
+        <Image Grid.Column="0" HorizontalAlignment="Center" Source="Imagenes/Logo.png" Margin="0,5"/>
         <Label Content="{x:Static p:Resources.lb_ValidarCuenta}" Grid.Row="1" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold"/>
         <Label Content="{x:Static p:Resources.lb_CodigoVerificacion}" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="15" Foreground="White"/>
-        <TextBox x:Name="tb_CodigoVerificacion" Grid.Row="3" MaxLength="5" Height="30" Margin="110,0" FontFamily="Gill Sans MT" FontSize="22"/>
+        <TextBox x:Name="tb_CodigoVerificacion" Grid.Row="3" MaxLength="5" Height="30" Margin="110,0" FontFamily="Gill Sans MT" FontSize="22" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         <Button x:Name="bt_Aceptar" Content="{x:Static p:Resources.bt_Aceptar}" Grid.Row="4" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Aceptar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         <Button x:Name="bt_Cancelar" Content="{x:Static p:Resources.bt_Cancelar}" Grid.Row="5" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Cancelar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
-        <Label Content="{x:Static p:Resources.lb_EnviarCodigo}" Grid.Row="6" VerticalAlignment="Bottom" Margin="10,0" FontFamily="Verdana" FontSize="9" Foreground="White"/>
-        <TextBox x:Name="tb_NombreUsuario" Grid.Row="7" Height="20" MaxLength="20" Margin="10,0" FontFamily="Gill Sans MT" FontSize="14"/>
+        <Label Content="{x:Static p:Resources.lb_EnviarCodigo}" Grid.Row="6" VerticalAlignment="Bottom" Margin="10,0" FontFamily="Verdana" FontSize="10" Foreground="White"/>
+        <TextBox x:Name="tb_NombreUsuario" Grid.Row="7" Height="20" MaxLength="20" Margin="10,0" FontFamily="Gill Sans MT" FontSize="14" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         <Button x:Name="bt_Enviar" Content="{x:Static p:Resources.bt_Enviar}" Grid.Row="8" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="12" FontWeight="Bold" Click="Bt_Enviar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
     </Grid>
 </Window>

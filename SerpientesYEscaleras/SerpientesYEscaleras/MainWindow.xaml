@@ -9,30 +9,40 @@
         Title="SERPIENTES Y ESCALERAS" Height="400" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Menu x:Name="m_Idioma" Grid.Row="1" Height="16" HorizontalAlignment="Right" FontFamily="Gill Sans MT" FontSize="12">
-            <MenuItem x:Name="mi_Idioma" Header="{x:Static p:Resources.mi_Idioma}">
-                <MenuItem Header="{x:Static p:Resources.mi_Espaniol}" Height="16" Click="Mi_Español_Click"/>
-                <MenuItem Header="{x:Static p:Resources.mi_Ingles}" Height="16" Click="Mi_Ingles_Click"/>
+        <Image Grid.Column="0" HorizontalAlignment="Center" Source="Imagenes/Logo.png" Margin="0,5"/>
+        <Label x:Name="lb_Idioma" Content="{x:Static p:Resources.lb_IniciarSesion}" Grid.Row="1" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label Content="{x:Static p:Resources.lb_NombreUsuario}" Grid.Row="2" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
+        <TextBox x:Name="tb_NombreUsuario" Grid.Row="3" MaxLength="15" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <Label Content="{x:Static p:Resources.lb_Contrasenia}" Grid.Row="4" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
+        <PasswordBox x:Name="pb_Contrasenia" Grid.Row="5" MaxLength="16" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <Button x:Name="bt_Ingresar" Content="{x:Static p:Resources.bt_Ingresar}" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Margin="0,15,0,0" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Ingresar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <Label x:Name="lb_Registrarse" Content="{x:Static p:Resources.lb_Registrarse}" Grid.Row="7" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="12" MouseUp="Lb_Registrarse_MouseUp" Foreground="White"/>
+        <Label x:Name="lb_ValidarCuenta" Content="{x:Static p:Resources.lb_ValidarCuenta}" Grid.Row="8" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="12" MouseUp="Lb_ValidarCuenta_MouseUp" Foreground="White"/>
+        <Menu x:Name="m_Idioma" Grid.Row="9" HorizontalAlignment="Left" Height="20" FontFamily="Gill Sans MT" FontSize="12" Margin="15,0,0,0" Background="White" Foreground="#FF376092" BorderBrush="White">
+            <Image Source="Imagenes/Internacionalizacion/Idioma.png"/>
+            <MenuItem x:Name="mi_Idioma" Header="{x:Static p:Resources.mi_Idioma}" >
+                <MenuItem Header="{x:Static p:Resources.mi_Espaniol}" Height="16" Click="Mi_Español_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Imagenes/Internacionalizacion/Mexico.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{x:Static p:Resources.mi_Ingles}" Height="16" Click="Mi_Ingles_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Imagenes/Internacionalizacion/EstadosUnidos.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
         </Menu>
-        <Label x:Name="lb_Idioma" Content="{x:Static p:Resources.lb_IniciarSesion}" Grid.Row="2" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold"/>
-        <Label Content="{x:Static p:Resources.lb_NombreUsuario}" Grid.Row="3" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
-        <TextBox x:Name="tb_NombreUsuario" Grid.Row="4" MaxLength="15" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White"/>
-        <Label Content="{x:Static p:Resources.lb_Contrasenia}" Grid.Row="5" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
-        <PasswordBox x:Name="pb_Contrasenia" Grid.Row="6" MaxLength="16" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White"/>
-        <Button x:Name="bt_Ingresar" Content="{x:Static p:Resources.bt_Ingresar}" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Margin="0,15,0,0" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Ingresar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
-        <Label x:Name="lb_Registrarse" Content="{x:Static p:Resources.lb_Registrarse}" Grid.Row="8" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="12" MouseUp="Lb_Registrarse_MouseUp" Foreground="White"/>
-        <Label x:Name="lb_ValidarCuenta" Content="{x:Static p:Resources.lb_ValidarCuenta}" Grid.Row="9" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="12" MouseUp="Lb_ValidarCuenta_MouseUp" Foreground="White"/>
     </Grid>
 </Window>

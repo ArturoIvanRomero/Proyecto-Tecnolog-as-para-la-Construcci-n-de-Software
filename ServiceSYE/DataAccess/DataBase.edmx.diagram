@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="78422debf6dc40b1828dd72400a993a5" Name="Diagram1" >
+      <Diagram DiagramId="78422debf6dc40b1828dd72400a993a5" Name="Diagram1" ZoomLevel="113" >
         <EntityTypeShape EntityType="DataBase.Jugador" Width="1.5" PointX="1.75" PointY="1.125" />
         <EntityTypeShape EntityType="DataBase.Estadisticas" Width="1.5" PointX="3.75" PointY="1.25" />
         <AssociationConnector Association="DataBase.JugadorEstadisticas" />

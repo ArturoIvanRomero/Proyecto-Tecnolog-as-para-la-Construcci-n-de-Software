@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SerpientesYEscaleras.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,6 +40,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -51,6 +53,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.18\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -68,6 +73,7 @@
     <Compile Include="Espera.xaml.cs">
       <DependentUpon>Espera.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MessageBoxTemporal.cs" />
     <Compile Include="Partida.xaml.cs">
       <DependentUpon>Partida.xaml</DependentUpon>
     </Compile>
@@ -177,6 +183,9 @@
     <None Include="Connected Services\ServiceSYE\item3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceSYE\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceSYE\SerpientesYEscaleras.ServiceSYE.Jugador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -184,6 +193,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceSYE\Service.wsdl" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -193,16 +203,76 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\Recurso 5%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceSYE\" />
+    <Resource Include="Imagenes\Partida\TableroDificil.png" />
+    <Resource Include="Imagenes\Partida\TableroFacil.png" />
+    <Resource Include="Imagenes\Partida\TableroNormal.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceSYE\item.disco" />
+    <Resource Include="Imagenes\MenuPrincipal\LogoMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Partida\Dado.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\MenuPrincipal\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Internacionalizacion\Mexico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Internacionalizacion\EstadosUnidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Internacionalizacion\Idioma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\MenuPrincipal\Puntos.png" />
+    <Resource Include="Imagenes\MenuPrincipal\Salir.png" />
+    <Resource Include="Imagenes\MenuPrincipal\Victorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Partida\Ayuda.png" />
+    <Resource Include="Imagenes\MenuPrincipal\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\TablaPosiciones\Bronce.png" />
+    <Resource Include="Imagenes\TablaPosiciones\Normal.png" />
+    <Resource Include="Imagenes\TablaPosiciones\Oro.png" />
+    <Resource Include="Imagenes\TablaPosiciones\Plata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Espera\SerpienteTiempo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\MenuPrincipal\Crear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Espera\Espera.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Espera\Circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Partida\Ficha1.png" />
+    <Resource Include="Imagenes\Partida\Ficha2.png" />
+    <Resource Include="Imagenes\Partida\Ficha3.png" />
+    <Resource Include="Imagenes\Partida\Ficha4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\MenuPrincipal\Posiciones.png" />
+    <Resource Include="Imagenes\MenuPrincipal\Unirse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Partida\Bonus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceSYE\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceSYE\configuration91.svcinfo" />
@@ -215,6 +285,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceSYE\item.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

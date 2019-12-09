@@ -6,75 +6,82 @@
         xmlns:local="clr-namespace:SerpientesYEscaleras"
         xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092">
+        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="770"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="510"/>
+            <ColumnDefinition Width="610"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
-            <Image Height="770" Width="770" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Imagenes/Recurso 5@3x.png"/>
+            <Image x:Name="i_Tablero" Height="740" HorizontalAlignment="Left" VerticalAlignment="Center" Source="Imagenes/Partida/TableroNormal.png"/>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Bonus1" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-100,0,0,0" Source="Imagenes/Partida/Bonus.png"/>
+            </Grid>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Bonus2" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-100,0,0,0" Source="Imagenes/Partida/Bonus.png"/>
+            </Grid>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Bonus3" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-100,0,0,0" Source="Imagenes/Partida/Bonus.png"/>
+            </Grid>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Bonus4" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-100,0,0,0" Source="Imagenes/Partida/Bonus.png"/>
+            </Grid>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Ficha1" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-50,0,0,35" Source="Imagenes/Partida/Ficha1.png"/>
+            </Grid>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Ficha2" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-50,0,0,5" Source="Imagenes/Partida/Ficha2.png"/>
+            </Grid>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Ficha3" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-50,0,0,35" Source="Imagenes/Partida/Ficha3.png"/>
+            </Grid>
+            <Grid Height="740" Width="740" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image x:Name="i_Ficha4" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-50,0,0,5" Source="Imagenes/Partida/Ficha4.png"/>
+            </Grid>
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="30"/>
-            </Grid.RowDefinitions>
-        </Grid>
-        <Grid Grid.Column="2">
-            <Grid.RowDefinitions>
                 <RowDefinition Height="170"/>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="400"/>
+                <RowDefinition Height="600"/>
             </Grid.RowDefinitions>
             <WrapPanel Grid.Row="0" Orientation="Horizontal">
-                <Button x:Name="bt_Abandonar" Content="Abandonar" Height="20" VerticalAlignment="Center" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Abandonar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
-            </WrapPanel>
-            <Grid Grid.Row="1" Margin="30,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="150"/>
-                </Grid.RowDefinitions>
-                <Label Content="Bonus" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="20"/>
-                <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="225"/>
-                        <ColumnDefinition Width="225"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Content="1.- Vuelve al inicio" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
-                    <Label Content="2.- Divide tus casillas a la mitad" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
-                    <Label Content="3.- Regresa 3 casillas" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
-                    <Label Content="4.- Ve a la casilla 90" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
-                    <Label Content="5.- Duplica tus casillas" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
-                    <Label Content="6.- Avanza 6 casillas" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Showcard Gothic" FontSize="12"/>
+                <Button x:Name="bt_Dado" Height="100" Width="100" Margin="20,30,0,0" IsEnabled="False" Click="Bt_Dado_Click" Background="White" BorderBrush="White">
+                    <Image Source="Imagenes/Partida/Dado.jpeg"/>
+                </Button>
+                <Grid Margin="10,30,0,0">
+                    <TextBox Height="70" Width="70" IsReadOnly="True" IsEnabled="False" Background="Transparent" BorderBrush="White"/>
+                    <Label x:Name="lb_Dado" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="80" Foreground="White" FontWeight="Bold"/>
                 </Grid>
-            </Grid>
-            <Grid Grid.Row="2" Margin="50,50">
+                <Grid Margin="30,15,0,0">
+                    <Image Height="140" Source="Imagenes/Espera/SerpienteTiempo.png"/>
+                    <Label x:Name="lb_Tiempo" Content="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="80" Foreground="White" FontWeight="Bold" BorderBrush="White"/>
+                </Grid>
+                <Grid Width="220">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <WrapPanel Grid.Row="0" Orientation="Horizontal">
+                        <Button x:Name="bt_Ayuda" Height="40" Width="40" VerticalAlignment="Top" Margin="50,20,0,0" Click="Bt_Ayuda_Click"  Background="Transparent" BorderBrush="Transparent">
+                            <Image Source="Imagenes/Partida/Ayuda.png"/>
+                        </Button>
+                        <Button x:Name="bt_Abandonar" Content="{x:Static p:Resources.bt_Abandonar}" Height="20" VerticalAlignment="Top" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Margin="20,20,0,0" IsEnabled="False" Click="Bt_Abandonar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+                    </WrapPanel>
+                    <Image x:Name="i_Ficha" Grid.Row="1" Width="100"/>
+                    <Label x:Name="lb_Turno" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="50" Foreground="White" FontWeight="Bold"/>
+                </Grid>
+            </WrapPanel>
+            <Grid Grid.Row="1" Margin="50,50">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="400"/>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
-                <GroupBox Grid.Row="0" Height="200" Header="Mensajes" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold">
-                    <TextBox x:Name="tb_Mensajes" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Gill Sans MT" FontSize="12" Height="165" MaxHeight="175"/>
+                <GroupBox Grid.Row="0" Height="400" Header="{x:Static p:Resources.gb_Mensajes}" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold">
+                    <TextBox x:Name="tb_Mensajes" Height="350" TextWrapping="Wrap" IsReadOnly="True" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Gill Sans MT" FontSize="12" Background="White" Foreground="#FF376092" BorderBrush="White"/>
                 </GroupBox>
                 <WrapPanel Grid.Row="1" Orientation="Horizontal">
-                    <TextBox x:Name="tb_Mensaje" VerticalAlignment="Center" TextWrapping="NoWrap" AcceptsReturn="False" AcceptsTab="False" FontFamily="Gill Sans MT" FontSize="12" Height="20" Width="310" MaxLength="150" Margin="5,30"/>
-                    <Button x:Name="bt_Enviar" Content="Enviar" Height="20" VerticalAlignment="Center" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Margin="10,0" Click="Bt_Enviar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+                    <TextBox x:Name="tb_Mensaje" VerticalAlignment="Center" TextWrapping="NoWrap" AcceptsReturn="False" AcceptsTab="False" FontFamily="Gill Sans MT" FontSize="20" Height="30" Width="400" MaxLength="150" Margin="5,30" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+                    <Button x:Name="Enviar" Content="{x:Static p:Resources.bt_Enviar}" VerticalAlignment="Center" FontFamily="Verdana" FontSize="20" FontWeight="Bold" Margin="10,0" Click="Bt_Enviar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
                 </WrapPanel>
             </Grid>
         </Grid>

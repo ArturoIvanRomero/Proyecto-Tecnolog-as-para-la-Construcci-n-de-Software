@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:SerpientesYEscaleras"
         xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="450" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
+        Title="SERPIENTES Y ESCALERAS" Height="480" Width="320" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF376092">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
@@ -19,19 +19,24 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
+        <Image Grid.Column="0" HorizontalAlignment="Center" Source="Imagenes/Logo.png" Margin="0,5"/>
         <Label Content="{x:Static p:Resources.lb_Registrarse}" Grid.Row="1" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" Foreground="White" FontWeight="Bold"/>
         <Label Content="{x:Static p:Resources.lb_NombreUsuario}" Grid.Row="2" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
-        <TextBox x:Name="tb_NombreUsuario" Grid.Row="3" MaxLength="15" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14"/>
+        <TextBox x:Name="tb_NombreUsuario" Grid.Row="3" MaxLength="15" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         <Label Content="{x:Static p:Resources.lb_CorreoElectronico}" Grid.Row="4" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
-        <TextBox x:Name="tb_CorreoElectronico" Grid.Row="5" MaxLength="50" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14"/>
+        <TextBox x:Name="tb_CorreoElectronico" Grid.Row="5" MaxLength="50" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         <Label Content="{x:Static p:Resources.lb_Contrasenia}" Grid.Row="6" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
-        <PasswordBox x:Name="pb_Contrasenia" Grid.Row="7" MaxLength="16" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14"/>
+        <PasswordBox x:Name="pb_Contrasenia" Grid.Row="7" MaxLength="16" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White" Foreground="#FF376092" BorderBrush="White"/>
         <Label Content="{x:Static p:Resources.lb_ConfirmarContrasenia}" Grid.Row="8" Grid.Column="0" Margin="50,0" FontFamily="Verdana" FontSize="15" Foreground="White"/>
-        <PasswordBox x:Name="pb_ConfirmarContrasenia" Grid.Row="9" MaxLength="16" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14"/>
-        <Button x:Name="bt_Registrarse" Content="{x:Static p:Resources.lb_Registrarse}" Grid.Row="10" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15"  FontWeight="Bold" Click="Bt_Registrarse_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
-        <Button x:Name="bt_Cancelar" Content="{x:Static p:Resources.bt_Cancelar}" Grid.Row="11" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15"  FontWeight="Bold" Click="Bt_Cancelar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <PasswordBox x:Name="pb_ConfirmarContrasenia" Grid.Row="9" MaxLength="16" VerticalAlignment="Center" Margin="50,0" FontFamily="Gill Sans MT" FontSize="14" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <CheckBox x:Name="cb_Terminos" Content="{x:Static p:Resources.cb_TerminosCondiciones}" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="10" Foreground="White" />
+        <Button x:Name="bt_Registrarse" Content="{x:Static p:Resources.lb_Registrarse}" Grid.Row="11" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Registrarse_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <Button x:Name="bt_Cancelar" Content="{x:Static p:Resources.bt_Cancelar}" Grid.Row="12" HorizontalAlignment="Center" Height="25" FontFamily="Verdana" FontSize="15" FontWeight="Bold" Click="Bt_Cancelar_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+        <Button x:Name="bt_Terminos" Content="{x:Static p:Resources.bt_TerminosYPolitica}" Grid.Row="13" HorizontalAlignment="Center" Height="18" FontFamily="Verdana" FontSize="10" FontWeight="Bold" Background="Transparent" Foreground="White" BorderBrush="Transparent" Click="Bt_Terminos_Click"/>
     </Grid>
 </Window>

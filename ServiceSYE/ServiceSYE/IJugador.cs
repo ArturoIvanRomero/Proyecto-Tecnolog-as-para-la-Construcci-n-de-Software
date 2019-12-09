@@ -1,49 +1,89 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 
 namespace ServiceSYE {
   [ServiceContract]
   public interface IJugador {
     [OperationContract]
-    void AddJugador(Jugador jugador);
+    Boolean RegistrarJugador(Jugador jugador);
 
     [OperationContract]
-    Jugador GetJugador(String nombreUsuario, String contrasenia);
+    Jugador IniciarSesion(String nombreUsuario, String contrasenia);
 
     [OperationContract]
-    List<Jugador> GetJugadoresPuntos();
+    void UnirseAlJuego(Jugador jugador);
 
     [OperationContract]
-    List<Jugador> GetJugadoresVictorias();
+    void SalirDelJuego(Jugador jugador);
+
+    [OperationContract]
+    Boolean ValidarConectado(Jugador jugador);
+
+    [OperationContract]
+    List<Jugador> ObtenerJugadoresPuntos();
+
+    [OperationContract]
+    List<Jugador> ObtenerJugadoresVictorias();
+
+    [OperationContract]
+    Boolean EnviarCodigoACorreo(Jugador jugador, String asunto, String mensajeIngresar, String mensajeFinal);
+
+    [OperationContract]
+    Jugador ObtenerJugadorPorCodigo(String codigoVerificacion);
+
+    [OperationContract]
+    Jugador ObtenerJugadorPorNombre(String nombreUsuario);
+
+    [OperationContract]
+    Jugador ObtenerJugadorPorCorreo(String correoElectronico);
+
+    [OperationContract]
+    Boolean ValidarCuentaJugador(String correoElectronico);
+
+    [OperationContract]
+    int ValidarCodigo(String codigoVerificacion);
+
+    [OperationContract]
+    Boolean ModificarCodigo(String codigoVerificacion, String nuevoCodigoVerificacion);
+
+    [OperationContract]
+    Boolean ModificarEstadisticas(String nombreUsuario, Int16 puntos, Int16 victorias);
+
+    [OperationContract]
+    Jugador CrearJugador(List<DataAccess.Jugador> jugador);
   }
   
   [DataContract]
    public class Jugador {
-    private String nombreUsuario;
-    private String contrasenia;
-    private String correoElectronico;
-    private Int16 puntos;
-    private Int16 victorias;
-    private String codigo;
-    private Boolean validado;
+    [DataMember]
+    public string NombreUsuario { get; set; }
+    [DataMember]
+    public string Contrasenia { get; set; }
+    [DataMember]
+    public string CorreoElectronico { get; set; }
+    [DataMember]
+    public string Codigo { get; set; }
+    [DataMember]
+    public Estadisticas Estadisticas { get; set; }
+    [DataMember]
+    public Turno Turno { get; set; }
+  }
 
+  [DataContract]
+  public class Estadisticas {
     [DataMember]
-    public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
+    public Int16 Puntos { get; set; }
     [DataMember]
-    public string Contrasenia { get => contrasenia; set => contrasenia = value; }
+    public Int16 Victorias { get; set; }
+  }
+
+  [DataContract]
+  public class Turno {
     [DataMember]
-    public string CorreoElectronico { get => correoElectronico; set => correoElectronico = value; }
+    public int NumeroTurno { get; set; }
     [DataMember]
-    public Int16 Puntos { get => puntos; set => puntos = value; }
-    [DataMember] 
-    public Int16 Victorias { get => victorias; set => victorias = value; }
-    [DataMember]
-    public string Codigo { get => codigo; set => codigo = value; }
-    [DataMember] 
-    public bool Validado { get => validado; set => validado = value; }
+    public Casilla Casilla { get; set; }
   }
 }

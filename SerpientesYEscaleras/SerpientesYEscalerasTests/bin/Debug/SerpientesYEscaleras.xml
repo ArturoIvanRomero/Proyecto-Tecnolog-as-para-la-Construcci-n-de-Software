@@ -1,0 +1,1893 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SerpientesYEscaleras</name>
+    </assembly>
+    <members>
+        <member name="T:SerpientesYEscaleras.CrearPartida">
+            <summary>
+            Clase parcial CrearPartida.
+            Contiene métodos necesarios de la ventana de Crear partida.
+            </summary>
+            <summary>
+            CrearPartida
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.CrearPartida.#ctor(SerpientesYEscaleras.MenuPrincipal,SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Constructor de la ventana CrearPartida.
+            </summary>
+            <param name="menuPrincipal">
+            Ventana MenúPrincipal de la cual se mandó a llamar la ventana.
+            </param>
+            <param name="jugador">
+            Objeto jugador que se mandó desde el menú.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.CrearPartida.Bt_Crear_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para crear una partida.
+            Valida que no tenga nombre vacío y el jugador no haya creado una partida con ese mismo nombre que aun esté disponible.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.CrearPartida.Bt_Ayuda_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Muestra la ayuda de la ventana.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.CrearPartida.CrearJuego(SerpientesYEscaleras.ServiceSYE.PartidaClient)">
+            <summary>
+            Crea la partida.
+            Si el jugador no tiene los puntos suficientes manda un mensaje de alerta.
+            </summary>
+            <param name="clientePartida">
+            Referencia al servidor.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.CrearPartida.Cb_Dificultad_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Cambia la imagen que muestra una vista previa del tablero.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.CrearPartida.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.Espera">
+            <summary>
+            Clase parcial Espera.
+            Contiene métodos necesarios de la ventana de Espera.
+            </summary>
+            <summary>
+            Espera
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Espera.Jugador">
+            <summary>
+            Jugador que está en la ventana de Espera.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Espera.Partida">
+            <summary>
+            Partida que está en la ventana de Espera.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Espera.ClientePartida">
+            <summary>
+            Conexión con el servidor para acceder a los métodos que proporciona sobre las partidas.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Espera.ClienteChat">
+            <summary>
+            Conexión con el servidor para acceder a los métodos que proporciona sobre el chat.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Espera.Partidas">
+            <summary>
+            Objeto partidas que implementa los métodos que reciben respuesta del servidor, sobre las partidas.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Espera.Mensajes">
+            <summary>
+            Objeto mensajes que implementa los métodos que reciben respuesta del servidor, sobre el chat.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Espera.Cerrar">
+            <summary>
+            Valor boolean que indicasi una ventana se cierra completamente o sólo cambia a otra ventana.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.#ctor">
+            <summary>
+            Constructor de la ventana Espera, para las pruebas.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.#ctor(SerpientesYEscaleras.ServiceSYE.Jugador,SerpientesYEscaleras.ServiceSYE.Partida)">
+            <summary>
+            Constructor de la ventana Espera.
+            </summary>
+            <param name="jugador">
+            Objeto jugador que se mandó desde el menú.
+            </param>
+            <param name="partida">
+            Objeto partida que se mandó desde el menú.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.ValidarConectado">
+            <summary>
+            Método que valida que el jugador sigue conectado al servidor.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.Bt_Enviar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para enviar un mensaje en el chat.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.Bt_Cancelar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Cancela la espera de la partida y saca al jugador de esta.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Cierra la ventana y saca al jugador de la partida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.ValidarMensaje(System.String)">
+            <summary>
+            Valida que el mensaje que se quiere enviar no esté vacío o tenga sólo espacios.
+            </summary>
+            <param name="mensaje">
+            Mensaje que se quiere validar.
+            </param>
+            <returns>
+            Valor boolean que es True si el mensaje es valido y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.ValidarCaracteresMensaje(System.String)">
+            <summary>
+            Valida que el mensaje, con el que se quiere mandar, no tenga caracteres especiales.
+            Sólo se pueden ingresar letras del alfabeto (minúsculas y mayúsculas), vocales con acento, números y espacios.
+            </summary>
+            <param name="mensaje">
+            Mensaje con el que se quiere ingresar.
+            </param>
+            <returns>
+            Valor boolean que es True si el mensaje tiene los caracteres permitidos, si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.EnviarMensajeError">
+            <summary>
+            Muetra un mensaje temporal de que se perdió la conexión con el servidor y regresa al menú.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Espera.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.MessageBoxTemporal">
+            <summary>
+            Clase MessageBoxTemporal.
+            Contiene métodos necesarios para crear un MessageBox temporal.
+            No fue construido por el equipo de desarrollo.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.MessageBoxTemporal.#ctor(System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Constructor del MessageBoxTemporal.
+            </summary>
+            <param name="texto">
+            Texto que tendrá el MessageBox.
+            </param>
+            <param name="titulo">
+            Título que tendrá el MessageBox.
+            </param>
+            <param name="tiempo">
+            Tiempo que tendrá el MessageBox.
+            </param>
+            <param name="contador">
+            Valor boolean que indica si se mostrará o no el contador.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MessageBoxTemporal.Show(System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Método para mostrar el MessageBoxTemporal.
+            </summary>
+            <param name="texto">
+            Texto que tendrá el MessageBox.
+            </param>
+            <param name="titulo">
+            Título que tendrá el MessageBox.
+            </param>
+            <param name="tiempo">
+            Tiempo que tendrá el MessageBox.
+            </param>
+            <param name="contador">
+            Valor boolean que indica si se mostrará o no el contador.
+            </param>
+        </member>
+        <member name="T:SerpientesYEscaleras.Partida">
+            <summary>
+            Clase parcial Partida.
+            Contiene métodos necesarios de la ventana de la partida.
+            </summary>
+            <summary>
+            Partida
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Partida.Jugador">
+            <summary>
+            Jugador que está en la ventana de Partida.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Partida.PartidaEnJuego">
+            <summary>
+            Partida que está en la ventana de Partida.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.#ctor">
+            <summary>
+            Constructor de la ventana Partida, para las pruebas.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.#ctor(SerpientesYEscaleras.ServiceSYE.Jugador,SerpientesYEscaleras.ServiceSYE.Partida,SerpientesYEscaleras.ServiceSYE.PartidaClient,SerpientesYEscaleras.ServiceSYE.ChatClient,SerpientesYEscaleras.Partidas,SerpientesYEscaleras.Mensajes)">
+            <summary>
+            Constructor de la ventana Espera.
+            </summary>
+            <param name="jugador">
+            Objeto jugador que se mandó desde el menú.
+            </param>
+            <param name="partida">
+            Objeto partida que se mandó desde el menú.
+            </param>
+            /// <param name="clientePartida">
+            Conexión con el servidor para acceder a los métodos que proporciona sobre las partidas.
+            </param>
+            /// <param name="clienteChat">
+            Conexión con el servidor para acceder a los métodos que proporciona sobre el chat.
+            </param>
+            /// <param name="partidas">
+            Objeto mensajes que implementa los métodos que reciben respuesta del servidor, sobre las partidas.
+            </param>
+            /// <param name="mensajes">
+            Objeto mensajes que implementa los métodos que reciben respuesta del servidor, sobre el chat.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.ValidarConectado">
+            <summary>
+            Método que valida que el jugador sigue conectado al servidor.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.Bt_Dado_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para tirar el dado y que se lo notofiqué a los jugadores.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.Bt_Abandonar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para que el usuario abandone la partida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.Bt_Ayuda_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Muestra la ayuda de la ventana que muestra las reglas y funcionalidad de la partida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.Bt_Enviar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para enviar un mensaje en el chat.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Cierra la ventana.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.CargarTablero">
+            <summary>
+            Carga la imagen del tablero según la dificultad de la partida.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.ObtenerTurno(System.Collections.Generic.Dictionary{System.Object,SerpientesYEscaleras.ServiceSYE.Jugador},SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Obtiene los turno de la partida recuparada del servidor y se los asigna a los jugadores.
+            </summary>
+            <param name="jugadoresPartida">
+            Lista de los jugadores donde se encuentran los turno recuperados del servidor.
+            </param>
+            <param name="jugadorTurno">
+            Objeto jugador al que se le asignará el turno.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.CargarBonus">
+            <summary>
+            Posiciona las imagenes de los bonus segun la posición de las casillas bonus de la partida recuperada del servidor.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.ActivarDado">
+            <summary>
+            Activa el botón dado y cominza la cuenta atrás del temporizador.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.TurnoPerdido">
+            <summary>
+            Realiza el proceso cuando un jugador perdió su turno.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.CalcularMovimiento(System.Int32,SerpientesYEscaleras.ServiceSYE.Jugador,SerpientesYEscaleras.ServiceSYE.Partida)">
+            <summary>
+            Calcula el movimiento que hará la ficha del jugador a una casilla en el tablero.
+            </summary>
+            <param name="numeroDado">
+            Número que obtuvo el jugador al tirar el dado.
+            </param>
+            <param name="jugadorMovimiento">
+            Objeto jugador que tiene los datos del jugador que realizó el tiro.
+            </param>
+            <param name="partidaJugando">
+            Objeto partida que tiene los datos de la partida en juego.
+            </param>
+            <returns>
+            Valor entero de la casilla a la que se moverá la ficha del jugador.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.DeterminarMovimiento(System.String,System.String)">
+            <summary>
+            Realiza el proceso para mover la ficha del jugador.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre del jugador del que se moverá su ficha.
+            </param>
+            <param name="mensaje">
+            Mensaje que envía el juego.
+            En este caso se recibe el mansaje para saber si cuando el jugador tiro en bonus obtuvo un 4, que en ese caso no se realiza ningún movimiento de la ficha.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.DeterminarJugadorMovimiento(System.String)">
+            <summary>
+            Determina quien es el jugador del cual se moverá su ficha.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre del jugador que se moverá su ficha.
+            </param>
+            <returns>
+            Objeto jugador que tiene los datos del jugador que moverá su ficha.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.MoverFicha(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Mueve la imagen de la ficha a la casilla correspondiente.
+            </summary>
+            <param name="jugadorMovimiento">
+            Objeto jugador que tiene los datos del juagdor que moverá su ficha como su turno y la casilla a la que se moverá.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.MoverFichaSerpienteOEscalera(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Realiza el proceso para determinar el movimiento de la ficha de un jugador si es que cayó en una serpiente o una escalera.
+            </summary>
+            <param name="jugadorMovimiento">
+            Objecto jugador que tiene los datos del jugador que cayó en una serpiente o escalera.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.TirarBonus(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Realiza el proceso para enviar el mensaje de que un jugador cayó en una casilla bonus.
+            </summary>
+            <param name="jugadorMovimiento">
+            Objecto jugador que tiene los datos del jugador que cayó en una casilla bonus.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.MovimientoBonus(System.Int32)">
+            <summary>
+            Realiza el proceso para determinar el movimiento de una ficha según el bonus obtenido.
+            </summary>
+            <param name="numeroDado">
+            Valor entero que es el número obtenido al tirar el dado.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.TiroBonus(System.Int32,SerpientesYEscaleras.ServiceSYE.Jugador,SerpientesYEscaleras.ServiceSYE.Partida)">
+            <summary>
+            Calcula el movimiento que hará la ficha del jugador que tiro el bonus para los casos en los que:
+              la posición de la casilla se divide
+              la posición de la casilla se le resta 3
+              la posición de la casilla se le suma 10
+            </summary>
+            <param name="bonus">
+            Valor entero que indica el bonus obtenido.
+            </param>
+            <param name="jugadorMovimiento">
+            Objecto jugador que tiene los datos del jugador que tiro el bonus.
+            </param>
+            <param name="partidaJugando">
+            Objeto partida que tiene los datos de la partida en juego.
+            </param>
+            <returns>
+            Valor entero de la casilla a la que se moverá la ficha del jugador después del bonus.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.CambiarTurno(System.String)">
+            <summary>
+            Realiza el proceso para cambiar el turno. Verifica antes si el jugador que acaba de tirar no ha ganado. Y cambia la posición de los bonus si termino una ronda de turnos.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre del jugador que acaba de pasar su turno.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.VerificarGanador(System.String)">
+            <summary>
+            Verifica que un jugador ganó la partida.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre del jugador que acaba de pasar su turno.
+            </param>
+            <returns>
+            Valor boolenan que es True si el jugador ganó la partida y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.DefinirJugadorMasAlto(System.Collections.Generic.List{SerpientesYEscaleras.ServiceSYE.Jugador},System.Int32)">
+            <summary>
+            Define el jugador más alto en una lista de jugadores según su posición de su casilla.
+            </summary>
+            <param name="posicionJugadoresAux">
+            Lista de jugadores de la cual se definirá el jugador más alto.
+            </param>
+            <param name="contador">
+            Valor enetero que define el contador según el número de jugadores de la lista.
+            </param>
+            <returns>
+            Objeto jugador con la posición de casilla más alta.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.DefinirPremios(System.Int32)">
+            <summary>
+            Define los premios de los jugadores según el número de jugadores de la partida.
+            </summary>
+            <param name="numeroJugadores">
+            Valor entero que es el número de jugadores de la partida.
+            </param>
+            <returns>
+            Lista de premios (puntos) a otorgar a los jugadores en la partida.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.GuardarNuevasEstadisticas(SerpientesYEscaleras.ServiceSYE.Jugador,System.Int32)">
+            <summary>
+            Guarda las nuevas estadísticas (puntos y vitorias) de un jugador al terminar la partida.
+            </summary>
+            <param name="jugadorMasAlto">
+            Objecto jugador que tiene los datos del jugador que se guardaran sus nuevas estadísticas.
+            </param>
+            <param name="contador">
+            Valor entero que si es igual al número de jugador de la partida sirve para aumentar una victoria al jugador.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.SiguienteJugador">
+            <summary>
+            Envía un mensaje a los jugadores de quien es el siguiente jugador en tirar. Y cambia la posición de las imagenes de los bonus.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.EnviarMensajeTurnos">
+            <summary>
+            Envía un mensaje de los turnos de los jugadores y del color de su ficha.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.ActivarAbandonar(System.String)">
+            <summary>
+            Activa el botón de abandonar a los jugadores que no estén tirando.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre del jugador que no se activará el botón de abandonar.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.EnviarMensajeBonus(System.String)">
+            <summary>
+            Envía el mensaje de quien cayó en una casilla bonus y de los diferentes bonus que pueden tocar al tirar.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre del jugador que cayó en una casilla bonus.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.MoverFichaAbandono(System.String,System.Collections.Generic.Dictionary{System.Object,SerpientesYEscaleras.ServiceSYE.Jugador})">
+            <summary>
+            Mueve la ficha del jugador que abandonó a una posición fuera del tablero.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre del jugador que abandonó la partida. 
+            </param>
+            <param name="jugadoresPartida">
+            Lista de jugadores que tiene los jugadores de la partida.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.EnviarMensajeError">
+            <summary>
+            Envía un mensaje de error cuando se cae el servidor y regresa all menú principal.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partida.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.MenuPrincipal">
+            <summary>
+            Clase parcial MenuPrincipal.
+            Contiene métodos necesarios de la ventana del menú principal.
+            </summary>
+            <summary>
+            MenuPrincipal
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.#ctor(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Constructor de la ventana MenuPrincipal.
+            </summary>
+            <param name="jugador">
+            Objeto jugador que ingreso al juego.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.CargarDatos">
+            <summary>
+            Carga los datos del jugador en la ventana.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.ValidarConectado">
+            <summary>
+            Método que valida que el jugador sigue conectado al servidor.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.Bt_CrearPartida_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método que muestra la ventana de CrearPartida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.I_Crear_MouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Método que muestra la ventana de CrearPartida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.Bt_UnirsePartida_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método que muestra la ventana de UnirsePartida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.I_Unirse_MouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Método que muestra la ventana de UnirsePartida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.Bt_TablaPosiciones_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método que muestra la ventana de TablaPosiciones.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.I_Posicion_MouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Método que muestra la ventana de TablaPosiciones.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.Mi_Salir_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método para salir del juego.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Método que cierra la ventana y saca al jugador del juego.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.UnirseAPartida(SerpientesYEscaleras.ServiceSYE.Partida)">
+            <summary>
+            Método que muestra la ventana de Espera.
+            </summary>
+            <param name="partida">
+            Objeto partida que se creó.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MenuPrincipal.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.Partidas">
+            <summary>
+            Clase parcial Partidas.
+            Contiene métodos que reciben respuesta del servidor, sobre las partidas.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Partidas.UnirsePartida">
+            <summary>
+            Ventana UnirsePartida que recibe las actualizaciones de las partidas que están diponibles.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Partidas.Partida">
+            <summary>
+            Ventana Partida que recibe la respuesta para activar el dado de un jugador.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partidas.ActualizarPartidas(SerpientesYEscaleras.ServiceSYE.Partida[])">
+            <summary>
+            Actualiza las partidas en la tabla de la ventana UnirsePartida.
+            </summary>
+            <param name="partidas">
+            Arreglo de partidas disponibles.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Partidas.Tirar">
+            <summary>
+            Activa el dado de un jugador en la ventana Partida.
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.Mensajes">
+            <summary>
+            Clase parcial Mensajes.
+            Contiene métodos que reciben respuesta del servidor, sobre el chat.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Mensajes.Espera">
+            <summary>
+            Ventana Espera que recibe los mensajes del chat que mandaron los usuarios.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Mensajes.Partida">
+            <summary>
+            Ventana Partida que recibe los mensajes del chat que mandaron los usuarios.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Mensajes.RecibeMensaje(System.String,System.String,System.Int32)">
+            <summary>
+            Muestra los mensajes recibidos en el chat de espera.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre de usuario del quien mandó el mensaje.
+            </param>
+            <param name="mensaje">
+            Mensaje que se recibió.
+            </param>
+            <param name="numeroJugadores">
+            Valor entero para validar cuantos jugadores se han unido.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Mensajes.RecibeMensajePartida(System.String,System.String,System.Int32)">
+            <summary>
+            Muestra los mensajes recibidos en el chat de la partida.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre de usuario del quien mandó el mensaje.
+            </param>
+            <param name="mensaje">
+            Mensaje que se recibió.
+            </param>
+            <param name="tipoMensaje">
+            Valor entero que indica el tipo de mensaje que se recibió:
+              0 es un mensaje normal, 
+              1 es un mensaje que indica de quien es el turno, 
+              2 es un mensaje que muestra los bonus, 
+              3 es un mensaje que muestra cuanto obtuvo un jugador al tirar el dado,
+              4 es un mensaje que indica que un jugador perdió turno y
+              5 es un mensaje que indica qye un jugador salió de la partida.
+            </param>
+        </member>
+        <member name="T:SerpientesYEscaleras.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_Abandonar">
+            <summary>
+              Looks up a localized string similar to Abandonar.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_Aceptar">
+            <summary>
+              Looks up a localized string similar to Aceptar.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_Cancelar">
+            <summary>
+              Looks up a localized string similar to Cancelar.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_Crear">
+            <summary>
+              Looks up a localized string similar to Crear.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_CrearPartida">
+            <summary>
+              Looks up a localized string similar to Crear Partida.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_Enviar">
+            <summary>
+              Looks up a localized string similar to Enviar.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_Ingresar">
+            <summary>
+              Looks up a localized string similar to Ingresar.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_OrdenarPuntos">
+            <summary>
+              Looks up a localized string similar to Ordenar por Puntos.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_OrdenarVictorias">
+            <summary>
+              Looks up a localized string similar to Ordenar por Victorias.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_TablaPosiciones">
+            <summary>
+              Looks up a localized string similar to Tabla de Posiciones.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_TerminosYPolitica">
+            <summary>
+              Looks up a localized string similar to Términos y condiciones y Política de privacidad.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_Unirse">
+            <summary>
+              Looks up a localized string similar to Unirse.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.bt_UnirsePartida">
+            <summary>
+              Looks up a localized string similar to Unirse a Partida.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.cb_TerminosCondiciones">
+            <summary>
+              Looks up a localized string similar to Acepto los Términos y condiciones.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.cbi_Dificil">
+            <summary>
+              Looks up a localized string similar to Difícil.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.cbi_Facil">
+            <summary>
+              Looks up a localized string similar to Fácil.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.cbi_Normal">
+            <summary>
+              Looks up a localized string similar to Normal.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.dcg_Puntos">
+            <summary>
+              Looks up a localized string similar to Puntos.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.dgc_Dificultad">
+            <summary>
+              Looks up a localized string similar to Dificultad.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.dgc_Jugador">
+            <summary>
+              Looks up a localized string similar to Jugador.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.dgc_Nombre">
+            <summary>
+              Looks up a localized string similar to Nombre.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.gb_Mensajes">
+            <summary>
+              Looks up a localized string similar to Mensajes.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_CodigoVerificacion">
+            <summary>
+              Looks up a localized string similar to Código de verificación:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_ConfirmarContrasenia">
+            <summary>
+              Looks up a localized string similar to Confirmar contraseña:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Contrasenia">
+            <summary>
+              Looks up a localized string similar to Contraseña:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_CorreoElectronico">
+            <summary>
+              Looks up a localized string similar to Correo electrónico:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Dificultad">
+            <summary>
+              Looks up a localized string similar to Dificultad:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_EnviarCodigo">
+            <summary>
+              Looks up a localized string similar to Enviar de nuevo el código de verificación al usuario:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Esperando">
+            <summary>
+              Looks up a localized string similar to Esperando jugadores: .
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Fin">
+            <summary>
+              Looks up a localized string similar to FIN DEL JUEGO.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_IniciarSesion">
+            <summary>
+              Looks up a localized string similar to Iniciar sesión.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Nombre">
+            <summary>
+              Looks up a localized string similar to Nombre:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_NombreUsuario">
+            <summary>
+              Looks up a localized string similar to Nombre de usuario:.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Partidas">
+            <summary>
+              Looks up a localized string similar to Partidas.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Registrarse">
+            <summary>
+              Looks up a localized string similar to Registrarse.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_Resultados">
+            <summary>
+              Looks up a localized string similar to Resultados.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_TablaPosiciones">
+            <summary>
+              Looks up a localized string similar to Tabla de Posiciones.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.lb_ValidarCuenta">
+            <summary>
+              Looks up a localized string similar to Validar cuenta.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_Alerta">
+            <summary>
+              Looks up a localized string similar to Alerta.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_Ayuda">
+            <summary>
+              Looks up a localized string similar to ¿Cómo jugar?.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_AyudaDificultad">
+             <summary>
+               Looks up a localized string similar to La dificultad de la partida está determinada por el número de serpientes y escaleras presentes en el tablero:
+            Fácil: 6 escaleras y 3 serpientes.
+            Normal: 4 escaleras y 4 serpientes.
+            Difícil: 3 escaleras y 6 serpientes.
+            
+            La partida comienza cuando haya 4 jugadores.
+            Al empezar la partida apostaras 200 puntos..
+             </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_AyudaPartida">
+             <summary>
+               Looks up a localized string similar to 1.- Cada jugador tiene 10 segundos para realizar su tiro.
+            2.- Tu ficha y tu turno se encuentran en la esquina superior derecha.
+            3..- Cuando sea tu turno, presiona el dado para tirar y se mostrará cuanto obtuviste a la derecha del dado.
+            4.- Si un jugador no tira pierde su turno.
+            5.- En el chat puedes mandar mensaje a los demás jugadores, además de recibir retroalimentación del juego.
+            6.- Sólo puedes abandonar la partida cuando sea el turno de los demás jugadores. Si decides abandonar la partida perderás [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_AyudaUnirse">
+             <summary>
+               Looks up a localized string similar to Para unirte a una partida debes seleccionar una partida de la tabla y dar clic al botón Unirse, y te llevará a la pantalla de espera.
+            La partida comienza cuando haya 4 jugadores.
+            Al empezar la partida apostaras 200 puntos..
+             </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CaracteresInvalidos">
+            <summary>
+              Looks up a localized string similar to Caracteres inválidos en el nombre de usuario, verifique sus datos. Sólo puede tener letras y números..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CaracteresInvalidosContrasenia">
+            <summary>
+              Looks up a localized string similar to Caracteres inválidos en la contraseña, verifique sus datos. Sólo puede tener letras y números..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CaracteresInvalidosMensaje">
+            <summary>
+              Looks up a localized string similar to Caracteres inválidos en el mensaje, sólo puede tener letras y números..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CaracteresInvalidosPartida">
+            <summary>
+              Looks up a localized string similar to Caracteres inválidos en el nombre de la partida, sólo puede tener letras y números..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_Codigo">
+            <summary>
+              Looks up a localized string similar to Código de verificación.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CodigoEnviado">
+            <summary>
+              Looks up a localized string similar to Le hemos enviado de nuevo el código de verificación al correo:  .
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CodigoIncorrecto">
+            <summary>
+              Looks up a localized string similar to Código incorrecto..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CodigoVacio">
+            <summary>
+              Looks up a localized string similar to Ingrese un código..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_ConexionBD">
+            <summary>
+              Looks up a localized string similar to No hay conexión con la base de datos, inténtelo más tarde..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_ConexionBD2">
+            <summary>
+              Looks up a localized string similar to No hay conexión con la base de datos, por favor no cierre el juego ya que sus datos podrían no guardarse, estamos trabajando en esto, inténtelo más tarde..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_ConexionServidor">
+            <summary>
+              Looks up a localized string similar to No hay conexión con el servidor, inténtelo más tarde..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_ConexionServidor2">
+            <summary>
+              Looks up a localized string similar to No hay conexión con el servidor, por favor no cierre el juego ya que sus datos podrían no guardarse, estamos trabajando en esto, inténtelo más tarde..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_ConexionServidor3">
+            <summary>
+              Looks up a localized string similar to No hay conexión con el servidor, volverá al menú principal..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_ContraseniaInvalida">
+            <summary>
+              Looks up a localized string similar to La contraseña debe tener 8 caracteres con una letra y un número, como mínimo. Sólo puede tener letras y números..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_ContraseniaNoCoincide">
+            <summary>
+              Looks up a localized string similar to No coincide la confirmación de la contraseña, verifique su contraseña..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CorreoEnviado">
+            <summary>
+              Looks up a localized string similar to Le hemos enviado un correo con el código de verificación, ingréselo para validar su cuenta..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CorreoInvalido">
+            <summary>
+              Looks up a localized string similar to Correo electrónico inválido, verifique sus datos..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CorreoOcupado">
+            <summary>
+              Looks up a localized string similar to Este correo ya fue registrado, ingrese otro correo..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CuentaNoValidada">
+            <summary>
+              Looks up a localized string similar to Esta cuenta aún no ha sido validada, valide su cuenta con el código de verificación..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CuentaValidada">
+            <summary>
+              Looks up a localized string similar to Se validó la cuenta: .
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_CuentaYaVerificada">
+            <summary>
+              Looks up a localized string similar to Esta cuenta ya está verificada..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_DatosVacios">
+            <summary>
+              Looks up a localized string similar to No ingreso todos los campos, ingrese sus datos..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_EnvioFallido">
+            <summary>
+              Looks up a localized string similar to No pudimos enviar el código de verificación, inténtelo más tarde..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_IngreseCodigo">
+            <summary>
+              Looks up a localized string similar to , ingréselo para validar su cuenta..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_IngreseJugador">
+            <summary>
+              Looks up a localized string similar to Ingrese el nombre de usuario al que quiere enviar el código..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_JugadorInexistente">
+            <summary>
+              Looks up a localized string similar to No existe este jugador, verifique su nombre de usuario..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_Listo">
+            <summary>
+              Looks up a localized string similar to Listo.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_NombreOcupado">
+            <summary>
+              Looks up a localized string similar to Este nombre de usuario ya está ocupado, ingrese otro nombre de usuario..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_NombrePartidaOcupado">
+            <summary>
+              Looks up a localized string similar to Ya creó una partida con este nombre, ingrese otro nombre..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_NombreUsuarioOContraseniaIncorrectos">
+            <summary>
+              Looks up a localized string similar to Nombre de usuario o contraseña incorrectos, verifique sus datos..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_NombreUsuarioOContraseniaVacios">
+            <summary>
+              Looks up a localized string similar to Nombre de usuario o contraseña vacios, ingrese sus datos..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_NombreVacio">
+            <summary>
+              Looks up a localized string similar to Ingrese el nombre de la partida..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_PuntosInsuficientes">
+            <summary>
+              Looks up a localized string similar to No tienes suficientes puntos para unirte o crear una partida, necesitas 200 para apostar..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_RegistroExitoso">
+            <summary>
+              Looks up a localized string similar to Se registró correctamente..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_RegistroFallido">
+            <summary>
+              Looks up a localized string similar to Temporalmente no podemos registrar jugadores, inténtelo más tarde..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_SoloNumeros">
+            <summary>
+              Looks up a localized string similar to El código sólo puede tener números..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mb_TerminosCondiciones">
+             <summary>
+               Looks up a localized string similar to TÉRMINOS DE SERVICIO
+            Por favor, lea estas Condiciones de servicio cuidadosamente antes de acceder o utilizar nuestro juego. Al acceder o utilizar cualquier parte del juego, usted acepta que quedará vinculado por estas Condiciones de Servicio. Si usted no está de acuerdo con todos los términos y condiciones de este acuerdo, entonces usted no puede utilizar nuestro  juego. 
+            Usted no puede usar nuestro juego para ningún propósito ilegal o no autorizado ni puede, en el uso del juego, violar cualquier ley en s [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mi_Espaniol">
+            <summary>
+              Looks up a localized string similar to Español.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mi_Idioma">
+            <summary>
+              Looks up a localized string similar to Idioma.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mi_Ingles">
+            <summary>
+              Looks up a localized string similar to Inglés.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mi_Puntos">
+            <summary>
+              Looks up a localized string similar to Puntos.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mi_Salir">
+            <summary>
+              Looks up a localized string similar to Salir.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.mi_Victorias">
+            <summary>
+              Looks up a localized string similar to Victorias.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_AceptarTerminos">
+            <summary>
+              Looks up a localized string similar to Debes aceptar los Términos y condiciones..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Amarillo">
+            <summary>
+              Looks up a localized string similar to Amarillo.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Asunto">
+            <summary>
+              Looks up a localized string similar to Código de verifiación Serpientes Y Escaleras.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Bonus">
+             <summary>
+               Looks up a localized string similar to  está en una casilla bonus, vuelve a tirar.
+            Bonus:
+            1.- Vuelve al inicio
+            2.- Divide tus casillas a la mitad
+            3.- Retrocede 3 casillas
+            4.- Gana 50 puntos
+            5.- Avanza 10 casillas
+            6.- Ve a la casilla 90.
+             </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Comienzo">
+            <summary>
+              Looks up a localized string similar to EL JUEGO HA COMENZADO.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Gano">
+            <summary>
+              Looks up a localized string similar to  ganó..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_IngresaCodigo">
+            <summary>
+              Looks up a localized string similar to Ingresa el siguiente código:&lt;br/&gt;.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_JugadorConectado">
+            <summary>
+              Looks up a localized string similar to Este jugador ya está conectado..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Mensaje">
+            <summary>
+              Looks up a localized string similar to &lt;br/&gt;&lt;br/&gt;No compartas este código con nadie ya que es necesario para verificar su cuenta en Serpientes y Escaleras.&lt;br/&gt;&lt;br/&gt;¡Gracias por jugar con nosotros!.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Morado">
+            <summary>
+              Looks up a localized string similar to Morado.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Naranja">
+            <summary>
+              Looks up a localized string similar to Naranja.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Numero">
+            <summary>
+              Looks up a localized string similar to  obtuvó .
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Rosa">
+            <summary>
+              Looks up a localized string similar to Rosa.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Salir">
+            <summary>
+              Looks up a localized string similar to  salió de la partida..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Turn">
+            <summary>
+              Looks up a localized string similar to Turno.
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Turno">
+            <summary>
+              Looks up a localized string similar to Es el turno de: .
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_TurnoPerdido">
+            <summary>
+              Looks up a localized string similar to  perdió su turno..
+            </summary>
+        </member>
+        <member name="P:SerpientesYEscaleras.Properties.Resources.ms_Unirse">
+            <summary>
+              Looks up a localized string similar to  se unió a la partida..
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.Registrarse">
+            <summary>
+            Clase parcial Registrarse.
+            Contiene métodos necesarios de la ventana de Registrarse.
+            </summary>
+            <summary>
+            Registrarse
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.#ctor(System.Boolean)">
+            <summary>
+            Construtor de la ventana ValidarCuenta.
+            </summary>
+            <param name="prueba">
+            Valor boolean que sirve para indicar que es el contructor que se debe ejecutar cuando se realizan pruebas.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.#ctor">
+            <summary>
+            Construtor de la ventana ValidarCuenta.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.Bt_Registrarse_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para registrar a un jugador.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.Bt_Cancelar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Cancela el registro de un jugador.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.Bt_Terminos_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Muestra el mensaje de los Términos y Condiciones.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.CrearNuevoJugador">
+            <summary>
+            Crear un objeto jugador con los datos ingresados en la interfaz gráfica.
+            </summary>
+            <returns>
+            Objeto jugador con los datos del jugador que se va a registrar.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.RegistrarJugador(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Registra al jugador en el sistema.
+            </summary>
+            <param name="jugador">
+            Objeto jugador con los datos del jugador que se va a registrar. 
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarDatos">
+            <summary>
+            Valida los datos para registrar al jugador.
+            </summary>
+            <returns>
+            Valor booleano que es True si los datos son validos y False si no lo son.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarDatosCompletos(System.String,System.String,System.String,System.String)">
+            <summary>
+            Valida que los datos estén completos.
+            </summary>
+            <param name="nombre">
+            Nombre de usuario con el que se quiere registrar el jugador.
+            </param>
+            <param name="correo">
+            Correo electrónico con el que se quiere registrar el jugador.
+            </param>
+            <param name="contrasenia">
+            Contraseña con el que se quiere registrar el jugador.
+            </param>
+            <param name="confirmarcontrasenia">
+            Confirmación de la contraseña con el que se quiere registrar el jugador.
+            </param>
+            <returns>
+            Valor boolean que es True si los datos son completos y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarContrasenia(System.String)">
+            <summary>
+            Valida que la contraseña sea mayor o igual a 8 caracteres y que tenga números y letras.
+            </summary>
+            <param name="contrasenia">
+            Contraseña que se quiere validar.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarLetraEnContrasenia(System.Boolean,System.String,System.Int32)">
+            <summary>
+            Valida que una letra de la contraseña sea una letra.
+            </summary>
+            <param name="letra">
+            Valor boolean que indica que ya se encontró una letra en la contraseña.
+            </param>
+            <param name="contrasenia">
+            Contraseña en la que se quiere validar si es una letra.
+            </param>
+            <param name="i">
+            Posición de la contraseña en la que la que se quiere validar.
+            </param>
+            <returns>
+            Valor boolean que es True si es una letra y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.VerificarContrasenia(System.String,System.String)">
+            <summary>
+            Verifica que la contraseña y la confirmación de la contraseña coincidan.
+            </summary>
+            <param name="contrasenia">
+            Contraseña que se quiere verificar.
+            </param>
+            <param name="confirmaContrasenia">
+            Confirmación de contraseña que se quiere verificar.
+            </param>
+            <returns>
+            Valor boolean que es True si los dos parámetros coinciden y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarDatosPersonales">
+            <summary>
+            Valida que el nombre de usuario y la contraseña con la que se quiere registrar el jugador son validos.
+            </summary>
+            <returns>
+            Valor boolean que es True si los datos son validos y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarNombreUsuario(System.String)">
+            <summary>
+            Valida que el nombre de usuario, con el que se quiere registrar, no tenga caracteres especiales.
+            Sólo se pueden ingresar letras del alfabeto (minúsculas y mayúsculas), vocales con acento, números y espacios.
+            </summary>
+            <param name="nombre">
+            Nombre de usuario con el que se quiere registrar.
+            </param>
+            <returns>
+            Valor boolean que es True si el nombre de usuario tiene los caracteres permitidos, si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarCorreoElectronico(System.String)">
+            <summary>
+            Valida que el correo electrónico, con el que se quiere registrar:
+              tenga un arroba (@), tenga un punto (.), que tenga algo antes del arroba, que tenga el punto después del arroba, que tenga algo después del punto y que tenga algo entre el arroba y el punto.
+            </summary>
+            <param name="correo">
+            Correo electrónico que se quiere validar.
+            </param>
+            <returns>
+            Valor boolean que es True si el correo cumple con los requisitos y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarPuntoEnCorreo(System.Boolean,System.String,System.Int32,System.Int32)">
+            <summary>
+            Valida que el correo tenga un punto después del arroba.
+            </summary>
+            <param name="validar">
+            Valor boolean que indica si ya se verificaron los otros aspectos del correo.
+            </param>
+            <param name="correo">
+            Correo electrónico que se quiere validar.
+            </param>
+            <param name="posicionArroba">
+            Posición en la que se encontró el arroba.
+            </param>
+            <param name="i">
+            Posición en la que se quiere validar si hay un punto.
+            </param>
+            <returns>
+            Valor boolean que es True si se valida el punto y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.VerificarNombreUsuario(System.String)">
+            <summary>
+            Verifica si el nombre de usuario no está ocupado por otro jugador.
+            </summary>
+            <param name="nombre">
+            Nombre de usuario que se quiere verificar.
+            </param>
+            <returns>
+            Valor entero que es´0 si el nombre está disponible, es 1 si no está disponible, es 2 si hubo un error en la base de datos y es 3 si hubo un error con el servidor.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.VerificarCorreoElectronico(System.String)">
+            <summary>
+            Verifica si el correo electrónico no está ocupado por otro jugador.
+            </summary>
+            <param name="correo">
+            Correo electrónico que se quiere verificar.
+            </param>
+            <returns>
+            Valor entero que es´0 si el correo está disponible, es 1 si no está disponible, es 2 si hubo un error en la base de datos y es 3 si hubo un error con el servidor.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ValidarTerminosYCondiciones">
+            <summary>
+            Valida que se seleccionó la opción de los Términos y Condiciones.
+            </summary>
+            <returns>
+            Valor boolean que es True si se seleccinó la opción de los Términos y Condiciones y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.GenerarCodigo">
+            <summary>
+            Genera el código de verificación, que se enviará al correo electrónico, para que el jugador pueda validar su cuenta.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.MandarMensajesError(System.Int32,System.Boolean)">
+            <summary>
+            Manda mensaje de error de nombre ocupado, correo ocupado, fallo con la base de datos o fallo con la conexión al servidor.
+            </summary>
+            <param name="verificar">
+            Valor entero que indica que tipo de error surgió, si es uno es de algún dato ocupado, si es 2 es de conexión con el servidor y si es 3 es de conexión con el servidor.
+            </param>
+            <param name="nombre">
+            Valor boolean que indica si es un error con el nombre.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.ComputeSha256Hash(System.String)">
+            <summary>
+            Método para serializar.
+            No fue construido por el equipo de desarrollo.
+            </summary>
+            <param name="rawData">
+            Cadena que se quiere serializar.
+            </param>
+            <returns>
+            Cadena serializada.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.Registrarse.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.Resultados">
+            <summary>
+            Clase parcial Resultados.
+            Contiene métodos necesarios de la ventana de Resultados.
+            </summary>
+            <summary>
+            Resultados
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.Resultados.#ctor(SerpientesYEscaleras.Partida,System.Collections.Generic.List{SerpientesYEscaleras.ServiceSYE.Jugador})">
+            <summary>
+            Constructor de la ventana Resultados.
+            </summary>
+            <param name="partida">
+            Ventana Partida de la cual se mandó a llamar la ventana.
+            </param>
+            <param name="posicionJugadores">
+            Lista de jugadores según su posición al finalizar la partida y con los puntos que ganaron.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Resultados.Bt_Aceptar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Continua con el proceso.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Resultados.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Cierra la ventana.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.Resultados.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.TablaPosiciones">
+            <summary>
+            Clase parcial TablaPosiciones.
+            Contiene métodos necesarios de la ventana de Tabla de posiciones.
+            </summary>
+            <summary>
+            TablaPosiciones
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.TablaPosiciones.#ctor(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Constructor de la ventana TablaPosiciones.
+            </summary>
+            <param name="jugador">
+            Objeto jugador que se mandó desde el menú.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.TablaPosiciones.Bt_Ordenar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Ordena los jugadores en la tabla de posiciones según el botón, ya sea por puntos o por vistorias.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.TablaPosiciones.Dg_Jugadores_SelectedCellsChanged(System.Object,System.Windows.Controls.SelectedCellsChangedEventArgs)">
+            <summary>
+            Cambia la imagen que muestra un trofeo con el número de la posición del jugador seleccionado en la tabla de posiciones.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.TablaPosiciones.CargarJugadoresPuntos">
+            <summary>
+            Carga los jugadores ordenados por puntos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.TablaPosiciones.CargarJugadoresVictorias">
+            <summary>
+            Carga los jugadores ordenados por victorias.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.TablaPosiciones.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.UnirsePartida">
+            <summary>
+            Clase parcial UnirsePartida.
+            Contiene métodos necesarios de la ventana de Unirse a partida.
+            </summary>
+            <summary>
+            UnirsePartida
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.UnirsePartida.#ctor(SerpientesYEscaleras.MenuPrincipal,SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Constructor de la ventana UnirsePartida.
+            </summary>
+            <param name="menuPrincipal">
+            Ventana MenúPrincipal de la cual se mandó a llamar la ventana.
+            </param>
+            <param name="jugador">
+            Objeto jugador que se mandó desde el menú.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.UnirsePartida.Bt_Unirse_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para unir al jugador a una partida.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.UnirsePartida.Bt_Ayuda_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Muestra la ayuda de la ventana.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.UnirsePartida.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Cierra la ventana.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.UnirsePartida.CargarPartidas">
+            <summary>
+            Carga las partidas a las que se puede unir el jugador.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.UnirsePartida.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.ValidarCuenta">
+            <summary>
+            Clase parcial ValidarCuenta.
+            Contiene métodos necesarios de la ventana de Validar cuenta.
+            </summary>
+            <summary>
+            ValidarCuenta
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.#ctor(System.Boolean)">
+            <summary>
+            Construtor de la ventana ValidarCuenta.
+            </summary>
+            <param name="prueba">
+            Valor boolean que sirve para indicar que es el contructor que se debe ejecutar cuando se realizan pruebas.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.#ctor">
+            <summary>
+            Construtor de la ventana ValidarCuenta.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.Bt_Aceptar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para validar una cuenta.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.Bt_Cancelar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Cancela la validación de una cuenta.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.Bt_Enviar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para enviar, nuevamente, el código de verificación al correo del jugador.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.ValidarCodigo(System.String)">
+            <summary>
+            Valida que el código de verificación sólo contenga números.
+            </summary>
+            <param name="codigoVerificacion">
+            Código de verificación que se quiere validar.
+            </param>
+            <returns>
+            Valor boolean que es True si el código sólo tiene números, y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.ValidarCuentaJugador(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Valida la cuenta de un jugador en el sistema.
+            </summary>
+            <param name="jugador">
+            Objeto jugador que contiene los datos de la cuenta del jugador que se va a validar.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.ValidarDatos">
+            <summary>
+            Valida los datos del jugador al que se le va a enviar el código de verificación.
+            </summary>
+            <returns>
+            Valor boolean que es True si todos los datos son correctos y si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.ValidarNombreUsuario(System.String)">
+            <summary>
+            Valida que el nombre de usuario, con el que se quiere ingresar, no tenga caracteres especiales.
+            Sólo se pueden ingresar letras del alfabeto (minúsculas y mayúsculas), vocales con acento, números y espacios.
+            </summary>
+            <param name="nombreUsuario">
+            Nombre de usuario con el que se quiere ingresar.
+            </param>
+            <returns>
+            Valor boolean que es True si el nombre de usuario tiene los caracteres permitidos, si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.ValidarJugador(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Valida que se haya encontrado el jugador y que no hubo algún error.
+            </summary>
+            <param name="jugador">
+            Objeto jugador que se quiere validar.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.EnviarNuevoCodigo(SerpientesYEscaleras.ServiceSYE.Jugador,System.String)">
+            <summary>
+            Envía el correo electrónico al jugador con el nuevo código de verificación.
+            </summary>
+            <param name="jugador">
+            Objeto jugador que contiene los datos del jugador al que se le va a enviar el correo.
+            </param>
+            <param name="codigo">
+            Código que se enviará al jugador.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.MandarMensajeErrorCodigo(System.String)">
+            <summary>
+            Muestra mensaje de error de las base de datos o con el servidor, que ocurrieron al verificar que no exita el nuevo código de verificación.
+            </summary>
+            <param name="codigo">
+            Código que contiene un marcador para identificar el error.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.ValidarCuenta.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.App">
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:SerpientesYEscaleras.MainWindow">
+            <summary>
+            Clase parcial (principal) MainWindow.
+            Contiene métodos necesarios de la ventana de Iniciar sesión.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.#ctor(System.Boolean)">
+            <summary>
+            Constructor de la ventana MainWindow.
+            </summary>
+            <param name="prueba">
+            Valor boolean que sirve para indicar que es el contructor que se debe ejecutar cuando se realizan pruebas.
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.#ctor">
+            <summary>
+            Constructor de la ventana MainWindow.
+            </summary>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.Bt_Ingresar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Realiza el proceso para iniciar sesión.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.Lb_Registrarse_MouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Invoca a la ventana de Registrarse.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.Lb_ValidarCuenta_MouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Invoca a la ventana de ValidarCuenta.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.Mi_Español_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Cambia el idioma a Español.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.Mi_Ingles_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Cambia el idioma a Inglés.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.ValidarDatos">
+            <summary>
+            Valida los datos para iniciar sesión (nombre de usuario y contraseña).
+            </summary>
+            <returns>
+            Valor booleano que es True si los datos son validos y False si no lo son.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.Ingresar(SerpientesYEscaleras.ServiceSYE.Jugador)">
+            <summary>
+            Ingresa al usuario al sistema.
+            Verifica que el jugador tenga su cuenta validada y que no esté conectado.
+            Invoca a la ventana de MenuPrincipal.
+            </summary>
+            <param name="jugador">
+            Objeto jugador con los datos del jugador que quiere iniciar sesión. 
+            </param>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.ValidarDatosCompletos(System.String,System.String)">
+            <summary>
+            Valida que los datos para iniciar sesión estén completos.
+            </summary>
+            <param name="nombre"></param>
+            <param name="contrasenia"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.ValidarNombreUsuario(System.String)">
+            <summary>
+            Valida que el nombre de usuario, con el que se quiere ingresar, no tenga caracteres especiales.
+            Sólo se pueden ingresar letras del alfabeto (minúsculas y mayúsculas), vocales con acento, números y espacios.
+            </summary>
+            <param name="nombre">
+            Nombre de usuario con el que se quiere ingresar.
+            </param>
+            <returns>
+            Valor boolean que es True si el nombre de usuario tiene los caracteres permitidos, si no es False.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.ComputeSha256Hash(System.String)">
+            <summary>
+            Método para serializar.
+            No fue construido por el equipo de desarrollo.
+            </summary>
+            <param name="rawData">
+            Cadena que se quiere serializar.
+            </param>
+            <returns>
+            Cadena serializada.
+            </returns>
+        </member>
+        <member name="M:SerpientesYEscaleras.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

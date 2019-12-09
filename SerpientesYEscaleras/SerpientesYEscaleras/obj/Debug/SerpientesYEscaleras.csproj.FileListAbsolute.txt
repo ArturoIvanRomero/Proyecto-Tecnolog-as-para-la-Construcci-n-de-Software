@@ -32,4 +32,8 @@ C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Softwa
 C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\obj\Debug\en-US\SerpientesYEscaleras.resources.dll
 C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\obj\Debug\SerpientesYEscaleras.exe
 C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\obj\Debug\SerpientesYEscaleras.pdb
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\bin\Debug\WpfAnimatedGif.dll
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\bin\Debug\WpfAnimatedGif.xml
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\obj\Debug\SerpientesYEscaleras.csproj.CopyComplete
 C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\obj\Debug\SerpientesYEscaleras.csprojAssemblyReference.cache
+C:\Users\Arturo\Documents\Semestre5\Tecnologías para la Construcción de Software\Proyecto\SerpientesYEscaleras\SerpientesYEscaleras\bin\Debug\SerpientesYEscaleras.xml

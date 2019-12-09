@@ -6,32 +6,54 @@
         xmlns:local="clr-namespace:SerpientesYEscaleras"
         xmlns:p="clr-namespace:SerpientesYEscaleras.Properties"
         mc:Ignorable="d"
-        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092">
+        Title="SERPIENTES Y ESCALERAS" Height="770" Width="1380" WindowState="Maximized" ResizeMode="NoResize" Background="#FF376092" Closing="Window_Closing">
     <DockPanel LastChildFill="True">
-        <WrapPanel DockPanel.Dock="Top" Orientation="Vertical" HorizontalAlignment="Center" Margin="0">
-            <Label Content="SERPIENTES Y ESCALERAS" HorizontalAlignment="Center" FontFamily="Showcard Gothic" FontSize="40"/>
-            <Grid HorizontalAlignment="Right">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <Label x:Name="lb_NombreUsuario" Grid.Row="0" FontFamily="Gill Sans MT" FontSize="20" Foreground="White"/>
-                <Label x:Name="lb_Puntos" Content="{x:Static p:Resources.lb_Puntos}" Grid.Row="1" FontFamily="Gill Sans MT" FontSize="20" Foreground="White"/>
-                <Label x:Name="lb_Victorias" Content="{x:Static p:Resources.lb_Victorias}" Grid.Row="2" FontFamily="Gill Sans MT" FontSize="20" Foreground="White"/>
-                <Button x:Name="bt_Salir" Content="{x:Static p:Resources.bt_Salir}" Grid.Row="3" Height="30" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" FontWeight="Bold" Click="Bt_Salir_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
-            </Grid>
-        </WrapPanel>
+        <Grid DockPanel.Dock="Top" Width="1380">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="Imagenes/MenuPrincipal/Menu.png" Grid.Column="0" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30"/>
+            <Menu Height="80" Width="80" Grid.Column="0" HorizontalAlignment="Left" Background="Transparent" VerticalAlignment="Top" BorderBrush="White" Margin="30">
+                <MenuItem FontSize="75" Header="Menu" Foreground="Transparent">
+                    <MenuItem x:Name="mi_NombreUsuario" FontFamily="Gill Sans MT" FontWeight="Bold" FontSize="25" Background="White" Foreground="#FF376092" BorderBrush="White" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <Image Source="Imagenes/MenuPrincipal/Usuario.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="mi_Puntos" Header="{x:Static p:Resources.mi_Puntos}" FontFamily="Gill Sans MT" FontSize="20" Background="White" Foreground="#FF376092" BorderBrush="White" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <Image Source="Imagenes/MenuPrincipal/Puntos.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="mi_Victorias" Header="{x:Static p:Resources.mi_Victorias}" Grid.Row="2" FontFamily="Gill Sans MT" FontSize="20" Background="White" Foreground="#FF376092" BorderBrush="White" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <Image Source="Imagenes/MenuPrincipal/Victorias.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Background="White" FontSize="20" BorderBrush="White" IsEnabled="False"/>
+                    <MenuItem x:Name="mi_Salir" Header="{x:Static p:Resources.mi_Salir}" Grid.Row="3" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" FontWeight="Bold" Click="Mi_Salir_Click" Background="White" Foreground="#FF376092" BorderBrush="White">
+                        <MenuItem.Icon>
+                            <Image Source="Imagenes/MenuPrincipal/Salir.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <Image Grid.Column="1" HorizontalAlignment="Center" Source="Imagenes/MenuPrincipal/LogoMenu.png" Margin="0,10"/>            
+        </Grid>
         <Grid HorizontalAlignment="Center" Margin="50,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="350"/>
                 <ColumnDefinition Width="400"/>
                 <ColumnDefinition Width="350"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="bt_CrearPartida" Content="{x:Static p:Resources.bt_CrearPartida}" Grid.Column="0" Height="40" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_CrearPartida_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
-            <Button x:Name="bt_UnirsePartida" Content="{x:Static p:Resources.bt_UnirsePartida}" Grid.Column="1" Height="50" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="40" FontWeight="Bold" Click="Bt_UnirsePartida_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
-            <Button x:Name="bt_TablaPosiciones" Content="{x:Static p:Resources.bt_TablaPosiciones}"  Grid.Column="2" Height="40" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_TablaPosiciones_Click" Background="White" Foreground="#FF376092" BorderBrush="White"/>
+            <Image x:Name="i_Crear" Grid.Column="0" Source="Imagenes/MenuPrincipal/Crear.png" VerticalAlignment="Top" Margin="20,50" MouseUp="I_Crear_MouseUp"/>
+            <Button x:Name="bt_CrearPartida" Content="{x:Static p:Resources.bt_CrearPartida}" Grid.Column="0" Height="60" Width="350" VerticalAlignment="Bottom" Margin="0, 135" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_CrearPartida_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent"/>
+            <Image x:Name="i_Unirse" Grid.Column="1" Source="Imagenes/MenuPrincipal/Unirse.png" VerticalAlignment="Top" Margin="10,30" MouseUp="I_Unirse_MouseUp"/>
+            <Button x:Name="bt_UnirsePartida" Content="{x:Static p:Resources.bt_UnirsePartida}" Grid.Column="1" Height="80" VerticalAlignment="Bottom" Margin="0, 75" FontFamily="Verdana" FontSize="40" FontWeight="Bold" Click="Bt_UnirsePartida_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent"/>
+            <Image x:Name="i_Posicion" Grid.Column="2" Source="Imagenes/MenuPrincipal/Posiciones.png" VerticalAlignment="Top" Margin="20,50" MouseUp="I_Posicion_MouseUp"/>
+            <Button x:Name="bt_TablaPosiciones" Content="{x:Static p:Resources.bt_TablaPosiciones}" Grid.Column="2" Height="60" Width="350" VerticalAlignment="Bottom" Margin="0, 135" FontFamily="Verdana" FontSize="30" FontWeight="Bold" Click="Bt_TablaPosiciones_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent"/>
         </Grid>
     </DockPanel>
 </Window>
